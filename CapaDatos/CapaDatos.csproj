@@ -54,6 +54,7 @@
     <Compile Include="BaseDatos\MarketContext.cs" />
     <Compile Include="BaseDatos\Modelos\MCategorias.cs" />
     <Compile Include="BaseDatos\Modelos\MGrupoDescuentos.cs" />
+    <Compile Include="BaseDatos\Modelos\MProductos.cs" />
     <Compile Include="BaseDatos\Modelos\MUnidadMedidas.cs" />
     <Compile Include="Core\IRepository.cs" />
     <Compile Include="Core\Repository.cs" />
@@ -69,6 +70,10 @@
     <Compile Include="Migrations\202403181537539_AddTablaUnidadMedidas.Designer.cs">
       <DependentUpon>202403181537539_AddTablaUnidadMedidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403181755176_AddTablaProductos.cs" />
+    <Compile Include="Migrations\202403181755176_AddTablaProductos.designer.cs">
+      <DependentUpon>202403181755176_AddTablaProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -81,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403181537539_AddTablaUnidadMedidas.resx">
       <DependentUpon>202403181537539_AddTablaUnidadMedidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403181755176_AddTablaProductos.resx">
+      <DependentUpon>202403181755176_AddTablaProductos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
