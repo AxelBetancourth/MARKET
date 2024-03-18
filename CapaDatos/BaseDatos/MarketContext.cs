@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos.BaseDatos.Modelos;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -13,6 +14,10 @@ namespace CapaDatos.BaseDatos
         {
             
         }
+
+        public DbSet<MCategorias> MCategorias { get; set; }
+        public DbSet<MGrupoDescuentos> MGrupoDescuentos { get; set; }
+        public DbSet<MUnidadMedidas> MUnidadMedidas { get; set; }
 
     }
 }
