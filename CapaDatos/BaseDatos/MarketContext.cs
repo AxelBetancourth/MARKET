@@ -27,6 +27,7 @@ namespace CapaDatos.BaseDatos
         public DbSet<MGrupoDescuentos> MGrupoDescuentos { get; set; }
         public DbSet<MUnidadMedidas> MUnidadMedidas { get; set; }
         public DbSet<MProductos> MProductos { get; set; }
+        public DbSet<MCondicionPagos> MCondicionPagos { get; set; }
 
     }
 }
