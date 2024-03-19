@@ -40,6 +40,13 @@ namespace MARKET
             condicionPagos.MdiParent = this;
             condicionPagos.Show();
         }
+
+        private void unidadDeMedidaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PUnidadMedidas unidadMedidas = new PUnidadMedidas();
+            unidadMedidas.MdiParent = this;
+            unidadMedidas.Show();
+        }
     }
     
 }
