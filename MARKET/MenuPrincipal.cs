@@ -16,5 +16,22 @@ namespace MARKET
         {
             InitializeComponent();
         }
+
+        private void condiciónDePagosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void unidadDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PCategorias categoria = new PCategorias();
+            categoria.MdiParent = this;
+            categoria.Show();
+        }
     }
 }

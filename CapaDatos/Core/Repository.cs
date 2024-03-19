@@ -18,7 +18,22 @@ namespace CapaDatos.Core
         }
         public void Agregar(T entidad)
         {
-            throw new NotImplementedException();
+            dbcontext.Set<T>().Add(entidad);
+            dbcontext.SaveChanges();
+        }
+        public IQueryable<T> Consulta()
+        {
+            return dbcontext.Set<T>().AsQueryable();
+        }
+        public void Editar(T entidad)
+        {
+            dbcontext.Set<T>();
+            dbcontext.SaveChanges();
+        }
+        public void Eliminar(T entidad)
+        {
+            dbcontext.Set<T>().Remove(entidad);
+            dbcontext.SaveChanges();
         }
     }
 }
