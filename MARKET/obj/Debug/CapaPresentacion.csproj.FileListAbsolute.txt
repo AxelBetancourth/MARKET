@@ -58,3 +58,5 @@ C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\CapaPresenta
 C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.exe
 C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.pdb
+C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.MenuPrincipal.resources
+C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.PCategorias.resources

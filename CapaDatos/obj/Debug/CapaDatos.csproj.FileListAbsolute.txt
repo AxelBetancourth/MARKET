@@ -43,3 +43,4 @@ C:\Users\claud\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos
 C:\Users\claud\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\claud\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.pdb
 C:\Users\claud\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaProductos.resources
+C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaProductos.resources
