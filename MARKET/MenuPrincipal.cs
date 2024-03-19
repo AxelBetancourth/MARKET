@@ -33,5 +33,13 @@ namespace MARKET
             categoria.MdiParent = this;
             categoria.Show();
         }
+
+        private void condiciónDePagosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PCondicionPagos condicionPagos = new PCondicionPagos();
+            condicionPagos.MdiParent = this;
+            condicionPagos.Show();
+        }
     }
+    
 }
