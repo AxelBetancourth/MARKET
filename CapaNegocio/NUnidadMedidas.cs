@@ -17,7 +17,6 @@ namespace CapaNegocio
         {
             unidadMedidas = new DUnidadMedidas();
         }
-
         public List<MUnidadMedidas> TodasLasUnidades()
         {
             return unidadMedidas.UnidadesTodas();
