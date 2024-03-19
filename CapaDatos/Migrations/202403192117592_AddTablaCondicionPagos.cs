@@ -11,14 +11,14 @@
                 "dbo.MCondicionPagos",
                 c => new
                     {
-                        CodigoPaosId = c.Int(nullable: false, identity: true),
+                        CodigoPagoId = c.Int(nullable: false, identity: true),
                         Codigo = c.String(nullable: false, maxLength: 50),
                         Descripción = c.String(nullable: false, maxLength: 50),
                         Estado = c.Boolean(nullable: false),
                         Dias = c.Int(nullable: false),
                         FechaCreacion = c.DateTime(nullable: false),
                     })
-                .PrimaryKey(t => t.CodigoPaosId);
+                .PrimaryKey(t => t.CodigoPagoId);
             
         }
         

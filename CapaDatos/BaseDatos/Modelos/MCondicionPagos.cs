@@ -10,7 +10,7 @@ namespace CapaDatos.BaseDatos.Modelos
     public class MCondicionPagos
     {
         [Key]
-        public int CodigoPaosId { get; set; }
+        public int CodigoPagoId { get; set; }
         [Required]
         [MaxLength(50)]
         public string Codigo { get; set; }

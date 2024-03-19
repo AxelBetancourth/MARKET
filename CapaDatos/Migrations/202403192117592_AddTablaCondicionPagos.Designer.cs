@@ -13,7 +13,7 @@ namespace CapaDatos.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202403190711146_AddTablaCondicionPagos"; }
+            get { return "202403192117592_AddTablaCondicionPagos"; }
         }
         
         string IMigrationMetadata.Source
