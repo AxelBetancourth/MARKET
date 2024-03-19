@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Comun\CargarCombos.cs" />
     <Compile Include="NCategorias.cs" />
+    <Compile Include="NUnidadMedidas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
