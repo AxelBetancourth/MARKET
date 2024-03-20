@@ -68,6 +68,12 @@
     <Compile Include="PCategorias.Designer.cs">
       <DependentUpon>PCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="PClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PClientes.Designer.cs">
+      <DependentUpon>PClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCondicionPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PCategorias.resx">
       <DependentUpon>PCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PClientes.resx">
+      <DependentUpon>PClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PCondicionPagos.resx">
       <DependentUpon>PCondicionPagos.cs</DependentUpon>

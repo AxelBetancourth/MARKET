@@ -49,6 +49,13 @@ namespace MARKET
             unidadMedidas.MdiParent = this;
             unidadMedidas.Show();
         }
+
+        private void grupoDeDescuentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PClientes pClientes = new PClientes();
+            pClientes.MdiParent = this;
+            pClientes.Show();
+        }
     }
     
 }
