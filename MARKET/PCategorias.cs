@@ -111,5 +111,10 @@ namespace MARKET
                 txtDescripcion.Text = row.Cells["Descripción"].Value.ToString();
             }
         }
+
+        private void PCategorias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
