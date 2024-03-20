@@ -1,4 +1,5 @@
-﻿using CapaDatos.BaseDatos.Modelos;
+﻿using CapaDatos;
+using CapaDatos.BaseDatos.Modelos;
 using CapaNegocio;
 using System;
 using System.Collections.Generic;
@@ -12,33 +13,37 @@ using System.Windows.Forms;
 
 namespace MARKET
 {
-    public partial class PCategorias : Form
+    public partial class PUnidadMedidas : Form
     {
-        private NCategorias nCategorias;
-        public PCategorias()
+        private NUnidadMedidas unidadMedidas;
+        public PUnidadMedidas()
         {
             InitializeComponent();
-            nCategorias = new NCategorias();
+            unidadMedidas = new NUnidadMedidas();
             CargarDatos();
         }
-
         void CargarDatos()
         {
-            dgCategorias.DataSource = nCategorias.TodasLasCategorias();
+            dgUnidades.DataSource = unidadMedidas.TodasLasUnidades();
         }
 
         void LimpiarDatos()
         {
-            txtCategoriaId.Text = "";
+            txtUnidadesId.Text = "";
             txtCodigo.Text = "";
             txtDescripcion.Text = "";
             cbEstado.Checked = false;
             errorProvider1.Clear();
         }
 
+        private void PUnidadMedidas_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void cbActivos_CheckedChanged(object sender, EventArgs e)
         {
-            dgCategorias.DataSource = nCategorias.CategoriasActivas();
+            dgUnidades.DataSource = unidadMedidas.UnidadesActivas();
             if (cbActivos.Checked == false)
             {
                 CargarDatos();
@@ -48,10 +53,10 @@ namespace MARKET
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             var agregar = false;
-            var categoriaId = txtCategoriaId.Text.ToString();
+            var unidadesId = txtUnidadesId.Text.ToString();
             var codigo = txtCodigo.Text.ToString();
             var descripcion = txtDescripcion.Text.ToString();
-            if (string.IsNullOrEmpty(categoriaId) || string.IsNullOrWhiteSpace(categoriaId))
+            if (string.IsNullOrEmpty(unidadesId) || string.IsNullOrWhiteSpace(unidadesId))
             {
                 agregar = true;
             }
@@ -68,7 +73,7 @@ namespace MARKET
 
             if (agregar)
             {
-                nCategorias.AgregarCategoria(new MCategorias()
+                unidadMedidas.AgregarUnidades(new MUnidadMedidas()
                 {
                     Codigo = codigo,
                     Descripción = descripcion,
@@ -77,9 +82,9 @@ namespace MARKET
             }
             else
             {
-                nCategorias.EditarCategoria(new MCategorias()
+                unidadMedidas.EditarUnidades(new MUnidadMedidas()
                 {
-                    CategoriaId = int.Parse(categoriaId),
+                    UnidadMedidaId = int.Parse(unidadesId),
                     Codigo = codigo,
                     Descripción = descripcion,
                     Estado = cbEstado.Checked
@@ -89,32 +94,28 @@ namespace MARKET
             CargarDatos();
             LimpiarDatos();
         }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            var categoriaId = txtCategoriaId.Text.ToString();
-            if (string.IsNullOrEmpty(categoriaId) || string.IsNullOrWhiteSpace(categoriaId))
+            var UnidadMedidaId = txtUnidadesId.Text.ToString();
+            if (string.IsNullOrEmpty(UnidadMedidaId) || string.IsNullOrWhiteSpace(UnidadMedidaId))
             {
                 return;
             }
-            nCategorias.EliminarCategoria(int.Parse(categoriaId));
+            unidadMedidas.EliminarUnidades(int.Parse(UnidadMedidaId));
             CargarDatos();
             LimpiarDatos();
         }
 
-        private void dgCategorias_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgUnidades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dgCategorias.Rows.Count)
+            if (e.RowIndex >= 0 && e.RowIndex < dgUnidades.Rows.Count)
             {
-                DataGridViewRow row = dgCategorias.Rows[e.RowIndex];
-                txtCategoriaId.Text = row.Cells["CategoriaId"].Value.ToString();
+                DataGridViewRow row = dgUnidades.Rows[e.RowIndex];
+                txtUnidadesId.Text = row.Cells["UnidadMedidaId"].Value.ToString();
                 txtCodigo.Text = row.Cells["Codigo"].Value.ToString();
                 txtDescripcion.Text = row.Cells["Descripción"].Value.ToString();
             }
-        }
-
-        private void PCategorias_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

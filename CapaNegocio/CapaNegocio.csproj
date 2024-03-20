@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +55,9 @@
   <ItemGroup>
     <Compile Include="Comun\CargarCombos.cs" />
     <Compile Include="NCategorias.cs" />
+    <Compile Include="NCondicionPagos.cs" />
+    <Compile Include="NGrupoDescuentos.cs" />
+    <Compile Include="NUnidadMedidas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

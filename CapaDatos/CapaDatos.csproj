@@ -61,6 +61,8 @@
     <Compile Include="Core\Repository.cs" />
     <Compile Include="DCategorias.cs" />
     <Compile Include="DCondicionPagos.cs" />
+    <Compile Include="DGrupoDescuentos.cs" />
+    <Compile Include="DUnidadMedidas.cs" />
     <Compile Include="Migrations\202403181514256_AddTablaCategorias.cs" />
     <Compile Include="Migrations\202403181514256_AddTablaCategorias.Designer.cs">
       <DependentUpon>202403181514256_AddTablaCategorias.cs</DependentUpon>
@@ -77,9 +79,9 @@
     <Compile Include="Migrations\202403181755176_AddTablaProductos.designer.cs">
       <DependentUpon>202403181755176_AddTablaProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202403190711146_AddTablaCondicionPagos.cs" />
-    <Compile Include="Migrations\202403190711146_AddTablaCondicionPagos.designer.cs">
-      <DependentUpon>202403190711146_AddTablaCondicionPagos.cs</DependentUpon>
+    <Compile Include="Migrations\202403192117592_AddTablaCondicionPagos.cs" />
+    <Compile Include="Migrations\202403192117592_AddTablaCondicionPagos.Designer.cs">
+      <DependentUpon>202403192117592_AddTablaCondicionPagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,8 +99,8 @@
     <EmbeddedResource Include="Migrations\202403181755176_AddTablaProductos.resx">
       <DependentUpon>202403181755176_AddTablaProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403190711146_AddTablaCondicionPagos.resx">
-      <DependentUpon>202403190711146_AddTablaCondicionPagos.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202403192117592_AddTablaCondicionPagos.resx">
+      <DependentUpon>202403192117592_AddTablaCondicionPagos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
