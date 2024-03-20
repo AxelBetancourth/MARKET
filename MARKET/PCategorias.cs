@@ -111,5 +111,6 @@ namespace MARKET
                 txtDescripcion.Text = row.Cells["Descripción"].Value.ToString();
             }
         }
+
     }
 }
