@@ -112,5 +112,9 @@ namespace MARKET
             }
         }
 
+        private void PCategorias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
