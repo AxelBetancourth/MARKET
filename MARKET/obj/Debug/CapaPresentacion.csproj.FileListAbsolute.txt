@@ -85,3 +85,4 @@ C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.pdb
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PCondicionPagos.resources
 C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.PCondicionPagos.resources
 C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.PUnidadMedidas.resources
+C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.PGrupoDescuentos.resources

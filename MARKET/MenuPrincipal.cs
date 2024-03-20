@@ -19,7 +19,9 @@ namespace MARKET
 
         private void condiciónDePagosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            PGrupoDescuentos descuentos= new PGrupoDescuentos();
+            descuentos.MdiParent = this;
+            descuentos.Show();
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)

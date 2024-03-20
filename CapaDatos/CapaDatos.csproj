@@ -60,6 +60,8 @@
     <Compile Include="Core\IRepository.cs" />
     <Compile Include="Core\Repository.cs" />
     <Compile Include="DCategorias.cs" />
+    <Compile Include="DCondicionPagos.cs" />
+    <Compile Include="DGrupoDescuentos.cs" />
     <Compile Include="DUnidadMedidas.cs" />
     <Compile Include="Migrations\202403181514256_AddTablaCategorias.cs" />
     <Compile Include="Migrations\202403181514256_AddTablaCategorias.Designer.cs">
