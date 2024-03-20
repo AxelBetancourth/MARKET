@@ -13,37 +13,38 @@ using System.Windows.Forms;
 
 namespace MARKET
 {
-    public partial class PUnidadMedidas : Form
+    public partial class PGrupoDescuentos : Form
     {
-        private NUnidadMedidas unidadMedidas;
-        public PUnidadMedidas()
+        private NGrupoDescuentos nGrupoDescuentos;
+        public PGrupoDescuentos()
         {
             InitializeComponent();
-            unidadMedidas = new NUnidadMedidas();
+            nGrupoDescuentos = new NGrupoDescuentos();
             CargarDatos();
         }
         void CargarDatos()
         {
-            dgUnidades.DataSource = unidadMedidas.TodasLasUnidades();
+            dgDescuentos.DataSource = nGrupoDescuentos.TodasLosDescuentos();
         }
 
         void LimpiarDatos()
         {
-            txtUnidadesId.Text = "";
+            txtDescuentosId.Text = "";
             txtCodigo.Text = "";
             txtDescripcion.Text = "";
+            txtPorcentaje.Text = "";
             cbEstado.Checked = false;
             errorProvider1.Clear();
         }
 
-        private void PUnidadMedidas_Load(object sender, EventArgs e)
+        private void PGrupoDescuentos_Load(object sender, EventArgs e)
         {
 
         }
 
         private void cbActivos_CheckedChanged(object sender, EventArgs e)
         {
-            dgUnidades.DataSource = unidadMedidas.UnidadesActivas();
+            dgDescuentos.DataSource = nGrupoDescuentos.DescuentosActivos();
             if (cbActivos.Checked == false)
             {
                 CargarDatos();
@@ -53,9 +54,11 @@ namespace MARKET
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             var agregar = false;
-            var unidadesId = txtUnidadesId.Text.ToString();
+            var unidadesId = txtDescuentosId.Text.ToString();
             var codigo = txtCodigo.Text.ToString();
             var descripcion = txtDescripcion.Text.ToString();
+            var porcentaje = txtPorcentaje.Text.ToString();
+
             if (string.IsNullOrEmpty(unidadesId) || string.IsNullOrWhiteSpace(unidadesId))
             {
                 agregar = true;
@@ -70,23 +73,29 @@ namespace MARKET
                 errorProvider1.SetError(txtDescripcion, "Debe ingresar una descripcion");
                 return;
             }
-
+            if (string.IsNullOrEmpty(porcentaje) || string.IsNullOrWhiteSpace(porcentaje))
+            {
+                errorProvider1.SetError(txtPorcentaje, "Debe ingresar un porcentaje");
+                return;
+            }
             if (agregar)
             {
-                unidadMedidas.AgregarUnidades(new MUnidadMedidas()
+                nGrupoDescuentos.AgregarDescuentos(new MGrupoDescuentos()
                 {
                     Codigo = codigo,
                     Descripción = descripcion,
+                    Porcentaje = int.Parse(porcentaje),
                     Estado = cbEstado.Checked
                 });
             }
             else
             {
-                unidadMedidas.EditarUnidades(new MUnidadMedidas()
+                nGrupoDescuentos.EditarDescuentos(new MGrupoDescuentos()
                 {
-                    UnidadMedidaId = int.Parse(unidadesId),
+                    GrupoDescuentoId = int.Parse(unidadesId),
                     Codigo = codigo,
                     Descripción = descripcion,
+                    Porcentaje = int.Parse(porcentaje),
                     Estado = cbEstado.Checked
                 });
             }
@@ -95,26 +104,35 @@ namespace MARKET
             LimpiarDatos();
         }
 
+        private void txtPorcentaje_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            var UnidadMedidaId = txtUnidadesId.Text.ToString();
-            if (string.IsNullOrEmpty(UnidadMedidaId) || string.IsNullOrWhiteSpace(UnidadMedidaId))
+            var GrupoDescuentoId = txtDescuentosId.Text.ToString();
+            if (string.IsNullOrEmpty(GrupoDescuentoId) || string.IsNullOrWhiteSpace(GrupoDescuentoId))
             {
                 return;
             }
-            unidadMedidas.EliminarUnidades(int.Parse(UnidadMedidaId));
+            nGrupoDescuentos.EliminarDescuentos(int.Parse(GrupoDescuentoId));
             CargarDatos();
             LimpiarDatos();
         }
 
-        private void dgUnidades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgDescuentos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dgUnidades.Rows.Count)
+            if (e.RowIndex >= 0 && e.RowIndex < dgDescuentos.Rows.Count)
             {
-                DataGridViewRow row = dgUnidades.Rows[e.RowIndex];
-                txtUnidadesId.Text = row.Cells["UnidadMedidaId"].Value.ToString();
+                DataGridViewRow row = dgDescuentos.Rows[e.RowIndex];
+                txtDescuentosId.Text = row.Cells["GrupoDescuentoId"].Value.ToString();
                 txtCodigo.Text = row.Cells["Codigo"].Value.ToString();
                 txtDescripcion.Text = row.Cells["Descripción"].Value.ToString();
+                txtPorcentaje.Text = row.Cells["Porcentaje"].Value.ToString();
             }
         }
     }
