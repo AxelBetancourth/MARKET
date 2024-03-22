@@ -130,6 +130,7 @@ namespace MARKET
                 txtCondicionId.Text = row.Cells["CodigoPagoId"].Value.ToString();
                 txtCodigo.Text = row.Cells["Codigo"].Value.ToString();
                 txtDescripcion.Text = row.Cells["Descripción"].Value.ToString();
+                cbEstado.Checked = bool.Parse(dgCondiciones.CurrentRow.Cells["Estado"].Value.ToString());
                 txtDias.Text = row.Cells["Dias"].Value.ToString();
             }
         }

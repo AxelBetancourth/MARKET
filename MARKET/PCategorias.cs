@@ -1,4 +1,5 @@
-﻿using CapaDatos.BaseDatos.Modelos;
+﻿using CapaDatos;
+using CapaDatos.BaseDatos.Modelos;
 using CapaNegocio;
 using System;
 using System.Collections.Generic;
@@ -109,6 +110,7 @@ namespace MARKET
                 txtCategoriaId.Text = row.Cells["CategoriaId"].Value.ToString();
                 txtCodigo.Text = row.Cells["Codigo"].Value.ToString();
                 txtDescripcion.Text = row.Cells["Descripción"].Value.ToString();
+                cbEstado.Checked = bool.Parse(dgCategorias.CurrentRow.Cells["Estado"].Value.ToString());
             }
         }
 

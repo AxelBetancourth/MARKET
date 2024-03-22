@@ -23,14 +23,10 @@ namespace CapaNegocio
         {
             return dproductos.TodosLosProductos();
         }
-        public List<MProductos> ProductosActivos()
-        {
-            return dproductos.TodosLosProductos().Where(c => c.Estado == true).ToList();
-        }
         public List<CargarCombos> CargaCombo()
         {
             List<CargarCombos> Datos = new List<CargarCombos>();
-            var Productos = ProductosActivos().Select(c => new
+            var Productos = TodosProductos().Select(c => new
             {
                 c.ProductoId,
                 c.Categoriaid,
@@ -71,6 +67,19 @@ namespace CapaNegocio
                 c.FechaCreacion
             });
             return productos.Cast<object>().ToList();
+        }
+
+        public List<object> obtenerProductosActivosGrid()
+        {
+            var productos = dproductos.TodosLosProductos().Select(c => new {
+                c.ProductoId,
+                CategoriaDescripcion = c.MCategotias.Descripción,
+                UnidadMedidaDescripcion = c.MUnidadMedidas.Descripción,
+                c.Estado,
+                c.PrecioCompra,
+                c.FechaCreacion
+            });
+            return productos.Where(c => c.Estado == true).Cast<object>().ToList();
         }
     }
 }
