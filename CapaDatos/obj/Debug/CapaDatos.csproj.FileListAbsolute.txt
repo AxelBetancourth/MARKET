@@ -63,3 +63,4 @@ C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.pdb
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaCondicionPagos.resources
 C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaCondicionPagos.resources
+C:\Users\claud\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaCondicionPagos.resources

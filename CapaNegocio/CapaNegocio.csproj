@@ -57,6 +57,7 @@
     <Compile Include="NCategorias.cs" />
     <Compile Include="NCondicionPagos.cs" />
     <Compile Include="NGrupoDescuentos.cs" />
+    <Compile Include="NProductos.cs" />
     <Compile Include="NUnidadMedidas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
