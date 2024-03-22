@@ -51,9 +51,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(316, 232);
+            this.btnEliminar.Location = new System.Drawing.Point(237, 188);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(85, 38);
+            this.btnEliminar.Size = new System.Drawing.Size(64, 31);
             this.btnEliminar.TabIndex = 47;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -61,9 +62,10 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(216, 232);
+            this.BtnGuardar.Location = new System.Drawing.Point(162, 188);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(85, 38);
+            this.BtnGuardar.Size = new System.Drawing.Size(64, 31);
             this.BtnGuardar.TabIndex = 46;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
@@ -71,33 +73,37 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(216, 158);
+            this.txtDescripcion.Location = new System.Drawing.Point(162, 128);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(346, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(260, 20);
             this.txtDescripcion.TabIndex = 45;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(216, 116);
+            this.txtCodigo.Location = new System.Drawing.Point(162, 94);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(76, 20);
             this.txtCodigo.TabIndex = 44;
             // 
             // txtDescuentosId
             // 
-            this.txtDescuentosId.Location = new System.Drawing.Point(216, 70);
+            this.txtDescuentosId.Location = new System.Drawing.Point(162, 57);
+            this.txtDescuentosId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescuentosId.Name = "txtDescuentosId";
             this.txtDescuentosId.ReadOnly = true;
-            this.txtDescuentosId.Size = new System.Drawing.Size(100, 22);
+            this.txtDescuentosId.Size = new System.Drawing.Size(76, 20);
             this.txtDescuentosId.TabIndex = 43;
             // 
             // cbEstado
             // 
             this.cbEstado.AutoSize = true;
             this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEstado.Location = new System.Drawing.Point(16, 206);
+            this.cbEstado.Location = new System.Drawing.Point(12, 167);
+            this.cbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(72, 20);
+            this.cbEstado.Size = new System.Drawing.Size(62, 17);
             this.cbEstado.TabIndex = 42;
             this.cbEstado.Text = "Activo";
             this.cbEstado.UseVisualStyleBackColor = true;
@@ -106,9 +112,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 158);
+            this.label4.Location = new System.Drawing.Point(9, 128);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 20);
+            this.label4.Size = new System.Drawing.Size(93, 17);
             this.label4.TabIndex = 41;
             this.label4.Text = "Descripción";
             // 
@@ -116,9 +123,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 114);
+            this.label3.Location = new System.Drawing.Point(9, 93);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 40;
             this.label3.Text = "Código";
             // 
@@ -126,18 +134,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 70);
+            this.label2.Location = new System.Drawing.Point(9, 57);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 20);
+            this.label2.Size = new System.Drawing.Size(148, 17);
             this.label2.TabIndex = 39;
             this.label2.Text = "GrupoDescuento Id";
             // 
             // cbActivos
             // 
             this.cbActivos.AutoSize = true;
-            this.cbActivos.Location = new System.Drawing.Point(12, 249);
+            this.cbActivos.Location = new System.Drawing.Point(9, 202);
+            this.cbActivos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbActivos.Name = "cbActivos";
-            this.cbActivos.Size = new System.Drawing.Size(149, 20);
+            this.cbActivos.Size = new System.Drawing.Size(120, 17);
             this.cbActivos.TabIndex = 38;
             this.cbActivos.Text = "Mostrar solo activas";
             this.cbActivos.UseVisualStyleBackColor = true;
@@ -148,12 +158,13 @@
             this.dgDescuentos.AllowUserToAddRows = false;
             this.dgDescuentos.AllowUserToDeleteRows = false;
             this.dgDescuentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDescuentos.Location = new System.Drawing.Point(12, 281);
+            this.dgDescuentos.Location = new System.Drawing.Point(9, 228);
+            this.dgDescuentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgDescuentos.Name = "dgDescuentos";
             this.dgDescuentos.ReadOnly = true;
             this.dgDescuentos.RowHeadersWidth = 51;
             this.dgDescuentos.RowTemplate.Height = 24;
-            this.dgDescuentos.Size = new System.Drawing.Size(894, 283);
+            this.dgDescuentos.Size = new System.Drawing.Size(670, 230);
             this.dgDescuentos.TabIndex = 37;
             this.dgDescuentos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDescuentos_CellDoubleClick);
             // 
@@ -161,17 +172,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(238, 19);
+            this.label1.Location = new System.Drawing.Point(178, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 25);
+            this.label1.Size = new System.Drawing.Size(362, 20);
             this.label1.TabIndex = 36;
             this.label1.Text = "Todos los Grupos de Descuento de Clientes";
             // 
             // txtPorcentaje
             // 
-            this.txtPorcentaje.Location = new System.Drawing.Point(719, 68);
+            this.txtPorcentaje.Location = new System.Drawing.Point(539, 55);
+            this.txtPorcentaje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPorcentaje.Name = "txtPorcentaje";
-            this.txtPorcentaje.Size = new System.Drawing.Size(100, 22);
+            this.txtPorcentaje.Size = new System.Drawing.Size(76, 20);
             this.txtPorcentaje.TabIndex = 49;
             this.txtPorcentaje.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPorcentaje_KeyPress);
             // 
@@ -179,9 +192,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(605, 68);
+            this.label5.Location = new System.Drawing.Point(454, 55);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 20);
+            this.label5.Size = new System.Drawing.Size(86, 17);
             this.label5.TabIndex = 48;
             this.label5.Text = "Porcentaje";
             // 
@@ -189,9 +203,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(825, 70);
+            this.label6.Location = new System.Drawing.Point(619, 57);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 20);
+            this.label6.Size = new System.Drawing.Size(21, 17);
             this.label6.TabIndex = 50;
             this.label6.Text = "%";
             // 
@@ -201,9 +216,9 @@
             // 
             // PGrupoDescuentos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 578);
+            this.ClientSize = new System.Drawing.Size(688, 470);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPorcentaje);
             this.Controls.Add(this.label5);
@@ -219,6 +234,7 @@
             this.Controls.Add(this.cbActivos);
             this.Controls.Add(this.dgDescuentos);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PGrupoDescuentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PGrupoDescuentos";

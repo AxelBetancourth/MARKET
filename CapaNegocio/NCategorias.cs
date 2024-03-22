@@ -29,7 +29,7 @@ namespace CapaNegocio
         public List<CargarCombos> CargaCombo()
         {
             List<CargarCombos> Datos = new List<CargarCombos>();
-            var categorias = CategoriasActivas().Select(c => new
+            var categorias = TodasLasCategorias().Select(c => new
             {
                 c.Descripción,
                 c.CategoriaId,
