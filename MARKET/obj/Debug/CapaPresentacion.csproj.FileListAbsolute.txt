@@ -94,3 +94,4 @@ C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PCond
 C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PGrupoDescuentos.resources
 C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PUnidadMedidas.resources
 C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PProductos.resources
+C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.PProductos.resources

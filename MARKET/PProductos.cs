@@ -140,7 +140,7 @@ namespace MARKET
 
         private void checkBfiltroactivos_CheckedChanged_1(object sender, EventArgs e)
         {
-            dgProductos.DataSource = nProductos.ProductosActivos();
+            dgProductos.DataSource = nProductos.obtenerProductosActivosGrid();
             if (checkBfiltroactivos.Checked == false)
             {
                 CargarDatos();
