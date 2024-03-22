@@ -37,5 +37,25 @@ namespace CapaNegocio
         {
             return unidadMedidas.EliminarUnidades(unidadMedidaId);
         }
+
+        public List<CargarCombos> CargaCombo()
+        {
+            List<CargarCombos> Datos = new List<CargarCombos>();
+            var unidades = TodasLasUnidades().Select(c => new
+            {
+                c.Descripción,
+                c.UnidadMedidaId,
+            }).ToList();
+            foreach (var item in unidades)
+            {
+                Datos.Add(new CargarCombos()
+                {
+                    Valor = item.UnidadMedidaId,
+                    Descripcion = item.Descripción
+                });
+            }
+
+            return Datos;
+        }
     }
 }
