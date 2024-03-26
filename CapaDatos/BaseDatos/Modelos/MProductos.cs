@@ -13,7 +13,7 @@ namespace CapaDatos.BaseDatos.Modelos
         public int ProductoId { get; set; }
         [Required]
         public int Categoriaid { get; set; }
-        public MCategorias MCategotias { get; set; }
+        public MCategorias MCategorias { get; set; }
         public int UnidadMedidaId { get; set; }
         public MUnidadMedidas MUnidadMedidas { get; set; }
         [Required]

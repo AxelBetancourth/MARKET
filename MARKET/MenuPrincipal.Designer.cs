@@ -42,15 +42,14 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
             this.productosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(900, 35);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "Menu";
             // 
@@ -61,27 +60,27 @@
             this.condiciónDePagosToolStripMenuItem,
             this.condiciónDePagosToolStripMenuItem1});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // grupoDeDescuentosToolStripMenuItem
             // 
             this.grupoDeDescuentosToolStripMenuItem.Name = "grupoDeDescuentosToolStripMenuItem";
-            this.grupoDeDescuentosToolStripMenuItem.Size = new System.Drawing.Size(284, 34);
+            this.grupoDeDescuentosToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.grupoDeDescuentosToolStripMenuItem.Text = "Ver clientes";
+            this.grupoDeDescuentosToolStripMenuItem.Click += new System.EventHandler(this.grupoDeDescuentosToolStripMenuItem_Click);
             // 
             // condiciónDePagosToolStripMenuItem
             // 
             this.condiciónDePagosToolStripMenuItem.Name = "condiciónDePagosToolStripMenuItem";
-            this.condiciónDePagosToolStripMenuItem.Size = new System.Drawing.Size(284, 34);
+            this.condiciónDePagosToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.condiciónDePagosToolStripMenuItem.Text = "Grupo de descuentos";
             this.condiciónDePagosToolStripMenuItem.Click += new System.EventHandler(this.condiciónDePagosToolStripMenuItem_Click);
             // 
             // condiciónDePagosToolStripMenuItem1
             // 
             this.condiciónDePagosToolStripMenuItem1.Name = "condiciónDePagosToolStripMenuItem1";
-            this.condiciónDePagosToolStripMenuItem1.Size = new System.Drawing.Size(284, 34);
+            this.condiciónDePagosToolStripMenuItem1.Size = new System.Drawing.Size(232, 26);
             this.condiciónDePagosToolStripMenuItem1.Text = "Condición de pagos";
             this.condiciónDePagosToolStripMenuItem1.Click += new System.EventHandler(this.condiciónDePagosToolStripMenuItem1_Click);
             // 
@@ -92,38 +91,39 @@
             this.unidadDeMedidaToolStripMenuItem,
             this.unidadDeMedidaToolStripMenuItem1});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(109, 29);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.categoriaToolStripMenuItem.Text = "Ver productos";
             this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
             // unidadDeMedidaToolStripMenuItem
             // 
             this.unidadDeMedidaToolStripMenuItem.Name = "unidadDeMedidaToolStripMenuItem";
-            this.unidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.unidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.unidadDeMedidaToolStripMenuItem.Text = "Categoria";
             this.unidadDeMedidaToolStripMenuItem.Click += new System.EventHandler(this.unidadDeMedidaToolStripMenuItem_Click);
             // 
             // unidadDeMedidaToolStripMenuItem1
             // 
             this.unidadDeMedidaToolStripMenuItem1.Name = "unidadDeMedidaToolStripMenuItem1";
-            this.unidadDeMedidaToolStripMenuItem1.Size = new System.Drawing.Size(261, 34);
+            this.unidadDeMedidaToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
             this.unidadDeMedidaToolStripMenuItem1.Text = "Unidad de medida";
             this.unidadDeMedidaToolStripMenuItem1.Click += new System.EventHandler(this.unidadDeMedidaToolStripMenuItem1_Click);
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 563);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
