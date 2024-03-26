@@ -83,3 +83,4 @@ C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.csproj.
 C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.pdb
 C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablacliente.resources
+C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablacliente.resources

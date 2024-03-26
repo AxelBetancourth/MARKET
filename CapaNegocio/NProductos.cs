@@ -23,25 +23,6 @@ namespace CapaNegocio
         {
             return dproductos.TodosLosProductos();
         }
-        public List<CargarCombos> CargaCombo()
-        {
-            List<CargarCombos> Datos = new List<CargarCombos>();
-            var Productos = TodosProductos().Select(c => new
-            {
-                c.ProductoId,
-                c.Categoriaid,
-            }).ToList();
-            foreach (var item in Productos)
-            {
-                Datos.Add(new CargarCombos()
-                {
-                    Valor = item.ProductoId,
-                    Descripcion = item.Categoriaid.ToString()
-                });
-            }
-
-            return Datos;
-        }
         public int AgregarProducto(MProductos Productos)
         {
             return dproductos.Guardar(Productos);
@@ -60,7 +41,7 @@ namespace CapaNegocio
         {
             var productos = dproductos.TodosLosProductos().Select(c => new {
                 c.ProductoId,
-                CategoriaDescripcion = c.MCategotias.Descripción,
+                CategoriaDescripcion = c.MCategorias.Descripción,
                 UnidadMedidaDescripcion = c.MUnidadMedidas.Descripción, 
                 c.Estado,
                 c.PrecioCompra,
@@ -73,7 +54,7 @@ namespace CapaNegocio
         {
             var productos = dproductos.TodosLosProductos().Select(c => new {
                 c.ProductoId,
-                CategoriaDescripcion = c.MCategotias.Descripción,
+                CategoriaDescripcion = c.MCategorias.Descripción,
                 UnidadMedidaDescripcion = c.MUnidadMedidas.Descripción,
                 c.Estado,
                 c.PrecioCompra,

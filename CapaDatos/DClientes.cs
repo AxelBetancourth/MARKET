@@ -4,6 +4,7 @@ using CapaDatos.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,9 +29,11 @@ namespace CapaDatos
         public bool Estado { get; set; }
         public DateTime FechaCreacion { get; set; }
 
-        public List<MClientes> ClientesTodos()
+        public List<MClientes> TodosLosClientes()
         {
-            return _repository.Consulta().ToList();
+            return _repository.Consulta().Include(c=> c.MGrupoDescuentos)
+                                         .Include(c=> c.MCondicionPagos)
+                                         .ToList();
         }
 
         public int GuardarClientes(MClientes Cliente)

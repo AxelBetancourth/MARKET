@@ -19,7 +19,6 @@ namespace CapaDatos
             _repository = new Repository<MProductos>();
         }
 
-
         public int ProductoId { get; set; }
         public int Categoriaid { get; set; }
         public int UnidadMedidaId { get; set; }
@@ -55,7 +54,7 @@ namespace CapaDatos
 
         public List<MProductos> TodosLosProductos()
         {
-            return _repository.Consulta().Include(c => c.MCategotias)
+            return _repository.Consulta().Include(c => c.MCategorias)
                                          .Include(c => c.MUnidadMedidas)
                                          .ToList();
         }

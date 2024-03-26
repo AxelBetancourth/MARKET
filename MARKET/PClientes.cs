@@ -16,110 +16,128 @@ namespace MARKET
     public partial class PClientes : Form
     {
         private NClientes nclientes;
+        private NCondicionPagos nCondicionPagos;
+        private NGrupoDescuentos nGrupoDescuentos;
         public PClientes()
         {
             InitializeComponent();
             nclientes = new NClientes();
+            nCondicionPagos = new NCondicionPagos();
+            nGrupoDescuentos = new NGrupoDescuentos();
             CargarDatos();
+            CargarCombos();
         }
 
         void CargarDatos()
         {
-            dgClientes.DataSource = nclientes.ClientesTodos();
+            var datos = nclientes.obtenerGridClientes();
+            dgClientes.DataSource = datos;
         }
-
         void LimpiarDatos()
         {
             txtcodigo.Text = "";
             txtnombres.Text = "";
             txtapellidos.Text = "";
-            txtdescuentoid.Text = "";
-            txtpagoid.Text = "";
+            cbxdescuentos.SelectedValue = "";
+            cbxPagos.SelectedValue = "";
             cbEstado.Checked = false;
-            errorProvider1.Clear();
+            ErrorClientes.Clear();
         }
 
-        private void cbActivos_CheckedChanged(object sender, EventArgs e)
+        private void CargarCombos()
         {
-            dgClientes.DataSource = nclientes.ClientesActivos();
-            if (cbActivos.Checked == false)
+            cbxdescuentos.DataSource = nGrupoDescuentos.CargaCombo();
+            cbxdescuentos.ValueMember = "Valor";
+            cbxdescuentos.DisplayMember = "Descripcion";
+
+            cbxPagos.DataSource = nCondicionPagos.CargaCombo();
+            cbxPagos.ValueMember = "Valor";
+            cbxPagos.DisplayMember = "Descripcion";
+        }
+
+        private bool ValidarDatos()
+        {
+            var FormularioValido = true;
+            if (string.IsNullOrEmpty(txtcodigo.Text.ToString()) || string.IsNullOrWhiteSpace(txtcodigo.Text.ToString()))
             {
+                FormularioValido = false;
+                ErrorClientes.SetError(txtcodigo, "Debe ingrear un Codigo");
+                return FormularioValido;
+            }
+            if (string.IsNullOrEmpty(txtnombres.Text.ToString()) || string.IsNullOrWhiteSpace(txtnombres.Text.ToString()))
+            {
+                FormularioValido = false;
+                ErrorClientes.SetError(txtnombres, "Debe de ingresar un nombre");
+                return FormularioValido;
+            }
+            if (string.IsNullOrEmpty(txtapellidos.Text.ToString()) || string.IsNullOrWhiteSpace(txtapellidos.Text.ToString()))
+            {
+                FormularioValido = false;
+                ErrorClientes.SetError(txtapellidos, "Debe ingresar un apellido");
+                return FormularioValido;
+            }
+            if (string.IsNullOrEmpty(cbxdescuentos.Text.ToString()) || string.IsNullOrWhiteSpace(cbxdescuentos.Text.ToString()))
+            {
+                FormularioValido = false;
+                ErrorClientes.SetError(cbxdescuentos, "Debe ingresar un grupo de descuento");
+                return FormularioValido;
+            }
+            if (string.IsNullOrEmpty(cbxPagos.Text.ToString()) || string.IsNullOrWhiteSpace(cbxPagos.Text.ToString()))
+            {
+                FormularioValido = false;
+                ErrorClientes.SetError(cbxPagos, "Debe ingresar una condición de pago");
+                return FormularioValido;
+            }
+            return FormularioValido;
+        }
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (ValidarDatos())
+            {
+                MClientes Clientes = new MClientes()
+
+                {
+                    Codigo = txtcodigo.Text,
+                    Nombres = txtnombres.Text,
+                    Apellidos = txtapellidos.Text,
+                    GrupoDescuentoId = int.Parse(cbxdescuentos.SelectedValue.ToString()),
+                    CodigoPagoId = int.Parse(cbxPagos.SelectedValue.ToString()),
+                    Estado = cbEstado.Checked
+                };
+                if (!string.IsNullOrEmpty(txtClienteId.Text) || !string.IsNullOrWhiteSpace(txtClienteId.Text))
+                {
+                    if (int.TryParse(txtClienteId.Text.ToString(), out int clienteId) && clienteId != 0)
+                    {
+                        Clientes.ClienteID = clienteId;
+                    }
+                }
+                nclientes.GuardarClientes(Clientes);
+                LimpiarDatos();
                 CargarDatos();
             }
+
         }
-        private void btnguardar_Click(object sender, EventArgs e)
+
+        private void PClientes_Load(object sender, EventArgs e)
         {
-            var agregar = false;
-            var ClienteID = txtcodigo.Text.ToString();
-            var codigo = txtcodigo.Text.ToString();
-            var Nombres = txtnombres.Text.ToString();
-            var Apellidos = txtapellidos.Text.ToString();
-            var GrupoDescuentoId = txtdescuentoid.Text.ToString();
-            var CodigoPagoId = txtpagoid.Text.ToString();
-            var Estado = cbEstado.Text.ToString();
 
-            if (string.IsNullOrEmpty(ClienteID) || string.IsNullOrWhiteSpace(ClienteID))
-            {
-                agregar = true;
-            }
-            if (string.IsNullOrEmpty(codigo) || string.IsNullOrWhiteSpace(codigo))
-            {
-                errorProvider1.SetError(txtcodigo, "Debe ingresar el codigo");
-                return;
-            }
-            if (string.IsNullOrEmpty(Nombres) || string.IsNullOrWhiteSpace(Nombres))
-            {
-                errorProvider1.SetError(txtnombres, "Debe ingresar los Nombres");
-                return;
-            }
-            if (string.IsNullOrEmpty(Apellidos) || string.IsNullOrWhiteSpace(Apellidos))
-            {
-                errorProvider1.SetError(txtapellidos, "Debe ingresar los apellidos");
-                return;
-            }
-            if (string.IsNullOrEmpty(GrupoDescuentoId) || string.IsNullOrWhiteSpace(GrupoDescuentoId))
-            {
-                errorProvider1.SetError(txtdescuentoid, "Debe ingresar el grupo de descuento");
-                return;
-            }
-            if (string.IsNullOrEmpty(CodigoPagoId) || string.IsNullOrWhiteSpace(CodigoPagoId))
-            {
-                errorProvider1.SetError(txtpagoid, "Debe ingresar el Id de pago");
-                return;
-            }
-            if (agregar)
-            {
-                nclientes.GuardarClientes(new MClientes()
-                {
+        }
 
-               
-                 Codigo = codigo,
-                 Nombres = Nombres,
-                 Apellidos = Apellidos,
-                 GrupoDescuentoId = int.Parse(GrupoDescuentoId),
-                 CodigoPagoId = int.Parse(CodigoPagoId),
-                 Estado = cbEstado.Checked
-
-
-            });
-            }
-            else
+        private void dgClientes_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dgClientes.Rows.Count)
             {
-                nclientes.GuardarClientes(new MClientes()
-                {
-
-                    ClienteID = int.Parse(ClienteID),
-                    Codigo = codigo,
-                    Nombres = Nombres,
-                    Apellidos = Apellidos,
-                    GrupoDescuentoId = int.Parse(GrupoDescuentoId),
-                    CodigoPagoId = int.Parse(CodigoPagoId),
-                    Estado = cbEstado.Checked
-                });
+                DataGridViewRow row = dgClientes.Rows[e.RowIndex];
+                txtClienteId.Text = row.Cells["ClienteID"].Value.ToString();
+                txtcodigo.Text = row.Cells["Codigo"].Value.ToString();
+                txtnombres.Text = row.Cells["Nombres"].Value.ToString();
+                txtapellidos.Text = row.Cells["Apellidos"].Value.ToString();
+                var descuentos = dgClientes.CurrentRow.Cells["DescuentosCodigo"].Value.ToString();
+                cbxdescuentos.SelectedIndex = cbxdescuentos.FindStringExact(descuentos);
+                var pagos = dgClientes.CurrentRow.Cells["PagoCodigo"].Value.ToString();
+                cbxPagos.SelectedIndex = cbxPagos.FindStringExact(pagos);
+                cbEstado.Checked = bool.Parse(dgClientes.CurrentRow.Cells["Estado"].Value.ToString());
             }
-
-            CargarDatos();
-            LimpiarDatos();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -134,22 +152,14 @@ namespace MARKET
             LimpiarDatos();
         }
 
-        private void dgClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void cbActivos_CheckedChanged(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dgClientes.Rows.Count)
+            dgClientes.DataSource = nclientes.obtenerClientesActivosGrid();
+            if (cbActivos.Checked == false)
             {
-                DataGridViewRow row = dgClientes.Rows[e.RowIndex];
-                txtClienteId.Text = row.Cells["ClienteID"].Value.ToString();
-                txtcodigo.Text = row.Cells["Codigo"].Value.ToString();
-                txtnombres.Text = row.Cells["Nombres"].Value.ToString();
-                txtapellidos.Text = row.Cells["Apellidos"].Value.ToString();
-                txtdescuentoid.Text = row.Cells["GrupoDescuentoId"].Value.ToString();
-                txtpagoid.Text = row.Cells["CodigoPagoId"].Value.ToString();
-                cbEstado.Checked = bool.Parse(dgClientes.CurrentRow.Cells["Estado"].Value.ToString());
-                
+                CargarDatos();
             }
         }
-
     }
 }
 
