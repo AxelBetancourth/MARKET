@@ -86,29 +86,39 @@ C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PCond
 C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.PCondicionPagos.resources
 C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.PUnidadMedidas.resources
 C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.PGrupoDescuentos.resources
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\MARKET.exe.config
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\MARKET.exe
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\MARKET.pdb
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\CapaDatos.dll
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\CapaNegocio.dll
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\EntityFramework.dll
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\CapaDatos.pdb
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\CapaDatos.dll.config
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\CapaNegocio.pdb
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\CapaNegocio.dll.config
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\EntityFramework.xml
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.MenuPrincipal.resources
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PCategorias.resources
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PClientes.resources
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PCondicionPagos.resources
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PGrupoDescuentos.resources
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.Properties.Resources.resources
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PUnidadMedidas.resources
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\CapaPresentacion.csproj.CopyComplete
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.exe
-C:\Users\Braya\source\repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.pdb
+C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PGrupoDescuentos.resources
+C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PUnidadMedidas.resources
+C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.MenuPrincipal.resources
+C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PCategorias.resources
+C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PCondicionPagos.resources
+C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PGrupoDescuentos.resources
+C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PUnidadMedidas.resources
+C:\Users\claud\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PProductos.resources
+C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.PProductos.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\MARKET.exe.config
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\MARKET.exe
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\MARKET.pdb
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\CapaDatos.dll
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\CapaNegocio.dll
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\EntityFramework.dll
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\CapaDatos.pdb
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\CapaDatos.dll.config
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\CapaNegocio.pdb
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\CapaNegocio.dll.config
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\EntityFramework.xml
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.MenuPrincipal.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.PCategorias.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.PCondicionPagos.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.PGrupoDescuentos.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.PProductos.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.Properties.Resources.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.PUnidadMedidas.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.exe
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.pdb
+C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.PClientes.resources
