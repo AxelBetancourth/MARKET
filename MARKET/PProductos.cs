@@ -109,7 +109,7 @@ namespace MARKET
 
                 MProductos Producto = new MProductos()
                 {
-                    Categoriaid = int.Parse(cbxcategoria.SelectedValue.ToString()),
+                    CategoriaId = int.Parse(cbxcategoria.SelectedValue.ToString()),
                     UnidadMedidaId = int.Parse(cbxunidadmedida.SelectedValue.ToString()),
                     Estado = checkbEstado.Checked,
                     PrecioCompra = precioCompra,

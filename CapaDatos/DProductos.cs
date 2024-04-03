@@ -11,12 +11,11 @@ namespace CapaDatos
 {
     public class DProductos
     {
-
-        Repository<MProductos> _repository;
+        UnitOfWork _unitOfWork;
 
         public DProductos()
         {
-            _repository = new Repository<MProductos>();
+            _unitOfWork = new UnitOfWork();
         }
 
         public int ProductoId { get; set; }
@@ -26,46 +25,44 @@ namespace CapaDatos
         public bool Estado { get; set; }
         public decimal PrecioCompra { get; set; }
 
+        public List<MProductos> TodosLosProductos()
+        {
+            return _unitOfWork.Repository<MProductos>().Consulta().Include(c => c.MCategorias)
+                                         .Include(c => c.MUnidadMedidas)
+                                         .ToList();
+        }
         public int Guardar(MProductos producto)
         {
             if (producto.ProductoId == 0)
             {
-                producto.FechaCreacion = DateTime.Now;
-                _repository.Agregar(producto);
-                return 1;
+                _unitOfWork.Repository<MProductos>().Agregar(producto);
+                return _unitOfWork.Guardar();
             }
             else
             {
-                var productoInDb = _repository.Consulta().FirstOrDefault(c => c.ProductoId == producto.ProductoId);
+                var productoInDb = _unitOfWork.Repository<MProductos>().Consulta().FirstOrDefault(c => c.ProductoId == producto.ProductoId);
                 if (productoInDb != null)
                 {
-                    productoInDb.Categoriaid = producto.Categoriaid;
+                    productoInDb.CategoriaId = producto.CategoriaId;
                     productoInDb.UnidadMedidaId = producto.UnidadMedidaId;
                     producto.FechaCreacion = productoInDb.FechaCreacion;
                     productoInDb.Estado = producto.Estado;
                     productoInDb.PrecioCompra = producto.PrecioCompra;
-                    _repository.Editar(productoInDb);
-                    return 1;
+                    _unitOfWork.Repository<MProductos>().Editar(productoInDb);
+                    return _unitOfWork.Guardar();
                 }
 
                 return 0;
             }
         }
 
-        public List<MProductos> TodosLosProductos()
-        {
-            return _repository.Consulta().Include(c => c.MCategorias)
-                                         .Include(c => c.MUnidadMedidas)
-                                         .ToList();
-        }
-
         public int Eliminar(int ProductoId)
         {
-            var productoInDb = _repository.Consulta().FirstOrDefault(c => c.ProductoId == ProductoId);
+            var productoInDb = _unitOfWork.Repository<MProductos>().Consulta().FirstOrDefault(c => c.ProductoId == ProductoId);
             if (productoInDb != null)
             {
-                _repository.Eliminar(productoInDb);
-                return 1;
+                _unitOfWork.Repository<MProductos>().Eliminar(productoInDb);
+                return _unitOfWork.Guardar();
             }
             return 0;
         }

@@ -11,11 +11,11 @@ namespace CapaDatos
 {
     public class DUnidadMedidas
     {
-        Repository<MUnidadMedidas> _repository;
+        UnitOfWork _unitOfWork;
 
         public DUnidadMedidas()
         {
-            _repository = new Repository<MUnidadMedidas>();
+            _unitOfWork = new UnitOfWork();
         }
 
         public int UnidadMedidaId { get; set; }
@@ -26,28 +26,27 @@ namespace CapaDatos
 
         public List<MUnidadMedidas> UnidadesTodas()
         {
-            return _repository.Consulta().ToList();
+            return _unitOfWork.Repository<MUnidadMedidas>().Consulta().ToList();
         }
 
         public int GuardarUnidades(MUnidadMedidas unidadMedidas)
         {
             if (unidadMedidas.UnidadMedidaId == 0)
             {
-                unidadMedidas.FechaCreacion = DateTime.Now;
-                _repository.Agregar(unidadMedidas);
-                return 1;
+                _unitOfWork.Repository<MUnidadMedidas>().Agregar(unidadMedidas);
+                return _unitOfWork.Guardar();
             }
             else
             {
-                var UnidadMedidasInDb = _repository.Consulta().FirstOrDefault(c => c.UnidadMedidaId == unidadMedidas.UnidadMedidaId);
+                var UnidadMedidasInDb = _unitOfWork.Repository<MUnidadMedidas>().Consulta().FirstOrDefault(c => c.UnidadMedidaId == unidadMedidas.UnidadMedidaId);
 
                 if (UnidadMedidasInDb != null)
                 {
                     UnidadMedidasInDb.Codigo = unidadMedidas.Codigo;
                     UnidadMedidasInDb.Descripción = unidadMedidas.Descripción;
                     UnidadMedidasInDb.Estado = unidadMedidas.Estado;
-                    _repository.Editar(UnidadMedidasInDb);
-                    return 1;
+                    _unitOfWork.Repository<MUnidadMedidas>().Editar(UnidadMedidasInDb);
+                    return _unitOfWork.Guardar();
                 }
                 return 0;
             }
@@ -55,11 +54,11 @@ namespace CapaDatos
         }
         public int EliminarUnidades(int unidadMedidaId)
         {
-            var UnidadMedidasInDb = _repository.Consulta().FirstOrDefault(c => c.UnidadMedidaId == unidadMedidaId);
+            var UnidadMedidasInDb = _unitOfWork.Repository<MUnidadMedidas>().Consulta().FirstOrDefault(c => c.UnidadMedidaId == unidadMedidaId);
             if (UnidadMedidasInDb != null)
             {
-                _repository.Eliminar(UnidadMedidasInDb);
-                return 1;
+                _unitOfWork.Repository<MUnidadMedidas>().Eliminar(UnidadMedidasInDb);
+                return _unitOfWork.Guardar();
             }
             return 0;
         }

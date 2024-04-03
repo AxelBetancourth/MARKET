@@ -43,6 +43,7 @@ namespace CapaNegocio
         }
         public int GuardarClientes(MClientes clientes)
         {
+            clientes.FechaCreacion = DateTime.Now;
             return dClientes.GuardarClientes(clientes);
         }
         public int EditarClientes(MClientes clientes)

@@ -46,6 +46,7 @@ namespace CapaNegocio
         }
         public int AgregarDescuentos(MGrupoDescuentos descuentos)
         {
+            descuentos.FechaCreacion = DateTime.Now;
             return dGrupoDescuentos.GuardarDescuentos(descuentos);
         }
         public int EditarDescuentos(MGrupoDescuentos descuentos)

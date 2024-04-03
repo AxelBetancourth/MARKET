@@ -47,6 +47,7 @@ namespace CapaNegocio
         }
         public int AgregarCategoria(MCategorias categorias)
         {
+            categorias.FechaCreacion = DateTime.Now;
             return dCategorias.GuardarCategoria(categorias);
         }
         public int EditarCategoria(MCategorias categorias)

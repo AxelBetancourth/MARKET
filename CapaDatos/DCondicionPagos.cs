@@ -11,10 +11,10 @@ namespace CapaDatos
 {
     public class DCondicionPagos
     {
-        Repository<MCondicionPagos> _repository;
+        UnitOfWork _unitOfWork;
         public DCondicionPagos()
         {
-            _repository = new Repository<MCondicionPagos>();
+            _unitOfWork = new UnitOfWork();
         }
 
         public int CodigoPagoId { get; set; }
@@ -26,28 +26,28 @@ namespace CapaDatos
 
         public List<MCondicionPagos> CondicionesTodas()
         {
-            return _repository.Consulta().ToList();
+            return _unitOfWork.Repository<MCondicionPagos>().Consulta().ToList();
         }
 
         public int GuardarUnidades(MCondicionPagos condicionPagos)
         {
             if (condicionPagos.CodigoPagoId == 0)
             {
-                condicionPagos.FechaCreacion = DateTime.Now;
-                _repository.Agregar(condicionPagos);
-                return 1;
+                _unitOfWork.Repository<MCondicionPagos>().Agregar(condicionPagos);
+                return _unitOfWork.Guardar();
             }
             else
             {
-                var CondicionPagosInDb = _repository.Consulta().FirstOrDefault(c => c.CodigoPagoId == condicionPagos.CodigoPagoId);
+                var CondicionPagosInDb = _unitOfWork.Repository<MCondicionPagos>().Consulta().FirstOrDefault(c => c.CodigoPagoId == condicionPagos.CodigoPagoId);
 
                 if (CondicionPagosInDb != null)
                 {
                     CondicionPagosInDb.Codigo = condicionPagos.Codigo;
                     CondicionPagosInDb.Descripción = condicionPagos.Descripción;
                     CondicionPagosInDb.Estado = condicionPagos.Estado;
-                    _repository.Editar(CondicionPagosInDb);
-                    return 1;
+                    CondicionPagosInDb.Dias = condicionPagos.Dias;
+                    _unitOfWork.Repository<MCondicionPagos>().Editar(CondicionPagosInDb);
+                    return _unitOfWork.Guardar();
                 }
                 return 0;
             }
@@ -55,11 +55,11 @@ namespace CapaDatos
         }
         public int EliminarCondiciones(int codigoPagoId)
         {
-            var CondicionPagosInDb = _repository.Consulta().FirstOrDefault(c => c.CodigoPagoId == codigoPagoId);
+            var CondicionPagosInDb = _unitOfWork.Repository<MCondicionPagos>().Consulta().FirstOrDefault(c => c.CodigoPagoId == codigoPagoId);
             if (CondicionPagosInDb != null)
             {
-                _repository.Eliminar(CondicionPagosInDb);
-                return 1;
+                _unitOfWork.Repository<MCondicionPagos>().Eliminar(CondicionPagosInDb);
+                return _unitOfWork.Guardar();
             }
             return 0;
         }
