@@ -11,13 +11,11 @@ namespace CapaDatos
 {
     public class DGrupoDescuentos
     {
-        Repository<MGrupoDescuentos> _repository;
-
+        UnitOfWork _unitOfWork;
         public DGrupoDescuentos()
         {
-            _repository = new Repository<MGrupoDescuentos>();
+            _unitOfWork = new UnitOfWork();
         }
-
         public int GrupoDescuentoId { get; set; }
         public string Codigo { get; set; }
         public string Descripción { get; set; }
@@ -27,20 +25,19 @@ namespace CapaDatos
 
         public List<MGrupoDescuentos> GDescuentosTodas()
         {
-            return _repository.Consulta().ToList();
+            return _unitOfWork.Repository<MGrupoDescuentos>().Consulta().ToList();
         }
 
         public int GuardarDescuentos(MGrupoDescuentos grupoDescuentos)
         {
             if (grupoDescuentos.GrupoDescuentoId == 0)
             {
-                grupoDescuentos.FechaCreacion = DateTime.Now;
-                _repository.Agregar(grupoDescuentos);
-                return 1;
+                _unitOfWork.Repository<MGrupoDescuentos>().Agregar(grupoDescuentos);
+                return _unitOfWork.Guardar();
             }
             else
             {
-                var GrupoDescuentosInDb = _repository.Consulta().FirstOrDefault(c => c.GrupoDescuentoId == grupoDescuentos.GrupoDescuentoId);
+                var GrupoDescuentosInDb = _unitOfWork.Repository<MGrupoDescuentos>().Consulta().FirstOrDefault(c => c.GrupoDescuentoId == grupoDescuentos.GrupoDescuentoId);
 
                 if (GrupoDescuentosInDb != null)
                 {
@@ -48,8 +45,8 @@ namespace CapaDatos
                     GrupoDescuentosInDb.Descripción = grupoDescuentos.Descripción;
                     GrupoDescuentosInDb.Estado = grupoDescuentos.Estado;
                     GrupoDescuentosInDb.Porcentaje = grupoDescuentos.Porcentaje;
-                    _repository.Editar(GrupoDescuentosInDb);
-                    return 1;
+                    _unitOfWork.Repository<MGrupoDescuentos>().Editar(GrupoDescuentosInDb);
+                    return _unitOfWork.Guardar();
                 }
                 return 0;
             }
@@ -57,11 +54,11 @@ namespace CapaDatos
         }
         public int EliminarDescuentos(int grupoDescuentosId)
         {
-            var GrupoDescuentosInDb = _repository.Consulta().FirstOrDefault(c => c.GrupoDescuentoId == grupoDescuentosId);
+            var GrupoDescuentosInDb = _unitOfWork.Repository<MGrupoDescuentos>().Consulta().FirstOrDefault(c => c.GrupoDescuentoId == grupoDescuentosId);
             if (GrupoDescuentosInDb != null)
             {
-                _repository.Eliminar(GrupoDescuentosInDb);
-                return 1;
+                _unitOfWork.Repository<MGrupoDescuentos>().Eliminar(GrupoDescuentosInDb);
+                return _unitOfWork.Guardar();
             }
             return 0;
         }

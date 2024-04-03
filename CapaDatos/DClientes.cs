@@ -13,13 +13,13 @@ namespace CapaDatos
 {
     public class DClientes
     {
-        Repository<MClientes> _repository;
+        UnitOfWork _unitOfWork;
 
         public DClientes()
         {
-            _repository = new Repository<MClientes>();
+            _unitOfWork = new UnitOfWork();
         }
-        [Key]
+
         public int ClienteID { get; set; }
         public string Codigo { get; set; }
         public string Nombres { get; set; }
@@ -31,7 +31,7 @@ namespace CapaDatos
 
         public List<MClientes> TodosLosClientes()
         {
-            return _repository.Consulta().Include(c=> c.MGrupoDescuentos)
+            return _unitOfWork.Repository<MClientes>().Consulta().Include(c=> c.MGrupoDescuentos)
                                          .Include(c=> c.MCondicionPagos)
                                          .ToList();
         }
@@ -40,13 +40,12 @@ namespace CapaDatos
         {
             if (Cliente.ClienteID == 0)
             {
-                Cliente.FechaCreacion = DateTime.Now;
-                _repository.Agregar(Cliente);
-                return 1;
+                _unitOfWork.Repository<MClientes>().Agregar(Cliente);
+                return _unitOfWork.Guardar();
             }
             else
             {
-                var ClienteInDb = _repository.Consulta().FirstOrDefault(c => c.ClienteID == Cliente.ClienteID);
+                var ClienteInDb = _unitOfWork.Repository<MClientes>().Consulta().FirstOrDefault(c => c.ClienteID == Cliente.ClienteID);
 
                 if (ClienteInDb != null)
                 {
@@ -56,8 +55,8 @@ namespace CapaDatos
                     ClienteInDb.GrupoDescuentoId = Cliente.GrupoDescuentoId;
                     ClienteInDb.CodigoPagoId = Cliente.CodigoPagoId;
                     ClienteInDb.Estado = Cliente.Estado;
-                    _repository.Editar(ClienteInDb);
-                    return 1;
+                    _unitOfWork.Repository<MClientes>().Editar(ClienteInDb);
+                    return _unitOfWork.Guardar();
                 }
                 return 0;
             }
@@ -66,11 +65,11 @@ namespace CapaDatos
 
         public int EliminarCliente(int ClienteID)
         {
-            var ClienteInDb = _repository.Consulta().FirstOrDefault(c => c.ClienteID == ClienteID);
+            var ClienteInDb = _unitOfWork.Repository<MClientes>().Consulta().FirstOrDefault(c => c.ClienteID == ClienteID);
             if (ClienteInDb != null)
             {
-                _repository.Eliminar(ClienteInDb);
-                return 1;
+                _unitOfWork.Repository<MClientes>().Eliminar(ClienteInDb);
+                return _unitOfWork.Guardar();
             }
             return 0;
         }

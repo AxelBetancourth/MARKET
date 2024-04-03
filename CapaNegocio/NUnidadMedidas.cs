@@ -27,6 +27,7 @@ namespace CapaNegocio
         }
         public int AgregarUnidades(MUnidadMedidas unidades)
         {
+            unidades.FechaCreacion = DateTime.Now;
             return unidadMedidas.GuardarUnidades(unidades);
         }
         public int EditarUnidades(MUnidadMedidas unidades)

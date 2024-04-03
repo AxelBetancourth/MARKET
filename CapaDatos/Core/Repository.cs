@@ -10,7 +10,7 @@ namespace CapaDatos.Core
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly MarketContext dbcontext;
+        public MarketContext dbcontext;
 
         public Repository()
         {
@@ -19,7 +19,6 @@ namespace CapaDatos.Core
         public void Agregar(T entidad)
         {
             dbcontext.Set<T>().Add(entidad);
-            dbcontext.SaveChanges();
         }
         public IQueryable<T> Consulta()
         {
@@ -29,12 +28,10 @@ namespace CapaDatos.Core
         {
 
             dbcontext.Set<T>();
-            dbcontext.SaveChanges();
         }
         public void Eliminar(T entidad)
         {
             dbcontext.Set<T>().Remove(entidad);
-            dbcontext.SaveChanges();
         }
     }
 }

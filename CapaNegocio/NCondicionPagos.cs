@@ -47,6 +47,7 @@ namespace CapaNegocio
         }
         public int AgregarCondiciones(MCondicionPagos condiciones)
         {
+            condiciones.FechaCreacion = DateTime.Now;
             return dCondicionPagos.GuardarUnidades(condiciones);
         }
         public int EditarCondiciones(MCondicionPagos condiciones)

@@ -25,6 +25,7 @@ namespace CapaNegocio
         }
         public int AgregarProducto(MProductos Productos)
         {
+            Productos.FechaCreacion = DateTime.Now;
             return dproductos.Guardar(Productos);
         }
         public int EditarProducto(MProductos Productos)
