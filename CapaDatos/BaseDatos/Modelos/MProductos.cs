@@ -11,7 +11,6 @@ namespace CapaDatos.BaseDatos.Modelos
     {
         [Key]
         public int ProductoId { get; set; }
-        [Required]
         public int CategoriaId { get; set; }
         public MCategorias MCategorias { get; set; }
         public int UnidadMedidaId { get; set; }
