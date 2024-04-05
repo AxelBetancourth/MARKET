@@ -92,3 +92,5 @@ C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\Ca
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablacliente.resources
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.csproj.GenerateResource.cache
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.addmigrationChangeReglasBaseDatosPermitirDeleteCascada.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.addmigrationChangeReglasBaseDatosPermitirDeleteCascada.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaPedidos.resources
