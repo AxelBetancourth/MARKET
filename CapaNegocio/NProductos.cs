@@ -23,31 +23,9 @@ namespace CapaNegocio
         {
             return dproductos.TodosLosProductos();
         }
-        public List<MProductos> ProductosActivos()
-        {
-            return dproductos.TodosLosProductos().Where(c => c.Estado == true).ToList();
-        }
-        public List<CargarCombos> CargaCombo()
-        {
-            List<CargarCombos> Datos = new List<CargarCombos>();
-            var Productos = ProductosActivos().Select(c => new
-            {
-                c.ProductoId,
-                c.Categoriaid,
-            }).ToList();
-            foreach (var item in Productos)
-            {
-                Datos.Add(new CargarCombos()
-                {
-                    Valor = item.ProductoId,
-                    Descripcion = item.Categoriaid.ToString()
-                });
-            }
-
-            return Datos;
-        }
         public int AgregarProducto(MProductos Productos)
         {
+            Productos.FechaCreacion = DateTime.Now;
             return dproductos.Guardar(Productos);
         }
         public int EditarProducto(MProductos Productos)
@@ -64,13 +42,26 @@ namespace CapaNegocio
         {
             var productos = dproductos.TodosLosProductos().Select(c => new {
                 c.ProductoId,
-                CategoriaDescripcion = c.MCategotias.Descripción,
+                CategoriaDescripcion = c.MCategorias.Descripción,
                 UnidadMedidaDescripcion = c.MUnidadMedidas.Descripción, 
                 c.Estado,
                 c.PrecioCompra,
                 c.FechaCreacion
             });
             return productos.Cast<object>().ToList();
+        }
+
+        public List<object> obtenerProductosActivosGrid()
+        {
+            var productos = dproductos.TodosLosProductos().Select(c => new {
+                c.ProductoId,
+                CategoriaDescripcion = c.MCategorias.Descripción,
+                UnidadMedidaDescripcion = c.MUnidadMedidas.Descripción,
+                c.Estado,
+                c.PrecioCompra,
+                c.FechaCreacion
+            });
+            return productos.Where(c => c.Estado == true).Cast<object>().ToList();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using CapaDatos;
 using CapaDatos.BaseDatos.Modelos;
+using CapaNegocio.Comun;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +26,28 @@ namespace CapaNegocio
         {
             return dCondicionPagos.CondicionesTodas().Where(c => c.Estado == true).ToList();
         }
+        public List<CargarCombos> CargaCombo()
+        {
+            List<CargarCombos> Datos = new List<CargarCombos>();
+            var condiciones = TodasLasCondiciones().Select(c => new
+            {
+                c.Codigo,
+                c.CodigoPagoId,
+            }).ToList();
+            foreach (var item in condiciones)
+            {
+                Datos.Add(new CargarCombos()
+                {
+                    Valor = item.CodigoPagoId,
+                    Descripcion = item.Codigo
+                });
+            }
+
+            return Datos;
+        }
         public int AgregarCondiciones(MCondicionPagos condiciones)
         {
+            condiciones.FechaCreacion = DateTime.Now;
             return dCondicionPagos.GuardarUnidades(condiciones);
         }
         public int EditarCondiciones(MCondicionPagos condiciones)

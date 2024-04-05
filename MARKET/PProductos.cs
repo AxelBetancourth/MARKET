@@ -33,8 +33,8 @@ namespace MARKET
         void LimpiarDatos()
         {
             txtProductoid.Text = "";
-            cbxcategoria.Text = "";
-            cbxunidadmedida.Text = "";
+            cbxcategoria.SelectedValue = "";
+            cbxunidadmedida.SelectedValue = "";
             checkbEstado.Checked = false;
             txtProductoid.Text = "";
             errorProvider1.Clear();
@@ -89,8 +89,8 @@ namespace MARKET
         private void LimpiarCampos()
         {
             txtProductoid.Text = "";
-            cbxcategoria.Text = "";
-            cbxunidadmedida.Text = "";
+            cbxcategoria.SelectedValue = "";
+            cbxunidadmedida.SelectedValue = "";
             txtpreciocompra.Text = "";
             checkbEstado.Checked = false;
             errorProvider1.Clear();
@@ -109,7 +109,7 @@ namespace MARKET
 
                 MProductos Producto = new MProductos()
                 {
-                    Categoriaid = int.Parse(cbxcategoria.SelectedValue.ToString()),
+                    CategoriaId = int.Parse(cbxcategoria.SelectedValue.ToString()),
                     UnidadMedidaId = int.Parse(cbxunidadmedida.SelectedValue.ToString()),
                     Estado = checkbEstado.Checked,
                     PrecioCompra = precioCompra,
@@ -140,7 +140,7 @@ namespace MARKET
 
         private void checkBfiltroactivos_CheckedChanged_1(object sender, EventArgs e)
         {
-            dgProductos.DataSource = nProductos.ProductosActivos();
+            dgProductos.DataSource = nProductos.obtenerProductosActivosGrid();
             if (checkBfiltroactivos.Checked == false)
             {
                 CargarDatos();

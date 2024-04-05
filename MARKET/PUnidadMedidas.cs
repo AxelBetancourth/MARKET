@@ -115,6 +115,7 @@ namespace MARKET
                 txtUnidadesId.Text = row.Cells["UnidadMedidaId"].Value.ToString();
                 txtCodigo.Text = row.Cells["Codigo"].Value.ToString();
                 txtDescripcion.Text = row.Cells["Descripción"].Value.ToString();
+                cbEstado.Checked = bool.Parse(dgUnidades.CurrentRow.Cells["Estado"].Value.ToString());
             }
         }
     }

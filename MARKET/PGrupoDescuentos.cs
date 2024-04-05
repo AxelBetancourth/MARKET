@@ -132,6 +132,7 @@ namespace MARKET
                 txtDescuentosId.Text = row.Cells["GrupoDescuentoId"].Value.ToString();
                 txtCodigo.Text = row.Cells["Codigo"].Value.ToString();
                 txtDescripcion.Text = row.Cells["Descripción"].Value.ToString();
+                cbEstado.Checked = bool.Parse(dgDescuentos.CurrentRow.Cells["Estado"].Value.ToString());
                 txtPorcentaje.Text = row.Cells["Porcentaje"].Value.ToString();
             }
         }
