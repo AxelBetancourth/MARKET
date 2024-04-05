@@ -135,5 +135,6 @@ namespace MARKET
                 txtPorcentaje.Text = row.Cells["Porcentaje"].Value.ToString();
             }
         }
+
     }
 }

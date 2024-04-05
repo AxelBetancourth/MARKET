@@ -27,6 +27,7 @@ namespace CapaDatos.Core
         }
         public void Editar(T entidad)
         {
+
             dbcontext.Set<T>();
             dbcontext.SaveChanges();
         }
