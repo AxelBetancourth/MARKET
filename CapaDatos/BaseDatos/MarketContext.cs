@@ -9,15 +9,17 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.BaseDatos
 {
-    public class MarketContext:DbContext
+    public class MarketContext : DbContext
     {
-        public MarketContext():base("Market")
+        public MarketContext() : base("Market")
         {
-            
+
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
@@ -29,6 +31,6 @@ namespace CapaDatos.BaseDatos
         public DbSet<MClientes> MClientes { get; set; }
         public DbSet<MPedidos> MPedidos { get; set; }
         public DbSet<MPedidoDetalles> MPedidoDetalles { get; set; }
-
+        public DbSet<MFacturas> MFacturas { get; set; }
     }
 }
