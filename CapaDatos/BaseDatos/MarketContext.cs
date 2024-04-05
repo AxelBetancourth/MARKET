@@ -18,8 +18,6 @@ namespace CapaDatos.BaseDatos
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
@@ -29,6 +27,7 @@ namespace CapaDatos.BaseDatos
         public DbSet<MProductos> MProductos { get; set; }
         public DbSet<MCondicionPagos> MCondicionPagos { get; set; }
         public DbSet<MClientes> MClientes { get; set; }
+        public DbSet<MPedidos> MPedidos { get; set; }
 
     }
 }

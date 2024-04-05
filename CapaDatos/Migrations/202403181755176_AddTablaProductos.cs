@@ -12,16 +12,16 @@
                 c => new
                     {
                         ProductoId = c.Int(nullable: false, identity: true),
-                        Categoriaid = c.Int(nullable: false),
+                        CategoriaId = c.Int(nullable: false),
                         UnidadMedidaId = c.Int(nullable: false),
                         FechaCreacion = c.DateTime(nullable: false),
                         Estado = c.Boolean(nullable: false),
                         PrecioCompra = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
                 .PrimaryKey(t => t.ProductoId)
-                .ForeignKey("dbo.MCategorias", t => t.Categoriaid)
+                .ForeignKey("dbo.MCategorias", t => t.CategoriaId)
                 .ForeignKey("dbo.MUnidadMedidas", t => t.UnidadMedidaId)
-                .Index(t => t.Categoriaid)
+                .Index(t => t.CategoriaId)
                 .Index(t => t.UnidadMedidaId);
             
         }

@@ -83,3 +83,14 @@ C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.csproj.
 C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.pdb
 C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablacliente.resources
+C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablacliente.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaCategorias.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaGrupoDescuentos.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaUnidadMedidas.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaProductos.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaCondicionPagos.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablacliente.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.csproj.GenerateResource.cache
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.addmigrationChangeReglasBaseDatosPermitirDeleteCascada.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.addmigrationChangeReglasBaseDatosPermitirDeleteCascada.resources
+C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaPedidos.resources

@@ -52,9 +52,16 @@ namespace MARKET
 
         private void grupoDeDescuentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PClientes pClientes = new PClientes();
-            pClientes.MdiParent = this;
-            pClientes.Show();
+            PProductos Productos = new PProductos();
+            Productos.MdiParent = this;
+            Productos.Show();
+        }
+
+        private void grupoDeDescuentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PClientes Clientes = new PClientes();
+            Clientes.MdiParent = this;
+            Clientes.Show();
         }
     }
     

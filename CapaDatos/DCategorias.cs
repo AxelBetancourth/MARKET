@@ -12,11 +12,11 @@ namespace CapaDatos
 {
     public class DCategorias
     {
-        Repository<MCategorias> _repository;
+        UnitOfWork _unitOfWork;
 
         public DCategorias()
         {
-            _repository = new Repository<MCategorias>();
+            _unitOfWork = new UnitOfWork();
         }
         public int CategoriaId { get; set; }
         public string Codigo { get; set; }
@@ -26,28 +26,28 @@ namespace CapaDatos
 
         public List<MCategorias> categoriaTodas()
         {
-            return _repository.Consulta().ToList();
+            return _unitOfWork.Repository<MCategorias>().Consulta().ToList();
         }
 
         public int GuardarCategoria(MCategorias categoria)
         {
+
             if (categoria.CategoriaId == 0)
             {
-                categoria.FechaCreacion = DateTime.Now;
-                _repository.Agregar(categoria);
-                return 1;
+                _unitOfWork.Repository<MCategorias>().Agregar(categoria);
+                return _unitOfWork.Guardar();
             }
             else
             {
-                var CategoriaInDb = _repository.Consulta().FirstOrDefault(c => c.CategoriaId == categoria.CategoriaId);
+                var CategoriaInDb = _unitOfWork.Repository<MCategorias>().Consulta().FirstOrDefault(c => c.CategoriaId == categoria.CategoriaId);
 
                 if (CategoriaInDb != null)
                 {
                     CategoriaInDb.Codigo = categoria.Codigo;
                     CategoriaInDb.Descripción = categoria.Descripción;
                     CategoriaInDb.Estado = categoria.Estado;
-                    _repository.Editar(CategoriaInDb);
-                    return 1;
+                    _unitOfWork.Repository<MCategorias>().Editar(CategoriaInDb);
+                    return _unitOfWork.Guardar();
                 }
                 return 0;
             }
@@ -56,11 +56,11 @@ namespace CapaDatos
 
         public int EliminarCategoria(int categoriaId)
         {
-            var CategoriaInDb = _repository.Consulta().FirstOrDefault(c => c.CategoriaId == categoriaId);
+            var CategoriaInDb = _unitOfWork.Repository<MCategorias>().Consulta().FirstOrDefault(c => c.CategoriaId == categoriaId);
             if (CategoriaInDb != null)
             {
-                _repository.Eliminar(CategoriaInDb);
-                return 1;
+                _unitOfWork.Repository<MCategorias>().Eliminar(CategoriaInDb);
+                return _unitOfWork.Guardar();
             }
             return 0;
         }

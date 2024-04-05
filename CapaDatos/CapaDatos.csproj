@@ -56,10 +56,13 @@
     <Compile Include="BaseDatos\Modelos\MClientes.cs" />
     <Compile Include="BaseDatos\Modelos\MCondicionPagos.cs" />
     <Compile Include="BaseDatos\Modelos\MGrupoDescuentos.cs" />
+    <Compile Include="BaseDatos\Modelos\MPedidos.cs" />
     <Compile Include="BaseDatos\Modelos\MProductos.cs" />
     <Compile Include="BaseDatos\Modelos\MUnidadMedidas.cs" />
     <Compile Include="Core\IRepository.cs" />
+    <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Core\Repository.cs" />
+    <Compile Include="Core\UnitOfWork.cs" />
     <Compile Include="DCategorias.cs" />
     <Compile Include="DClientes.cs" />
     <Compile Include="DCondicionPagos.cs" />
@@ -90,6 +93,14 @@
     <Compile Include="Migrations\202403200632221_AddTablaClientes.designer.cs">
       <DependentUpon>202403200632221_AddTablaClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404031927082_add-migration ChangeReglasBaseDatosPermitirDeleteCascada.cs" />
+    <Compile Include="Migrations\202404031927082_add-migration ChangeReglasBaseDatosPermitirDeleteCascada.Designer.cs">
+      <DependentUpon>202404031927082_add-migration ChangeReglasBaseDatosPermitirDeleteCascada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404050522156_AddTablaPedidos.cs" />
+    <Compile Include="Migrations\202404050522156_AddTablaPedidos.designer.cs">
+      <DependentUpon>202404050522156_AddTablaPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -111,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403200632221_AddTablaClientes.resx">
       <DependentUpon>202403200632221_AddTablaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404031927082_add-migration ChangeReglasBaseDatosPermitirDeleteCascada.resx">
+      <DependentUpon>202404031927082_add-migration ChangeReglasBaseDatosPermitirDeleteCascada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404050522156_AddTablaPedidos.resx">
+      <DependentUpon>202404050522156_AddTablaPedidos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
