@@ -55,6 +55,7 @@
     <Compile Include="BaseDatos\Modelos\MCategorias.cs" />
     <Compile Include="BaseDatos\Modelos\MClientes.cs" />
     <Compile Include="BaseDatos\Modelos\MCondicionPagos.cs" />
+    <Compile Include="BaseDatos\Modelos\MFacturaDetalle.cs" />
     <Compile Include="BaseDatos\Modelos\MFacturas.cs" />
     <Compile Include="BaseDatos\Modelos\MGrupoDescuentos.cs" />
     <Compile Include="BaseDatos\Modelos\MPedidoDetalles.cs" />
@@ -112,6 +113,10 @@
     <Compile Include="Migrations\202404050828246_AddTablaFacturas.Designer.cs">
       <DependentUpon>202404050828246_AddTablaFacturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404060417401_AddTablaFacturaDetalle.cs" />
+    <Compile Include="Migrations\202404060417401_AddTablaFacturaDetalle.designer.cs">
+      <DependentUpon>202404060417401_AddTablaFacturaDetalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -145,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404050828246_AddTablaFacturas.resx">
       <DependentUpon>202404050828246_AddTablaFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404060417401_AddTablaFacturaDetalle.resx">
+      <DependentUpon>202404060417401_AddTablaFacturaDetalle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
