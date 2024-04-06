@@ -32,5 +32,6 @@ namespace CapaDatos.BaseDatos
         public DbSet<MPedidos> MPedidos { get; set; }
         public DbSet<MPedidoDetalles> MPedidoDetalles { get; set; }
         public DbSet<MFacturas> MFacturas { get; set; }
+        public DbSet<MFacturaDetalle> MFacturaDetalle { get; set; }
     }
 }
