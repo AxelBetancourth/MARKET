@@ -1,5 +1,6 @@
 ﻿using CapaDatos;
 using CapaDatos.BaseDatos.Modelos;
+using CapaNegocio.Comun;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,25 @@ namespace CapaNegocio
             return dPedidos.Guardar(Pedidos);
         }
 
+        public List<CargarCombos> CargaCombo()
+        {
+            List<CargarCombos> Datos = new List<CargarCombos>();
+            var categorias = TodosPedidos().Select(c => new
+            {
+                c.PedidoID,
+                c.FechaPedido
+            }).ToList();
+            foreach (var item in categorias)
+            {
+                Datos.Add(new CargarCombos()
+                {
+                    Valor = item.PedidoID,
+                    Descripcion = item.FechaPedido.ToString("yyyy-MM-dd HH:mm:ss")
+                });
+            }
+
+            return Datos;
+        }
         public int Eliminar(int PedidosID)
         {
             return dPedidos.Eliminar(PedidosID);
