@@ -38,6 +38,7 @@ namespace CapaNegocio
         {
             return dproductos.Eliminar(ProductoId);
         }
+
         public List<object> obtenerProductosGrid()
         {
             var productos = dproductos.TodosLosProductos().Select(c => new {

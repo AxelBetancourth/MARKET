@@ -69,6 +69,7 @@
     <Compile Include="DCategorias.cs" />
     <Compile Include="DClientes.cs" />
     <Compile Include="DCondicionPagos.cs" />
+    <Compile Include="DFacturas.cs" />
     <Compile Include="DGrupoDescuentos.cs" />
     <Compile Include="DPedidoDetalles.cs" />
     <Compile Include="DPedidos.cs" />

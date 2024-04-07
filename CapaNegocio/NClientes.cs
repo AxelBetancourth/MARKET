@@ -26,7 +26,6 @@ namespace CapaNegocio
         {
             return dClientes.TodosLosClientes();
         }
-
         public List<object> obtenerClientesActivosGrid()
         {
             var clientes = dClientes.TodosLosClientes().Select(c => new {
@@ -53,6 +52,25 @@ namespace CapaNegocio
         public int EliminarCliente(int ClienteID)
         {
             return dClientes.EliminarCliente(ClienteID);
+        }
+        public List<CargarCombos> CargaCombo()
+        {
+            List<CargarCombos> Datos = new List<CargarCombos>();
+            var Pedidos = TodosClientes().Select(c => new
+            {
+                c.ClienteID,
+                NombreCompleto = c.Nombres + " " + c.Apellidos
+            }).ToList();
+            foreach (var item in Pedidos)
+            {
+                Datos.Add(new CargarCombos()
+                {
+                    Valor = item.ClienteID,
+                    Descripcion = item.NombreCompleto
+                });
+            }
+
+            return Datos;
         }
         public List<object> obtenerGridClientes()
         {
