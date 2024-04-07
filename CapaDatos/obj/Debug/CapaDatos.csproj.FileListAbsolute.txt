@@ -107,3 +107,4 @@ C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaPedidoDetalles.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaFacturas.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaFacturaDetalle.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaFacturaDetalle.resources
