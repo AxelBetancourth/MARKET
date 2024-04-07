@@ -71,6 +71,7 @@
     <Compile Include="DCondicionPagos.cs" />
     <Compile Include="DGrupoDescuentos.cs" />
     <Compile Include="DPedidoDetalles.cs" />
+    <Compile Include="DPedidos.cs" />
     <Compile Include="DProductos.cs" />
     <Compile Include="DUnidadMedidas.cs" />
     <Compile Include="Migrations\202403181514256_AddTablaCategorias.cs" />
