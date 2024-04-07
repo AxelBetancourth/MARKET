@@ -63,6 +63,13 @@ namespace MARKET
             Clientes.MdiParent = this;
             Clientes.Show();
         }
+
+        private void verFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PFacturas Facturas = new PFacturas();
+            Facturas.MdiParent = this;
+            Facturas.Show();
+        }
     }
     
 }

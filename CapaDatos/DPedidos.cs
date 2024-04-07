@@ -18,7 +18,6 @@ namespace CapaDatos
         {
             _unitOfWork = new UnitOfWork();
         }
-
         public int PedidoID { get; set; }
         public int ClienteID { get; set; }
         public DateTime FechaCreacion { get; set; }
@@ -58,7 +57,6 @@ namespace CapaDatos
                 return 0;
             }
         }
-
         public int Eliminar(int PedidoID)
         {
             var pedidoInDb = _unitOfWork.Repository<MPedidos>().Consulta().FirstOrDefault(c => c.PedidoID == PedidoID);
