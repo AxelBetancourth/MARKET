@@ -34,17 +34,18 @@ namespace CapaNegocio
         public List<CargarCombos> CargaCombo()
         {
             List<CargarCombos> Datos = new List<CargarCombos>();
-            var categorias = TodosPedidos().Select(c => new
+            var Pedidos = TodosPedidos().Select(c => new
             {
                 c.PedidoID,
                 c.FechaPedido
             }).ToList();
-            foreach (var item in categorias)
+            foreach (var item in Pedidos)
             {
                 Datos.Add(new CargarCombos()
                 {
                     Valor = item.PedidoID,
-                    Descripcion = item.FechaPedido.ToString("yyyy-MM-dd HH:mm:ss")
+                    //Descripcion = item.FechaPedido.ToString("yyyy-MM-dd HH:mm:ss")
+                    Descripcion = $"{item.PedidoID} - {item.FechaPedido.ToString("yyyy-MM-dd HH:mm:ss")}"
                 });
             }
 
