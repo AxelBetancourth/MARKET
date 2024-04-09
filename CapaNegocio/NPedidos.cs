@@ -84,6 +84,32 @@ namespace CapaNegocio
             });
             return pedidos.Where(c => c.Estado == true).Cast<object>().ToList();
         }
+        public List<object> BuscarPedidosGrid()
+        {
+            var pedidos = dPedidos.TodosLosPedidos().Select(c => new {
+                c.PedidoID,
+                ClientesNombres = c.MClientes.Nombres,
+                ClientesApellidos = c.MClientes.Apellidos,
+                c.Estado,
+                c.Total,
+                c.SubTotal,
+                c.Descuento
+            });
+            return pedidos.Cast<object>().ToList();
+        }
+        public List<object> BuscarPedidosactivosGrid()
+        {
+            var pedidos = dPedidos.TodosLosPedidos().Select(c => new {
+                c.PedidoID,
+                ClientesNombres = c.MClientes.Nombres,
+                ClientesApellidos = c.MClientes.Apellidos,
+                c.Estado,
+                c.Total,
+                c.SubTotal,
+                c.Descuento
+            });
+            return pedidos.Where(c => c.Estado == true).Cast<object>().ToList();
+        }
 
     }
 }

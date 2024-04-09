@@ -132,3 +132,27 @@ C:\Users\Braya\Desktop\RadCopia de seguridad\Market\CapaDatos\obj\Debug\CapaDato
 C:\Users\Braya\Desktop\RadCopia de seguridad\Market\CapaDatos\obj\Debug\CapaDatos.csproj.Up2Date
 C:\Users\Braya\Desktop\RadCopia de seguridad\Market\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\Braya\Desktop\RadCopia de seguridad\Market\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\bin\Debug\CapaDatos.dll.config
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\bin\Debug\EntityFramework.dll
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\bin\Debug\EntityFramework.xml
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaCategorias.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaGrupoDescuentos.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaUnidadMedidas.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaProductos.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaCondicionPagos.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaClientes.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.addmigrationChangeReglasBaseDatosPermitirDeleteCascada.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaPedidos.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaPedidoDetalles.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaFacturas.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaFacturaDetalle.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.csproj.GenerateResource.cache
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\CapaDatos\obj\Debug\CapaDatos.pdb

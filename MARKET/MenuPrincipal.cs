@@ -77,6 +77,20 @@ namespace MARKET
             Pedidos.MdiParent = this;
             Pedidos.Show();
         }
+
+        private void detalleDePedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PPedidoDetalles Pedido = new PPedidoDetalles();
+            Pedido.MdiParent = this;
+            Pedido.Show();
+        }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PProductos Productos = new PProductos();
+            Productos.MdiParent = this;
+            Productos.Show();
+        }
     }
     
 }
