@@ -59,8 +59,7 @@ namespace CapaNegocio
         {
             var pedidos = dPedidos.TodosLosPedidos().Select(c => new {
                 c.PedidoID,
-                ClientesNombres = c.MClientes.Nombres,
-                ClientesApellidos = c.MClientes.Apellidos,
+                ClienteNombreCompleto = c.MClientes.Nombres + " " + c.MClientes.Apellidos,
                 c.Estado,
                 c.FechaCreacion,
                 c.FechaPedido,
@@ -71,12 +70,11 @@ namespace CapaNegocio
             return pedidos.Cast<object>().ToList();
         }
 
-        public List<object> obtenerProductosActivosGrid()
+        public List<object> obtenerPedidosActivosGrid()
         {
             var pedidos = dPedidos.TodosLosPedidos().Select(c => new {
                 c.PedidoID,
-                ClientesNombres = c.MClientes.Nombres,
-                ClientesApellidos = c.MClientes.Apellidos,
+                ClienteNombreCompleto = c.MClientes.Nombres + " " + c.MClientes.Apellidos,
                 c.Estado,
                 c.FechaCreacion,
                 c.FechaPedido,

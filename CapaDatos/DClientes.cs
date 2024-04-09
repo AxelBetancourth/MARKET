@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    class DClientes
+  public  class DClientes
     {
         UnitOfWork _unitOfWork;
 
@@ -63,7 +63,7 @@ namespace CapaDatos
 
         }
 
-        public int EliminarCategoria(int ClienteID)
+        public int EliminarCliente(int ClienteID)
         {
             var ClienteInDb = _unitOfWork.Repository<MClientes>().Consulta().FirstOrDefault(c => c.ClienteID == ClienteID);
             if (ClienteInDb != null)

@@ -57,18 +57,25 @@ namespace MARKET
             Productos.Show();
         }
 
-        private void grupoDeDescuentosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void verFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PFacturas Facturas = new PFacturas();
+            Facturas.MdiParent = this;
+            Facturas.Show();
+        }
+
+        private void grupoDeDescuentosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             PClientes Clientes = new PClientes();
             Clientes.MdiParent = this;
             Clientes.Show();
         }
 
-        private void verFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void verPedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PFacturas Facturas = new PFacturas();
-            Facturas.MdiParent = this;
-            Facturas.Show();
+            PPedidos Pedidos = new PPedidos();
+            Pedidos.MdiParent = this;
+            Pedidos.Show();
         }
     }
     

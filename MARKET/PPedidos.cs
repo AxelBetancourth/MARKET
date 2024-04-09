@@ -1,0 +1,184 @@
+﻿using CapaDatos;
+using CapaDatos.BaseDatos.Modelos;
+using CapaNegocio;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MARKET
+{
+    public partial class PPedidos : Form
+    {
+        private NPedidos nPedidos;
+        private NClientes nClientes;
+        public PPedidos()
+        {
+            InitializeComponent();
+            nPedidos = new NPedidos();
+            nClientes = new NClientes();
+            CargarDatos();
+            CargaCombo();
+        }
+
+        private void PPedidos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        void CargarDatos()
+        {
+            var datos = nPedidos.obtenerPedidosGrid();
+            dgPedidos.DataSource = datos;
+        }
+
+        private void CargaCombo()
+        {
+            cbxClienteid.DataSource = nClientes.CargaCombo();
+            cbxClienteid.ValueMember = "Valor";
+            cbxClienteid.DisplayMember = "Descripcion";
+        }
+
+        private void cbActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            dgPedidos.DataSource = nPedidos.obtenerPedidosActivosGrid();
+            if (cbActivos.Checked == false)
+            {
+                CargarDatos();
+            }
+        }
+
+        void LimpiarCampos()
+        {
+            txtpedidoID.Text = "";
+            cbxClienteid.SelectedValue = "";
+            dtpfechapedido.Value = DateTime.Now;
+            txtSubTotal.Text = "";
+            txtDescuento.Text = "";
+            txtTotal.Text = "";
+            cbEstado.Checked = false;
+            errorpedidos.Clear();
+        }
+
+        private bool ValidarDatos()
+        {
+            var FormularioValido = true;
+            if (string.IsNullOrEmpty(cbxClienteid.Text.ToString()) || string.IsNullOrWhiteSpace(cbxClienteid.Text.ToString()))
+            {
+                FormularioValido = false;
+                errorpedidos.SetError(cbxClienteid, "Debe seleccionar un Cliente");
+                return FormularioValido;
+            }
+
+            if (string.IsNullOrEmpty(txtSubTotal.Text.ToString()) || string.IsNullOrWhiteSpace(txtSubTotal.Text.ToString()))
+            {
+                FormularioValido = false;
+                errorpedidos.SetError(txtSubTotal, "Debe ingresar el Subtotal.");
+                return FormularioValido;
+            }
+
+            if (string.IsNullOrEmpty(txtDescuento.Text.ToString()) || string.IsNullOrWhiteSpace(txtDescuento.Text.ToString()))
+            {
+                FormularioValido = false;
+                errorpedidos.SetError(txtDescuento, "Debe ingresar el Descuento.");
+                return FormularioValido;
+            }
+
+            return FormularioValido;
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            if (ValidarDatos())
+            {
+                MPedidos Pedidos = new MPedidos()
+                {
+                    ClienteID = int.Parse(cbxClienteid.SelectedValue.ToString()),
+                    FechaPedido = dtpfechapedido.Value,
+                    Estado = cbEstado.Checked,
+                    Total = decimal.Parse(txtTotal.Text.ToString()),
+                    SubTotal = decimal.Parse(txtSubTotal.Text.ToString()),
+                    Descuento = decimal.Parse(txtDescuento.Text.ToString()),
+            };
+                if (!string.IsNullOrEmpty(txtpedidoID.Text) || !string.IsNullOrWhiteSpace(txtpedidoID.Text))
+                {
+                    if (int.TryParse(txtpedidoID.Text.ToString(), out int productoId) && productoId != 0)
+                    {
+                        Pedidos.PedidoID = productoId;
+                    }
+                }
+                nPedidos.AgregarPedidos(Pedidos);
+                LimpiarCampos();
+                CargarDatos();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            var PedidoId = txtpedidoID.Text.ToString();
+            if (string.IsNullOrEmpty(PedidoId) || string.IsNullOrWhiteSpace(PedidoId))
+            {
+                return;
+            }
+            nPedidos.Eliminar(int.Parse(PedidoId));
+            CargarDatos();
+            LimpiarCampos(); 
+        }
+
+        private void dgPedidos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0 && e.RowIndex < dgPedidos.Rows.Count)
+            {
+                DataGridViewRow row = dgPedidos.Rows[e.RowIndex];
+                txtpedidoID.Text = row.Cells["PedidoID"].Value.ToString();
+                var Productos = dgPedidos.CurrentRow.Cells["ClienteNombreCompleto"].Value.ToString();
+                cbxClienteid.SelectedIndex = cbxClienteid.FindStringExact(Productos);
+                var FechaPedido = row.Cells["FechaPedido"].Value;
+                if (FechaPedido != null)
+                {
+                    dtpfechapedido.Value = (DateTime)FechaPedido;
+                }
+                cbEstado.Checked = bool.Parse(dgPedidos.CurrentRow.Cells["Estado"].Value.ToString());
+                txtTotal.Text = row.Cells["Total"].Value.ToString();
+                txtSubTotal.Text = row.Cells["SubTotal"].Value.ToString();
+                txtDescuento.Text = row.Cells["Descuento"].Value.ToString();
+            }
+        }
+
+        private void txtSubTotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+          (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void txtDescuento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+          (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void txtTotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+          (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+
+        }
+    }
+}
