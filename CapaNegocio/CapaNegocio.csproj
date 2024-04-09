@@ -59,6 +59,7 @@
     <Compile Include="NCondicionPagos.cs" />
     <Compile Include="NFacturas.cs" />
     <Compile Include="NGrupoDescuentos.cs" />
+    <Compile Include="NPedidoDetalles.cs" />
     <Compile Include="NPedidos.cs" />
     <Compile Include="NProductos.cs" />
     <Compile Include="NUnidadMedidas.cs" />

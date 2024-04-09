@@ -62,6 +62,18 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="PBuscarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PBuscarPedido.Designer.cs">
+      <DependentUpon>PBuscarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PBuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PBuscarProducto.Designer.cs">
+      <DependentUpon>PBuscarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     <Compile Include="PGrupoDescuentos.Designer.cs">
       <DependentUpon>PGrupoDescuentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="PPedidoDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPedidoDetalles.Designer.cs">
+      <DependentUpon>PPedidoDetalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="PPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +133,12 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PBuscarPedido.resx">
+      <DependentUpon>PBuscarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PBuscarProducto.resx">
+      <DependentUpon>PBuscarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PCategorias.resx">
       <DependentUpon>PCategorias.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PGrupoDescuentos.resx">
       <DependentUpon>PGrupoDescuentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPedidoDetalles.resx">
+      <DependentUpon>PPedidoDetalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPedidos.resx">
       <DependentUpon>PPedidos.cs</DependentUpon>
