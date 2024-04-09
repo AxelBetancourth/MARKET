@@ -50,18 +50,11 @@ namespace MARKET
             unidadMedidas.Show();
         }
 
-        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void grupoDeDescuentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PProductos Productos = new PProductos();
             Productos.MdiParent = this;
             Productos.Show();
-        }
-
-        private void grupoDeDescuentosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PClientes Clientes = new PClientes();
-            Clientes.MdiParent = this;
-            Clientes.Show();
         }
 
         private void verFacturasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,6 +62,20 @@ namespace MARKET
             PFacturas Facturas = new PFacturas();
             Facturas.MdiParent = this;
             Facturas.Show();
+        }
+
+        private void grupoDeDescuentosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            PClientes Clientes = new PClientes();
+            Clientes.MdiParent = this;
+            Clientes.Show();
+        }
+
+        private void verPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PPedidos Pedidos = new PPedidos();
+            Pedidos.MdiParent = this;
+            Pedidos.Show();
         }
     }
     

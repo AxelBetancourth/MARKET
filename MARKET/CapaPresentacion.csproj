@@ -92,6 +92,12 @@
     <Compile Include="PGrupoDescuentos.Designer.cs">
       <DependentUpon>PGrupoDescuentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="PPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPedidos.Designer.cs">
+      <DependentUpon>PPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="PProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PGrupoDescuentos.resx">
       <DependentUpon>PGrupoDescuentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPedidos.resx">
+      <DependentUpon>PPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PProductos.resx">
       <DependentUpon>PProductos.cs</DependentUpon>

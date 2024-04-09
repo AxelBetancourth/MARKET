@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.BaseDatos.Modelos
 {
-    public class MClientes
+     public class MClientes
     {
         [Key]
         public int ClienteID { get; set; }

@@ -95,9 +95,9 @@
     <Compile Include="Migrations\202403192117592_AddTablaCondicionPagos.Designer.cs">
       <DependentUpon>202403192117592_AddTablaCondicionPagos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202403260329415_AddTablacliente.cs" />
-    <Compile Include="Migrations\202403260329415_AddTablacliente.designer.cs">
-      <DependentUpon>202403260329415_AddTablacliente.cs</DependentUpon>
+    <Compile Include="Migrations\202403200632221_AddTablaClientes.cs" />
+    <Compile Include="Migrations\202403200632221_AddTablaClientes.designer.cs">
+      <DependentUpon>202403200632221_AddTablaClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202404031927082_add-migration ChangeReglasBaseDatosPermitirDeleteCascada.cs" />
     <Compile Include="Migrations\202404031927082_add-migration ChangeReglasBaseDatosPermitirDeleteCascada.Designer.cs">
@@ -138,8 +138,8 @@
     <EmbeddedResource Include="Migrations\202403192117592_AddTablaCondicionPagos.resx">
       <DependentUpon>202403192117592_AddTablaCondicionPagos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403260329415_AddTablacliente.resx">
-      <DependentUpon>202403260329415_AddTablacliente.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202403200632221_AddTablaClientes.resx">
+      <DependentUpon>202403200632221_AddTablaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404031927082_add-migration ChangeReglasBaseDatosPermitirDeleteCascada.resx">
       <DependentUpon>202404031927082_add-migration ChangeReglasBaseDatosPermitirDeleteCascada.cs</DependentUpon>

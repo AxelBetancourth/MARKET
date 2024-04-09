@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class DClientes
+  public  class DClientes
     {
         UnitOfWork _unitOfWork;
 
