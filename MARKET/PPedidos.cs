@@ -17,11 +17,15 @@ namespace MARKET
     {
         private NPedidos nPedidos;
         private NClientes nClientes;
+        private NPedidoDetalles nPedidoDetalles;
+        private NFacturas nFacturas;
         public PPedidos()
         {
             InitializeComponent();
             nPedidos = new NPedidos();
             nClientes = new NClientes();
+            nPedidoDetalles = new NPedidoDetalles();
+            nFacturas = new NFacturas();
             CargarDatos();
             CargaCombo();
             txtDescuento.ReadOnly = true;
@@ -102,25 +106,29 @@ namespace MARKET
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            var fecha = dtpfechapedido.Value.ToString();
+            DateTime fechaeditarpedido = DateTime.Parse(fecha);
+
             if (ValidarDatos())
             {
                 MPedidos Pedidos = new MPedidos()
                 {
                     ClienteID = int.Parse(cbxClienteid.SelectedValue.ToString()),
-                    FechaPedido = dtpfechapedido.Value,
+                    FechaPedido = fechaeditarpedido,
                     Estado = cbEstado.Checked,
                     Total = decimal.Parse(txtTotal.Text.ToString()),
                     SubTotal = decimal.Parse(txtSubTotal.Text.ToString()),
                     Descuento = decimal.Parse(txtDescuento.Text.ToString()),
-            };
-                if (!string.IsNullOrEmpty(txtpedidoID.Text) || !string.IsNullOrWhiteSpace(txtpedidoID.Text))
+                };
+                if (!string.IsNullOrEmpty(txtpedidoID.Text) && int.TryParse(txtpedidoID.Text.ToString(), out int productoId) && productoId != 0)
                 {
-                    if (int.TryParse(txtpedidoID.Text.ToString(), out int productoId) && productoId != 0)
-                    {
-                        Pedidos.PedidoID = productoId;
-                    }
+                    Pedidos.PedidoID = productoId;
+                    nPedidos.EditarPedidos(Pedidos);
                 }
-                nPedidos.AgregarPedidos(Pedidos);
+                else
+                {
+                    nPedidos.AgregarPedidos(Pedidos);
+                }
                 LimpiarCampos();
                 CargarDatos();
             }
@@ -133,9 +141,21 @@ namespace MARKET
             {
                 return;
             }
+            var PedidosDetallesAsociados = nPedidoDetalles.TodosDetallesPedidos().Where(c => c.PedidoID == int.Parse(PedidoId)).ToList();
+            if (PedidosDetallesAsociados.Count > 0)
+            {
+                MessageBox.Show("El pedido tiene asociados 'Pedidos Detalles', desvincule para poder eliminar ");
+                return;
+            }
+            var FacturasAsociadas = nFacturas.TodasFacturas().Where(c => c.PedidoID == int.Parse(PedidoId)).ToList();
+            if (FacturasAsociadas.Count > 0)
+            {
+                MessageBox.Show("El pedido tiene asociadas 'Facturas', desvincule para poder eliminar ");
+                return;
+            }
             nPedidos.Eliminar(int.Parse(PedidoId));
             CargarDatos();
-            LimpiarCampos(); 
+            LimpiarCampos();
         }
 
         private void dgPedidos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -185,7 +205,6 @@ namespace MARKET
             {
                 e.Handled = true;
             }
-
         }
 
         private void txtSubTotal_TextChanged(object sender, EventArgs e)

@@ -16,10 +16,12 @@ namespace MARKET
     public partial class PUnidadMedidas : Form
     {
         private NUnidadMedidas unidadMedidas;
+        private NProductos nProductos;
         public PUnidadMedidas()
         {
             InitializeComponent();
             unidadMedidas = new NUnidadMedidas();
+            nProductos = new NProductos();
             CargarDatos();
         }
         void CargarDatos()
@@ -102,9 +104,17 @@ namespace MARKET
             {
                 return;
             }
-            unidadMedidas.EliminarUnidades(int.Parse(UnidadMedidaId));
-            CargarDatos();
-            LimpiarDatos();
+            var ProductosAsociado = nProductos.TodosProductos().Where(c => c.UnidadMedidaId == int.Parse(UnidadMedidaId)).ToList();
+            if (ProductosAsociado.Count > 0)
+            {
+                MessageBox.Show("La Unidad de Medida tiene asociados 'Productos', desvincule para poder eliminar ");
+            }
+            else
+            {
+                unidadMedidas.EliminarUnidades(int.Parse(UnidadMedidaId));
+                CargarDatos();
+                LimpiarDatos();
+            }
         }
 
         private void dgUnidades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

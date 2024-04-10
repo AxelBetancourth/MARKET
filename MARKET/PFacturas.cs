@@ -105,6 +105,9 @@ namespace MARKET
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            var fecha = fechafactura.Value.ToString();
+            DateTime fechaeditarfactura = DateTime.Parse(fecha);
+
             if (ValidarDatos())
             {
                 MFacturas facturas = new MFacturas()
@@ -112,21 +115,22 @@ namespace MARKET
                 {
                     ClienteID = int.Parse(cbxclientes.SelectedValue.ToString()),
                     PedidoID = int.Parse(txtpedidoid.Text.ToString()),
-                    FechaFactura = fechafactura.Value,
+                    FechaFactura = fechaeditarfactura,
                     Estado = cbEstado.Checked,
                     Total = decimal.Parse(txttotal.Text.ToString()),
                     SubTotal = decimal.Parse(txtsubtotal.Text.ToString()),
                     Descuento = decimal.Parse(txtdescuento.Text.ToString()),
 
                 };
-                if (!string.IsNullOrEmpty(txtFacturaId.Text) || !string.IsNullOrWhiteSpace(txtFacturaId.Text))
+                if (!string.IsNullOrEmpty(txtFacturaId.Text) && int.TryParse(txtFacturaId.Text.ToString(), out int facturaId) && facturaId != 0)
                 {
-                    if (int.TryParse(txtFacturaId.Text.ToString(), out int facturaId) && facturaId != 0)
-                    {
-                        facturas.FacturaId = facturaId;
-                    }
+                    facturas.FacturaId = facturaId;
+                    nFacturas.EditarFacturas(facturas);
                 }
-                nFacturas.AgregarFacturas(facturas);
+                else
+                {
+                    nFacturas.AgregarFacturas(facturas);
+                }
                 LimpiarDatos();
                 CargarDatos();
             }
@@ -167,18 +171,24 @@ namespace MARKET
         {
             if (e.RowIndex >= 0 && e.RowIndex < dgFacturas.Rows.Count)
             {
+                txtpedidoid.Text = dgFacturas.CurrentRow.Cells["PedidoID"].Value.ToString();
+                txttotal.Text = dgFacturas.CurrentRow.Cells["Total"].Value.ToString();
+                txtsubtotal.Text = dgFacturas.CurrentRow.Cells["SubTotal"].Value.ToString();
+                txtdescuento.Text = dgFacturas.CurrentRow.Cells["Descuento"].Value.ToString();
+
                 txtFacturaId.Text = dgFacturas.CurrentRow.Cells["FacturaID"].Value.ToString();
                 var clientes = dgFacturas.CurrentRow.Cells["ClienteNombreCompleto"].Value.ToString();
                 cbxclientes.SelectedIndex = cbxclientes.FindStringExact(clientes);
-                txtpedidoid.Text = dgFacturas.CurrentRow.Cells["PedidoID"].Value.ToString();
                 if (DateTime.TryParse(dgFacturas.CurrentRow.Cells["FechaFactura"].Value.ToString(), out DateTime fechaFactura))
                 {
                     fechafactura.Value = fechaFactura;
                 }
                 cbEstado.Checked = bool.Parse(dgFacturas.CurrentRow.Cells["Estado"].Value.ToString());
-                txttotal.Text = dgFacturas.CurrentRow.Cells["Total"].Value.ToString();
-                txtsubtotal.Text = dgFacturas.CurrentRow.Cells["SubTotal"].Value.ToString();
-                txtdescuento.Text = dgFacturas.CurrentRow.Cells["Descuento"].Value.ToString();
+                
+
+                txttotal.Refresh();
+                txtsubtotal.Refresh();
+                txtdescuento.Refresh();
             }
         }
     }

@@ -18,12 +18,16 @@ namespace MARKET
         private NClientes nclientes;
         private NCondicionPagos nCondicionPagos;
         private NGrupoDescuentos nGrupoDescuentos;
+        private NPedidos nPedidos;
+        private NFacturas nFacturas;
         public PClientes()
         {
             InitializeComponent();
             nclientes = new NClientes();
             nCondicionPagos = new NCondicionPagos();
             nGrupoDescuentos = new NGrupoDescuentos();
+            nPedidos = new NPedidos();
+            nFacturas = new NFacturas();
             CargarDatos();
             CargarCombos();
         }
@@ -145,6 +149,18 @@ namespace MARKET
             var ClienteID = txtClienteId.Text.ToString();
             if (string.IsNullOrEmpty(ClienteID) || string.IsNullOrWhiteSpace(ClienteID))
             {
+                return;
+            }
+            var PedidosAsociados = nPedidos.TodosPedidos().Where(c => c.ClienteID == int.Parse(ClienteID)).ToList();
+            if (PedidosAsociados.Count > 0)
+            {
+                MessageBox.Show("El cliente tiene asociados 'Pedidos', desvincule para poder eliminar ");
+                return;
+            }
+            var FacturasAsociadas = nFacturas.TodasFacturas().Where(c => c.ClienteID == int.Parse(ClienteID)).ToList();
+            if (FacturasAsociadas.Count > 0)
+            {
+                MessageBox.Show("El cliente tiene asociadas 'Facturas', desvincule para poder eliminar ");
                 return;
             }
             nclientes.EliminarCliente(int.Parse(ClienteID));

@@ -51,7 +51,6 @@ namespace CapaDatos
                 {
                     pedidoInDb.PedidoID = pedido.PedidoID;
                     pedidoInDb.ProductoId = pedido.ProductoId;
-                    pedidoInDb.FechaCreacion = pedido.FechaCreacion;
                     pedidoInDb.Precio = pedido.Precio;
                     pedidoInDb.Total = pedido.Total;
                     pedidoInDb.SubTotal = pedido.SubTotal;

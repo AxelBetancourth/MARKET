@@ -89,7 +89,6 @@ C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\Ca
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaUnidadMedidas.resources
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaProductos.resources
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaCondicionPagos.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablacliente.resources
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.csproj.GenerateResource.cache
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.addmigrationChangeReglasBaseDatosPermitirDeleteCascada.resources
 C:\Users\Braya\Desktop\Proyecto RAD\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.addmigrationChangeReglasBaseDatosPermitirDeleteCascada.resources
@@ -180,3 +179,4 @@ C:\Users\axel8\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos
 C:\Users\axel8\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.csproj.Up2Date
 C:\Users\axel8\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\axel8\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaClientes.resources

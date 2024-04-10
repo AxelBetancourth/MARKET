@@ -50,7 +50,7 @@ namespace CapaDatos
                 {
                     facturaInDb.ClienteID = facturas.ClienteID;
                     facturaInDb.PedidoID = facturas.PedidoID;
-                    facturas.FechaFactura = facturaInDb.FechaFactura;
+                    facturaInDb.FechaFactura = facturas.FechaFactura;
                     facturaInDb.Estado = facturas.Estado;
                     facturaInDb.Total = facturas.Total;
                     facturaInDb.SubTotal = facturas.SubTotal;
