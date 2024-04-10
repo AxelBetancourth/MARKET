@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -45,17 +46,13 @@ namespace MARKET
             cbxclientes.DataSource = nClientes.CargaCombo();
             cbxclientes.ValueMember = "Valor";
             cbxclientes.DisplayMember = "Descripcion";
-
-            cbxpedidos.DataSource = nPedidos.CargaCombo();
-            cbxpedidos.ValueMember = "Valor";
-            cbxpedidos.DisplayMember = "Descripcion";
         }
 
         void LimpiarDatos()
         {
             txtFacturaId.Text = "";
             cbxclientes.SelectedValue = "";
-            cbxpedidos.Text = "";
+            txtpedidoid.Text = "";
             fechafactura.Value = DateTime.Now;
             cbEstado.Checked = false;
             txttotal.Text = "";
@@ -64,37 +61,34 @@ namespace MARKET
             errorProvider1.Clear();
         }
 
+        private bool ValidarCliente()
+        {
+            var clientesValidos = nClientes.CargaCombo().Select(c => c.Descripcion).ToList();
+            if (!clientesValidos.Contains(cbxclientes.Text))
+            {
+                errorProvider1.SetError(cbxclientes, "El cliente seleccionado no es válido.");
+                return false;
+            }
+            return true;
+        }
+
         private bool ValidarDatos()
         {
             var FormularioValido = true;
-            if (string.IsNullOrEmpty(cbxclientes.Text.ToString()) || string.IsNullOrWhiteSpace(cbxclientes.Text.ToString()))
+            if (string.IsNullOrEmpty(cbxclientes.Text.Trim()))
             {
                 FormularioValido = false;
-                errorProvider1.SetError(cbxclientes, "Debe ingrear un Cliente");
+                errorProvider1.SetError(cbxclientes, "Debe seleccionar un Cliente");
                 return FormularioValido;
             }
-            if (string.IsNullOrEmpty(cbxpedidos.Text.ToString()) || string.IsNullOrWhiteSpace(cbxpedidos.Text.ToString()))
+            if (!ValidarCliente())
             {
                 FormularioValido = false;
-                errorProvider1.SetError(cbxpedidos, "Debe de ingresar un pedido");
-                return FormularioValido;
             }
             if (string.IsNullOrEmpty(txttotal.Text.ToString()) || string.IsNullOrWhiteSpace(txttotal.Text.ToString()))
             {
                 FormularioValido = false;
-                errorProvider1.SetError(txttotal, "Debe ingresar un monto total");
-                return FormularioValido;
-            }
-            if (string.IsNullOrEmpty(txtsubtotal.Text.ToString()) || string.IsNullOrWhiteSpace(txtsubtotal.Text.ToString()))
-            {
-                FormularioValido = false;
-                errorProvider1.SetError(txtsubtotal, "Debe ingresar un monto subtotal");
-                return FormularioValido;
-            }
-            if (string.IsNullOrEmpty(txtdescuento.Text.ToString()) || string.IsNullOrWhiteSpace(txtdescuento.Text.ToString()))
-            {
-                FormularioValido = false;
-                errorProvider1.SetError(txtdescuento, "Debe ingresar un descuento");
+                errorProvider1.SetError(txttotal, "Debe ingresar un Pedido");
                 return FormularioValido;
             }
             return FormularioValido;
@@ -117,7 +111,7 @@ namespace MARKET
 
                 {
                     ClienteID = int.Parse(cbxclientes.SelectedValue.ToString()),
-                    PedidoID = int.Parse(cbxpedidos.SelectedValue.ToString()),
+                    PedidoID = int.Parse(txtpedidoid.Text.ToString()),
                     FechaFactura = fechafactura.Value,
                     Estado = cbEstado.Checked,
                     Total = decimal.Parse(txttotal.Text.ToString()),
@@ -146,29 +140,45 @@ namespace MARKET
                 return;
             }
             nFacturas.Eliminar(int.Parse(FacturaId));
-            CargarDatos();
             LimpiarDatos();
+            CargarDatos();
+        }
+
+        private void bbuscarpedido_Click(object sender, EventArgs e)
+        {
+            PBuscarPedido ppedido = new PBuscarPedido();
+            ppedido.ShowDialog();
+            txtpedidoid.Text = ppedido.PedidoID;
+            txttotal.Text = ppedido.Total;
+            txtsubtotal.Text = ppedido.SubTotal;
+            txtdescuento.Text = ppedido.Descuento;
+        }
+
+        private void cbActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            dgFacturas.DataSource = nFacturas.obtenerFacturasActivasGrid();
+            if (cbActivos.Checked == false)
+            {
+                CargarDatos();
+            }
         }
 
         private void dgFacturas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < dgFacturas.Rows.Count)
             {
-                DataGridViewRow row = dgFacturas.Rows[e.RowIndex];
-                txtFacturaId.Text = row.Cells["FacturaID"].Value.ToString();
+                txtFacturaId.Text = dgFacturas.CurrentRow.Cells["FacturaID"].Value.ToString();
                 var clientes = dgFacturas.CurrentRow.Cells["ClienteNombreCompleto"].Value.ToString();
                 cbxclientes.SelectedIndex = cbxclientes.FindStringExact(clientes);
-                var pedidos = dgFacturas.CurrentRow.Cells["PedidoInfo"].Value.ToString();
-                cbxpedidos.SelectedIndex = cbxpedidos.FindStringExact(pedidos);
-                var fechaFactura = row.Cells["FechaFactura"].Value;
-                if (fechaFactura != null)
+                txtpedidoid.Text = dgFacturas.CurrentRow.Cells["PedidoID"].Value.ToString();
+                if (DateTime.TryParse(dgFacturas.CurrentRow.Cells["FechaFactura"].Value.ToString(), out DateTime fechaFactura))
                 {
-                    fechafactura.Value = (DateTime)fechaFactura;
+                    fechafactura.Value = fechaFactura;
                 }
                 cbEstado.Checked = bool.Parse(dgFacturas.CurrentRow.Cells["Estado"].Value.ToString());
-                txttotal.Text = row.Cells["Total"].Value.ToString();
-                txtsubtotal.Text = row.Cells["SubTotal"].Value.ToString();
-                txtdescuento.Text = row.Cells["Descuento"].Value.ToString();
+                txttotal.Text = dgFacturas.CurrentRow.Cells["Total"].Value.ToString();
+                txtsubtotal.Text = dgFacturas.CurrentRow.Cells["SubTotal"].Value.ToString();
+                txtdescuento.Text = dgFacturas.CurrentRow.Cells["Descuento"].Value.ToString();
             }
         }
     }

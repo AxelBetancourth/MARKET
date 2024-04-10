@@ -24,6 +24,7 @@ namespace MARKET
             nClientes = new NClientes();
             CargarDatos();
             CargaCombo();
+            txtDescuento.ReadOnly = true;
         }
 
         private void PPedidos_Load(object sender, EventArgs e)
@@ -72,6 +73,13 @@ namespace MARKET
             {
                 FormularioValido = false;
                 errorpedidos.SetError(cbxClienteid, "Debe seleccionar un Cliente");
+                return FormularioValido;
+            }
+
+            if (string.IsNullOrEmpty(txtTotal.Text.ToString()) || string.IsNullOrWhiteSpace(txtTotal.Text.ToString()))
+            {
+                FormularioValido = false;
+                errorpedidos.SetError(txtTotal, "Debe ingresar el Total.");
                 return FormularioValido;
             }
 
@@ -139,10 +147,9 @@ namespace MARKET
                 txtpedidoID.Text = row.Cells["PedidoID"].Value.ToString();
                 var Productos = dgPedidos.CurrentRow.Cells["ClienteNombreCompleto"].Value.ToString();
                 cbxClienteid.SelectedIndex = cbxClienteid.FindStringExact(Productos);
-                var FechaPedido = row.Cells["FechaPedido"].Value;
-                if (FechaPedido != null)
+                if (DateTime.TryParse(dgPedidos.CurrentRow.Cells["FechaPedido"].Value.ToString(), out DateTime FechaPedidos))
                 {
-                    dtpfechapedido.Value = (DateTime)FechaPedido;
+                    dtpfechapedido.Value = FechaPedidos;
                 }
                 cbEstado.Checked = bool.Parse(dgPedidos.CurrentRow.Cells["Estado"].Value.ToString());
                 txtTotal.Text = row.Cells["Total"].Value.ToString();
@@ -179,6 +186,45 @@ namespace MARKET
                 e.Handled = true;
             }
 
+        }
+
+        private void txtSubTotal_TextChanged(object sender, EventArgs e)
+        {
+            txtDescuento.ReadOnly = string.IsNullOrEmpty(txtSubTotal.Text);
+        }
+
+        private void CalcularTotal()
+        {
+            if (!string.IsNullOrEmpty(txtSubTotal.Text) && !string.IsNullOrEmpty(txtDescuento.Text))
+            {
+                decimal subTotal = decimal.Parse(txtSubTotal.Text);
+                decimal descuento = decimal.Parse(txtDescuento.Text);
+                decimal total = subTotal - descuento;
+                txtTotal.Text = total.ToString();
+            }
+        }
+        private void txtDescuento_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtDescuento.Text))
+            {
+                decimal descuento = decimal.Parse(txtDescuento.Text);
+
+                if (descuento > 100)
+                {
+                    errorpedidos.SetError(txtDescuento, "El descuento no puede ser mayor al 100%.");
+                    txtTotal.Text = "";
+                }
+                else
+                {
+                    errorpedidos.Clear();
+                    CalcularTotal();
+                }
+            }
+            else
+            {
+                errorpedidos.Clear();
+                CalcularTotal();
+            }
         }
     }
 }
