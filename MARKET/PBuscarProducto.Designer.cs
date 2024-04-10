@@ -37,9 +37,11 @@
             // checkBprod
             // 
             this.checkBprod.AutoSize = true;
-            this.checkBprod.Location = new System.Drawing.Point(42, 26);
+            this.checkBprod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBprod.Location = new System.Drawing.Point(13, 64);
+            this.checkBprod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBprod.Name = "checkBprod";
-            this.checkBprod.Size = new System.Drawing.Size(110, 17);
+            this.checkBprod.Size = new System.Drawing.Size(151, 22);
             this.checkBprod.TabIndex = 7;
             this.checkBprod.Text = "Filtrar solo activos";
             this.checkBprod.UseVisualStyleBackColor = true;
@@ -48,31 +50,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(201, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 16);
+            this.label1.Size = new System.Drawing.Size(366, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Seleccione el Producto que Necesita";
             // 
             // dgbuscarProducto
             // 
             this.dgbuscarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbuscarProducto.Location = new System.Drawing.Point(33, 49);
+            this.dgbuscarProducto.Location = new System.Drawing.Point(13, 92);
+            this.dgbuscarProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgbuscarProducto.Name = "dgbuscarProducto";
-            this.dgbuscarProducto.Size = new System.Drawing.Size(387, 150);
+            this.dgbuscarProducto.RowHeadersWidth = 51;
+            this.dgbuscarProducto.Size = new System.Drawing.Size(701, 529);
             this.dgbuscarProducto.TabIndex = 5;
             this.dgbuscarProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbuscarProducto_CellClick_1);
+            this.dgbuscarProducto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbuscarProducto_CellDoubleClick);
             // 
             // PBuscarProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 211);
+            this.ClientSize = new System.Drawing.Size(727, 634);
             this.Controls.Add(this.checkBprod);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgbuscarProducto);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PBuscarProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PBuscarProducto";
             this.Load += new System.EventHandler(this.PBuscarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgbuscarProducto)).EndInit();

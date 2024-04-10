@@ -62,11 +62,8 @@ namespace CapaNegocio
         {
             var pedidos = dFacturas.TodosLasFacturas().Select(c => new {
                 c.FacturaId,
-                //ClientesNombres = c.MClientes.Nombres,
-                //ClientesApellidos = c.MClientes.Apellidos,
                 ClienteNombreCompleto = c.MClientes.Nombres + " " + c.MClientes.Apellidos,
-                //PedidosID = c.MPedidos.PedidoID,
-                //PedidosFechaPedido = c.MPedidos.FechaPedido,
+                c.PedidoID,
                 PedidoInfo = $"{c.MPedidos.PedidoID} - {c.MPedidos.FechaPedido}",
                 c.Estado,
                 c.FechaCreacion,
@@ -82,10 +79,9 @@ namespace CapaNegocio
         {
             var pedidos = dFacturas.TodosLasFacturas().Select(c => new {
                 c.FacturaId,
-                ClientesNombres = c.MClientes.Nombres,
-                ClientesApellidos = c.MClientes.Apellidos,
-                PedidosID = c.MPedidos.PedidoID,
-                PedidosFechaPedido = c.MPedidos.FechaPedido,
+                ClienteNombreCompleto = c.MClientes.Nombres + " " + c.MClientes.Apellidos,
+                c.PedidoID,
+                PedidoInfo = $"{c.MPedidos.PedidoID} - {c.MPedidos.FechaPedido}",
                 c.Estado,
                 c.FechaCreacion,
                 c.FechaFactura,

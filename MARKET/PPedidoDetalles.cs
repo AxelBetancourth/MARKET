@@ -15,7 +15,6 @@ namespace MARKET
 {
     public partial class PPedidoDetalles : Form
     {
-        private NPedidos nPedidos;
         private NPedidoDetalles nPedidodetalles;
         private NProductos nProductos;
         private PBuscarPedido buscarPedido;
@@ -30,7 +29,7 @@ namespace MARKET
 
         private void PPedidoDetalles_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         void LimpiarDatos()

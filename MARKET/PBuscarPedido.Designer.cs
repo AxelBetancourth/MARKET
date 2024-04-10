@@ -37,9 +37,11 @@
             // checkBpedidos
             // 
             this.checkBpedidos.AutoSize = true;
-            this.checkBpedidos.Location = new System.Drawing.Point(48, 35);
+            this.checkBpedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBpedidos.Location = new System.Drawing.Point(13, 74);
+            this.checkBpedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBpedidos.Name = "checkBpedidos";
-            this.checkBpedidos.Size = new System.Drawing.Size(110, 17);
+            this.checkBpedidos.Size = new System.Drawing.Size(151, 22);
             this.checkBpedidos.TabIndex = 5;
             this.checkBpedidos.Text = "Filtrar solo activos";
             this.checkBpedidos.UseVisualStyleBackColor = true;
@@ -48,31 +50,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(223, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 16);
+            this.label1.Size = new System.Drawing.Size(347, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "Seleccione el Pedido que Necesita";
             // 
             // dgbuscarPedido
             // 
             this.dgbuscarPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbuscarPedido.Location = new System.Drawing.Point(48, 58);
+            this.dgbuscarPedido.Location = new System.Drawing.Point(13, 104);
+            this.dgbuscarPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgbuscarPedido.Name = "dgbuscarPedido";
-            this.dgbuscarPedido.Size = new System.Drawing.Size(347, 150);
+            this.dgbuscarPedido.RowHeadersWidth = 51;
+            this.dgbuscarPedido.Size = new System.Drawing.Size(702, 517);
             this.dgbuscarPedido.TabIndex = 3;
             this.dgbuscarPedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbuscarPedido_CellClick_1);
+            this.dgbuscarPedido.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbuscarPedido_CellDoubleClick);
             // 
             // PBuscarPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 211);
+            this.ClientSize = new System.Drawing.Size(727, 634);
             this.Controls.Add(this.checkBpedidos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgbuscarPedido);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PBuscarPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PBuscarPedido";
             this.Load += new System.EventHandler(this.PBuscarPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgbuscarPedido)).EndInit();

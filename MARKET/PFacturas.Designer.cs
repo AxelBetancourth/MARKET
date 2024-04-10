@@ -42,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbxpedidos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.fechafactura = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +50,8 @@
             this.txtdescuento = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.bbuscarpedido = new System.Windows.Forms.Button();
+            this.txtpedidoid = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -75,9 +76,10 @@
             // 
             // txttotal
             // 
-            this.txttotal.Location = new System.Drawing.Point(919, 115);
+            this.txttotal.Location = new System.Drawing.Point(919, 215);
             this.txttotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
             this.txttotal.Size = new System.Drawing.Size(142, 22);
             this.txttotal.TabIndex = 47;
             // 
@@ -95,7 +97,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(797, 119);
+            this.label6.Location = new System.Drawing.Point(797, 219);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 18);
             this.label6.TabIndex = 45;
@@ -112,6 +114,7 @@
             this.cbActivos.TabIndex = 44;
             this.cbActivos.Text = "Mostrar solo activas";
             this.cbActivos.UseVisualStyleBackColor = true;
+            this.cbActivos.CheckedChanged += new System.EventHandler(this.cbActivos_CheckedChanged);
             // 
             // btnEliminar
             // 
@@ -168,7 +171,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(533, 19);
+            this.label4.Location = new System.Drawing.Point(524, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 24);
             this.label4.TabIndex = 37;
@@ -196,15 +199,6 @@
             this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 33;
             this.label1.Text = "FacturaId";
-            // 
-            // cbxpedidos
-            // 
-            this.cbxpedidos.FormattingEnabled = true;
-            this.cbxpedidos.Location = new System.Drawing.Point(186, 161);
-            this.cbxpedidos.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxpedidos.Name = "cbxpedidos";
-            this.cbxpedidos.Size = new System.Drawing.Size(286, 24);
-            this.cbxpedidos.TabIndex = 53;
             // 
             // label2
             // 
@@ -235,9 +229,10 @@
             // 
             // txtsubtotal
             // 
-            this.txtsubtotal.Location = new System.Drawing.Point(919, 162);
+            this.txtsubtotal.Location = new System.Drawing.Point(919, 112);
             this.txtsubtotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtsubtotal.Name = "txtsubtotal";
+            this.txtsubtotal.ReadOnly = true;
             this.txtsubtotal.Size = new System.Drawing.Size(142, 22);
             this.txtsubtotal.TabIndex = 57;
             // 
@@ -245,7 +240,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(797, 166);
+            this.label7.Location = new System.Drawing.Point(797, 116);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 18);
             this.label7.TabIndex = 56;
@@ -253,9 +248,10 @@
             // 
             // txtdescuento
             // 
-            this.txtdescuento.Location = new System.Drawing.Point(919, 208);
+            this.txtdescuento.Location = new System.Drawing.Point(919, 164);
             this.txtdescuento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdescuento.Name = "txtdescuento";
+            this.txtdescuento.ReadOnly = true;
             this.txtdescuento.Size = new System.Drawing.Size(142, 22);
             this.txtdescuento.TabIndex = 59;
             // 
@@ -263,7 +259,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(797, 212);
+            this.label8.Location = new System.Drawing.Point(797, 168);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 18);
             this.label8.TabIndex = 58;
@@ -273,18 +269,39 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // bbuscarpedido
+            // 
+            this.bbuscarpedido.Location = new System.Drawing.Point(186, 158);
+            this.bbuscarpedido.Margin = new System.Windows.Forms.Padding(4);
+            this.bbuscarpedido.Name = "bbuscarpedido";
+            this.bbuscarpedido.Size = new System.Drawing.Size(155, 28);
+            this.bbuscarpedido.TabIndex = 60;
+            this.bbuscarpedido.Text = "Buscar";
+            this.bbuscarpedido.UseVisualStyleBackColor = true;
+            this.bbuscarpedido.Click += new System.EventHandler(this.bbuscarpedido_Click);
+            // 
+            // txtpedidoid
+            // 
+            this.txtpedidoid.Location = new System.Drawing.Point(800, 21);
+            this.txtpedidoid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtpedidoid.Name = "txtpedidoid";
+            this.txtpedidoid.ReadOnly = true;
+            this.txtpedidoid.Size = new System.Drawing.Size(45, 22);
+            this.txtpedidoid.TabIndex = 61;
+            // 
             // PFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 609);
+            this.Controls.Add(this.txtpedidoid);
+            this.Controls.Add(this.bbuscarpedido);
             this.Controls.Add(this.txtdescuento);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtsubtotal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.fechafactura);
-            this.Controls.Add(this.cbxpedidos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbxclientes);
             this.Controls.Add(this.label9);
@@ -324,7 +341,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox cbEstado;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbxpedidos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker fechafactura;
         private System.Windows.Forms.Label label3;
@@ -333,5 +349,7 @@
         private System.Windows.Forms.TextBox txtdescuento;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button bbuscarpedido;
+        private System.Windows.Forms.TextBox txtpedidoid;
     }
 }

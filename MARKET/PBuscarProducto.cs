@@ -39,11 +39,6 @@ namespace MARKET
         }
         private void dgbuscarProducto_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            productoId = dgbuscarProducto.CurrentRow.Cells["ProductoId"].Value.ToString();
-            categoria = dgbuscarProducto.CurrentRow.Cells["CategoriaDescripcion"].Value.ToString();
-            unidadmedida = dgbuscarProducto.CurrentRow.Cells["UnidadMedidaDescripcion"].Value.ToString();
-            preciocompra = dgbuscarProducto.CurrentRow.Cells["PrecioCompra"].Value.ToString();
-            this.Visible = false;
         }
 
         private void checkBprod_CheckedChanged_1(object sender, EventArgs e)
@@ -53,6 +48,15 @@ namespace MARKET
             {
                 cargardatos();
             }
+        }
+
+        private void dgbuscarProducto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            productoId = dgbuscarProducto.CurrentRow.Cells["ProductoId"].Value.ToString();
+            categoria = dgbuscarProducto.CurrentRow.Cells["CategoriaDescripcion"].Value.ToString();
+            unidadmedida = dgbuscarProducto.CurrentRow.Cells["UnidadMedidaDescripcion"].Value.ToString();
+            preciocompra = dgbuscarProducto.CurrentRow.Cells["PrecioCompra"].Value.ToString();
+            this.Visible = false;
         }
     }
 }

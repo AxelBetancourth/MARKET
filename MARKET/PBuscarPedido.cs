@@ -37,11 +37,6 @@ namespace MARKET
         }
         private void dgbuscarPedido_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            PedidoID = dgbuscarPedido.CurrentRow.Cells["PedidoID"].Value.ToString();
-            Total = dgbuscarPedido.CurrentRow.Cells["Total"].Value.ToString();
-            SubTotal = dgbuscarPedido.CurrentRow.Cells["SubTotal"].Value.ToString();
-            Descuento = dgbuscarPedido.CurrentRow.Cells["Descuento"].Value.ToString();
-            this.Visible = false;
         }
 
         private void checkBpedidos_CheckedChanged_1(object sender, EventArgs e)
@@ -51,6 +46,15 @@ namespace MARKET
             {
                 cargardatos();
             }
+        }
+
+        private void dgbuscarPedido_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PedidoID = dgbuscarPedido.CurrentRow.Cells["PedidoID"].Value.ToString();
+            Total = dgbuscarPedido.CurrentRow.Cells["Total"].Value.ToString();
+            SubTotal = dgbuscarPedido.CurrentRow.Cells["SubTotal"].Value.ToString();
+            Descuento = dgbuscarPedido.CurrentRow.Cells["Descuento"].Value.ToString();
+            this.Visible = false;
         }
     }
 }
