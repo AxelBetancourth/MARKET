@@ -16,10 +16,12 @@ namespace MARKET
     public partial class PCondicionPagos : Form
     {
         private NCondicionPagos nCondicionPagos;
+        private NClientes nClientes;
         public PCondicionPagos()
         {
             InitializeComponent();
             nCondicionPagos = new NCondicionPagos();
+            nClientes = new NClientes();
             CargarDatos();
         }
         void CargarDatos()
@@ -110,12 +112,19 @@ namespace MARKET
             {
                 return;
             }
-            nCondicionPagos.EliminarCondiciones(int.Parse(CondicionId));
-            CargarDatos();
-            LimpiarDatos();
-        }
 
-       
+            var ClientesAsociados = nClientes.TodosClientes().Where(c => c.CodigoPagoId == int.Parse(CondicionId)).ToList();
+            if (ClientesAsociados.Count > 0)
+            {
+                MessageBox.Show("El grupo descuento tiene asociados 'Clientes', desvincule para poder eliminar ");
+            }
+            else
+            {
+                nCondicionPagos.EliminarCondiciones(int.Parse(CondicionId));
+                CargarDatos();
+                LimpiarDatos();
+            }
+        }
 
         private void txtDias_TextChanged(object sender, EventArgs e)
         {

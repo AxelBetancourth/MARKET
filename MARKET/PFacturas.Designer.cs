@@ -288,6 +288,7 @@
             this.txtpedidoid.ReadOnly = true;
             this.txtpedidoid.Size = new System.Drawing.Size(45, 22);
             this.txtpedidoid.TabIndex = 61;
+            this.txtpedidoid.Visible = false;
             // 
             // PFacturas
             // 

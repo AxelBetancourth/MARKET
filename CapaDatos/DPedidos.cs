@@ -45,7 +45,7 @@ namespace CapaDatos
                 if (pedidoInDb != null)
                 {
                     pedidoInDb.ClienteID = pedidos.ClienteID;
-                    pedidos.FechaPedido = pedidoInDb.FechaPedido;
+                    pedidoInDb.FechaPedido = pedidos.FechaPedido;
                     pedidoInDb.Estado = pedidos.Estado;
                     pedidoInDb.Total = pedidos.Total;
                     pedidoInDb.SubTotal = pedidos.SubTotal;

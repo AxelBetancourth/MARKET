@@ -48,7 +48,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(316, 232);
+            this.btnEliminar.Location = new System.Drawing.Point(504, 231);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(85, 38);
             this.btnEliminar.TabIndex = 35;
@@ -58,7 +58,7 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(216, 232);
+            this.BtnGuardar.Location = new System.Drawing.Point(404, 231);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(85, 38);
             this.BtnGuardar.TabIndex = 34;
@@ -70,7 +70,7 @@
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(181, 156);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(346, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(714, 22);
             this.txtDescripcion.TabIndex = 33;
             // 
             // txtCodigo
@@ -92,7 +92,7 @@
             // 
             this.cbEstado.AutoSize = true;
             this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEstado.Location = new System.Drawing.Point(16, 206);
+            this.cbEstado.Location = new System.Drawing.Point(823, 68);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(72, 20);
             this.cbEstado.TabIndex = 30;

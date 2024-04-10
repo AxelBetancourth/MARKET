@@ -44,7 +44,6 @@ namespace CapaNegocio
                 Datos.Add(new CargarCombos()
                 {
                     Valor = item.PedidoID,
-                    //Descripcion = item.FechaPedido.ToString("yyyy-MM-dd HH:mm:ss")
                     Descripcion = $"{item.PedidoID} - {item.FechaPedido.ToString("yyyy-MM-dd HH:mm:ss")}"
                 });
             }

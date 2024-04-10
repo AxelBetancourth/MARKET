@@ -20,12 +20,14 @@ namespace MARKET
         private NProductos nProductos;
         private NCategorias nCategoria;
         private NUnidadMedidas nUnidadMedida;
+        private NPedidoDetalles nPedidoDetalles;
         public PProductos()
         {
             InitializeComponent();
             nProductos = new NProductos();
             nCategoria = new NCategorias();
             nUnidadMedida = new NUnidadMedidas();
+            nPedidoDetalles = new NPedidoDetalles();
             CargarDatos();
             CargarCombos();
         }
@@ -128,14 +130,20 @@ namespace MARKET
         }
         private void btneliminar_Click_1(object sender, EventArgs e)
         {
-            var categoriaId = txtProductoid.Text.ToString();
-            if (string.IsNullOrEmpty(categoriaId) || string.IsNullOrWhiteSpace(categoriaId))
+            var productoId = txtProductoid.Text.ToString();
+            if (string.IsNullOrEmpty(productoId) || string.IsNullOrWhiteSpace(productoId))
             {
                 return;
             }
-            nProductos.Eliminar(int.Parse(categoriaId));
+            var PedidosDetallesAsociados = nPedidoDetalles.TodosDetallesPedidos().Where(c => c.PedidoID == int.Parse(productoId)).ToList();
+            if (PedidosDetallesAsociados.Count > 0)
+            {
+                MessageBox.Show("El producto tiene asociados 'Pedidos Detalles', desvincule para poder eliminar ");
+                return;
+            }
+            nProductos.EliminarProductos(int.Parse(productoId));
             CargarDatos();
-            LimpiarCampos();
+            LimpiarDatos();
         }
 
         private void checkBfiltroactivos_CheckedChanged_1(object sender, EventArgs e)

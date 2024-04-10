@@ -94,14 +94,15 @@ namespace MARKET
                     SubTotal = decimal.Parse(txtsubt.Text.ToString()),
                     Descuento = decimal.Parse(txtDescuento.Text.ToString()),
                 };
-                if (!string.IsNullOrEmpty(txtDetallePedidoId.Text) || !string.IsNullOrWhiteSpace(txtDetallePedidoId.Text))
+                if (!string.IsNullOrEmpty(txtDetallePedidoId.Text) && int.TryParse(txtDetallePedidoId.Text.ToString(), out int pedidoId) && pedidoId != 0)
                 {
-                    if (int.TryParse(txtDetallePedidoId.Text.ToString(), out int pedidodetalleid) && pedidodetalleid != 0)
-                    {
-                        PedidoDetalle.PedidoDetalleId = pedidodetalleid;
-                    }
+                    PedidoDetalle.PedidoDetalleId = pedidoId;
+                    nPedidodetalles.EditarPedidoDetalle(PedidoDetalle);
                 }
-                nPedidodetalles.AgregarPedidoDetalles(PedidoDetalle);
+                else
+                {
+                    nPedidodetalles.AgregarPedidoDetalles(PedidoDetalle);
+                }
                 LimpiarDatos();
                 CargarDatos();
             }

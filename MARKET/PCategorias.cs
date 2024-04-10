@@ -16,10 +16,12 @@ namespace MARKET
     public partial class PCategorias : Form
     {
         private NCategorias nCategorias;
+        private NProductos nProductos;
         public PCategorias()
         {
             InitializeComponent();
             nCategorias = new NCategorias();
+            nProductos = new NProductos();
             CargarDatos();
         }
 
@@ -97,9 +99,16 @@ namespace MARKET
             {
                 return;
             }
-            nCategorias.EliminarCategoria(int.Parse(categoriaId));
-            CargarDatos();
-            LimpiarDatos();
+            var ProductosAsociado = nProductos.TodosProductos().Where(c => c.CategoriaId == int.Parse(categoriaId)).ToList();
+            if (ProductosAsociado.Count > 0){
+                MessageBox.Show("La categoria tiene asociados 'Productos', desvincule para poder eliminar ");
+            }
+            else
+            {
+                nCategorias.EliminarCategoria(int.Parse(categoriaId));
+                CargarDatos();
+                LimpiarDatos();
+            }
         }
 
         private void dgCategorias_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

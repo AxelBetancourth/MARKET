@@ -34,7 +34,7 @@ namespace CapaNegocio
             return dproductos.Guardar(Productos);
         }
 
-        public int Eliminar(int ProductoId)
+        public int EliminarProductos(int ProductoId)
         {
             return dproductos.Eliminar(ProductoId);
         }

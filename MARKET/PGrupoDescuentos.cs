@@ -16,10 +16,12 @@ namespace MARKET
     public partial class PGrupoDescuentos : Form
     {
         private NGrupoDescuentos nGrupoDescuentos;
+        private NClientes nClientes;
         public PGrupoDescuentos()
         {
             InitializeComponent();
             nGrupoDescuentos = new NGrupoDescuentos();
+            nClientes = new NClientes();
             CargarDatos();
         }
         void CargarDatos()
@@ -119,9 +121,17 @@ namespace MARKET
             {
                 return;
             }
-            nGrupoDescuentos.EliminarDescuentos(int.Parse(GrupoDescuentoId));
-            CargarDatos();
-            LimpiarDatos();
+            var ClientesAsociados = nClientes.TodosClientes().Where(c => c.GrupoDescuentoId == int.Parse(GrupoDescuentoId)).ToList();
+            if (ClientesAsociados.Count > 0)
+            {
+                MessageBox.Show("El grupo descuento tiene asociados 'Clientes', desvincule para poder eliminar ");
+            }
+            else
+            {
+                nGrupoDescuentos.EliminarDescuentos(int.Parse(GrupoDescuentoId));
+                CargarDatos();
+                LimpiarDatos();
+            }
         }
 
         private void dgDescuentos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
