@@ -58,5 +58,10 @@ namespace MARKET
             preciocompra = dgbuscarProducto.CurrentRow.Cells["PrecioCompra"].Value.ToString();
             this.Visible = false;
         }
+
+        private void dgbuscarProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

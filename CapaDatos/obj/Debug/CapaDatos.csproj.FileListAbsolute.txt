@@ -100,7 +100,6 @@ C:\Users\claud\source\repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaPedidos.resources
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaPedidoDetalles.resources
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaFacturas.resources
-C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablacliente.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.addmigrationChangeReglasBaseDatosPermitirDeleteCascada.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaPedidos.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaPedidoDetalles.resources
@@ -180,3 +179,4 @@ C:\Users\axel8\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos
 C:\Users\axel8\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\axel8\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.pdb
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaClientes.resources
+C:\Users\admin\Source\Repos\AxelBetancourth\Market\CapaDatos\obj\Debug\CapaDatos.Migrations.AddTablaClientes.resources
