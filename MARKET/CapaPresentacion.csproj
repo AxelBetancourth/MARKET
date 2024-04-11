@@ -62,6 +62,12 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="PBuscarFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PBuscarFacturas.Designer.cs">
+      <DependentUpon>PBuscarFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="PBuscarPedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="PCondicionPagos.Designer.cs">
       <DependentUpon>PCondicionPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PFacturaDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PFacturaDetalle.Designer.cs">
+      <DependentUpon>PFacturaDetalle.cs</DependentUpon>
     </Compile>
     <Compile Include="PFacturas.cs">
       <SubType>Form</SubType>
@@ -133,6 +145,9 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PBuscarFacturas.resx">
+      <DependentUpon>PBuscarFacturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PBuscarPedido.resx">
       <DependentUpon>PBuscarPedido.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PCondicionPagos.resx">
       <DependentUpon>PCondicionPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PFacturaDetalle.resx">
+      <DependentUpon>PFacturaDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PFacturas.resx">
       <DependentUpon>PFacturas.cs</DependentUpon>

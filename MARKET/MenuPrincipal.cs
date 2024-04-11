@@ -91,6 +91,13 @@ namespace MARKET
             Productos.MdiParent = this;
             Productos.Show();
         }
+
+        private void detalleDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PFacturaDetalle Factura = new PFacturaDetalle();
+            Factura.MdiParent = this;
+            Factura.Show();
+        }
     }
     
 }

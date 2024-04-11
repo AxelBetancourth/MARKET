@@ -230,3 +230,10 @@ C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKE
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PBuscarProducto.resources
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PPedidoDetalles.resources
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PPedidos.resources
+C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PBuscarPedido.resources
+C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PBuscarProducto.resources
+C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PFacturas.resources
+C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PPedidoDetalles.resources
+C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PPedidos.resources
+C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PBuscarFacturas.resources
+C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PFacturaDetalle.resources
