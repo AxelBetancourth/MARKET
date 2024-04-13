@@ -1,23 +1,3 @@
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\MARKET.exe.config
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\MARKET.exe
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\MARKET.pdb
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\obj\Debug\MARKET.Properties.Resources.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\obj\Debug\MARKET.exe
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\obj\Debug\MARKET.pdb
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\CapaDatos.dll
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\CapaNegocio.dll
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\EntityFramework.dll
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\CapaDatos.pdb
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\CapaDatos.dll.config
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\CapaNegocio.pdb
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\CapaNegocio.dll.config
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\EntityFramework.xml
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\MARKET\MARKET\obj\Debug\CapaPres.61CA7C38.Up2Date
 C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\bin\Debug\MARKET.exe.config
 C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\bin\Debug\MARKET.exe
 C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\bin\Debug\MARKET.pdb
@@ -123,16 +103,8 @@ C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.exe
 C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.pdb
 C:\Users\Braya\Desktop\Proyecto RAD\Market\MARKET\obj\Debug\MARKET.PClientes.resources
 C:\Users\axel8\OneDrive\Documentos\RadBitduker\Market\MARKET\obj\Debug\MARKET.PClientes.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.MenuPrincipal.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PCategorias.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PClientes.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PCondicionPagos.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PGrupoDescuentos.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PProductos.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PUnidadMedidas.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PClientes.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PProductos.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PFacturas.resources
 C:\Users\Braya\Desktop\RadCopia de seguridad\Market\MARKET\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
 C:\Users\Braya\Desktop\RadCopia de seguridad\Market\MARKET\obj\Debug\MARKET.MenuPrincipal.resources
 C:\Users\Braya\Desktop\RadCopia de seguridad\Market\MARKET\obj\Debug\MARKET.PCategorias.resources
@@ -226,10 +198,6 @@ C:\Users\axel8\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\CapaPresenta
 C:\Users\axel8\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\CapaPres.61CA7C38.Up2Date
 C:\Users\axel8\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.exe
 C:\Users\axel8\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.pdb
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PBuscarPedido.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PBuscarProducto.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PPedidoDetalles.resources
-C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PPedidos.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PBuscarPedido.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PBuscarProducto.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PFacturas.resources
@@ -237,5 +205,37 @@ C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PPedi
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PPedidos.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PBuscarFacturas.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PFacturaDetalle.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\MARKET.exe.config
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\MARKET.exe
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\MARKET.pdb
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\CapaDatos.dll
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\CapaNegocio.dll
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\EntityFramework.dll
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\CapaDatos.pdb
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\CapaDatos.dll.config
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\CapaNegocio.pdb
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\CapaNegocio.dll.config
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\EntityFramework.xml
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.MenuPrincipal.resources
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PBuscarFacturas.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PBuscarPedido.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PBuscarProducto.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PCategorias.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PClientes.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PCondicionPagos.resources
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PFacturaDetalles.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PFacturas.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PGrupoDescuentos.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PPedidoDetalles.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PPedidos.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PProductos.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.Properties.Resources.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PUnidadMedidas.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\CapaPres.61CA7C38.Up2Date
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.exe
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.pdb

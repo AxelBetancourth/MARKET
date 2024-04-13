@@ -30,6 +30,7 @@ namespace MARKET
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PClientes));
             this.cbActivos = new System.Windows.Forms.CheckBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -57,11 +58,11 @@ namespace MARKET
             // cbActivos
             // 
             this.cbActivos.AutoSize = true;
-            this.cbActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbActivos.Location = new System.Drawing.Point(20, 299);
+            this.cbActivos.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbActivos.Location = new System.Drawing.Point(22, 298);
             this.cbActivos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbActivos.Name = "cbActivos";
-            this.cbActivos.Size = new System.Drawing.Size(185, 22);
+            this.cbActivos.Size = new System.Drawing.Size(173, 22);
             this.cbActivos.TabIndex = 23;
             this.cbActivos.Text = "Mostrar solo activas";
             this.cbActivos.UseVisualStyleBackColor = true;
@@ -69,12 +70,14 @@ namespace MARKET
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(588, 289);
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminar.BackColor = System.Drawing.Color.Red;
+            this.btnEliminar.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(668, 284);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(130, 32);
+            this.btnEliminar.Size = new System.Drawing.Size(146, 42);
             this.btnEliminar.TabIndex = 22;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -82,12 +85,14 @@ namespace MARKET
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(417, 289);
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(17)))));
+            this.btnGuardar.Font = new System.Drawing.Font("Arial Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(466, 284);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(130, 32);
+            this.btnGuardar.Size = new System.Drawing.Size(146, 42);
             this.btnGuardar.TabIndex = 21;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -97,61 +102,67 @@ namespace MARKET
             // 
             this.dgClientes.AllowUserToAddRows = false;
             this.dgClientes.AllowUserToDeleteRows = false;
+            this.dgClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgClientes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(20, 327);
+            this.dgClientes.Location = new System.Drawing.Point(22, 342);
             this.dgClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.ReadOnly = true;
             this.dgClientes.RowHeadersWidth = 62;
             this.dgClientes.RowTemplate.Height = 28;
-            this.dgClientes.Size = new System.Drawing.Size(1045, 271);
+            this.dgClientes.Size = new System.Drawing.Size(1167, 332);
             this.dgClientes.TabIndex = 20;
             this.dgClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellDoubleClick_1);
             // 
             // txtnombres
             // 
-            this.txtnombres.Location = new System.Drawing.Point(156, 150);
+            this.txtnombres.Location = new System.Drawing.Point(162, 166);
             this.txtnombres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnombres.Name = "txtnombres";
-            this.txtnombres.Size = new System.Drawing.Size(240, 22);
+            this.txtnombres.Size = new System.Drawing.Size(270, 25);
             this.txtnombres.TabIndex = 19;
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(156, 110);
+            this.txtcodigo.Location = new System.Drawing.Point(162, 121);
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(240, 22);
+            this.txtcodigo.Size = new System.Drawing.Size(270, 25);
             this.txtcodigo.TabIndex = 18;
             // 
             // txtClienteId
             // 
-            this.txtClienteId.Location = new System.Drawing.Point(143, 73);
+            this.txtClienteId.Location = new System.Drawing.Point(162, 75);
             this.txtClienteId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClienteId.Name = "txtClienteId";
             this.txtClienteId.ReadOnly = true;
-            this.txtClienteId.Size = new System.Drawing.Size(89, 22);
+            this.txtClienteId.Size = new System.Drawing.Size(100, 25);
             this.txtClienteId.TabIndex = 17;
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(461, 19);
+            this.label4.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(504, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(180, 24);
+            this.label4.Size = new System.Drawing.Size(259, 32);
             this.label4.TabIndex = 16;
-            this.label4.Text = "Todos los clientes";
+            this.label4.Text = "Gestión de Clientes";
             // 
             // cbEstado
             // 
             this.cbEstado.AutoSize = true;
-            this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEstado.Location = new System.Drawing.Point(275, 73);
+            this.cbEstado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.Location = new System.Drawing.Point(358, 81);
             this.cbEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(76, 22);
+            this.cbEstado.Size = new System.Drawing.Size(74, 22);
             this.cbEstado.TabIndex = 15;
             this.cbEstado.Text = "Activo";
             this.cbEstado.UseVisualStyleBackColor = true;
@@ -159,58 +170,59 @@ namespace MARKET
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 150);
+            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 169);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 18);
+            this.label3.Size = new System.Drawing.Size(72, 18);
             this.label3.TabIndex = 14;
             this.label3.Text = "Nombres";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 110);
+            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 18);
+            this.label2.Size = new System.Drawing.Size(59, 18);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Codigo";
+            this.label2.Text = "Código";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 73);
+            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 18);
+            this.label1.Size = new System.Drawing.Size(76, 18);
             this.label1.TabIndex = 12;
-            this.label1.Text = "ClienteId";
+            this.label1.Text = "Cliente Id";
             // 
             // txtapellidos
             // 
-            this.txtapellidos.Location = new System.Drawing.Point(156, 182);
+            this.txtapellidos.Location = new System.Drawing.Point(162, 209);
             this.txtapellidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtapellidos.Name = "txtapellidos";
-            this.txtapellidos.Size = new System.Drawing.Size(240, 22);
+            this.txtapellidos.Size = new System.Drawing.Size(270, 25);
             this.txtapellidos.TabIndex = 26;
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 222);
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(710, 128);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 18);
+            this.label5.Size = new System.Drawing.Size(154, 18);
             this.label5.TabIndex = 25;
-            this.label5.Text = "Descuento";
+            this.label5.Text = "Grupo de descuento";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(34, 182);
+            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(35, 216);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 18);
+            this.label6.Size = new System.Drawing.Size(73, 18);
             this.label6.TabIndex = 24;
             this.label6.Text = "Apellidos";
             // 
@@ -218,37 +230,40 @@ namespace MARKET
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(495, 147);
+            this.label9.Location = new System.Drawing.Point(557, 165);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 18);
             this.label9.TabIndex = 29;
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(656, 107);
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(710, 173);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 18);
+            this.label10.Size = new System.Drawing.Size(141, 18);
             this.label10.TabIndex = 28;
-            this.label10.Text = "PagoID";
+            this.label10.Text = "Condición de pago";
             // 
             // cbxdescuentos
             // 
+            this.cbxdescuentos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxdescuentos.FormattingEnabled = true;
-            this.cbxdescuentos.Location = new System.Drawing.Point(156, 222);
+            this.cbxdescuentos.Location = new System.Drawing.Point(888, 120);
             this.cbxdescuentos.Margin = new System.Windows.Forms.Padding(4);
             this.cbxdescuentos.Name = "cbxdescuentos";
-            this.cbxdescuentos.Size = new System.Drawing.Size(240, 24);
+            this.cbxdescuentos.Size = new System.Drawing.Size(270, 26);
             this.cbxdescuentos.TabIndex = 31;
             // 
             // cbxPagos
             // 
+            this.cbxPagos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxPagos.FormattingEnabled = true;
-            this.cbxPagos.Location = new System.Drawing.Point(736, 104);
+            this.cbxPagos.Location = new System.Drawing.Point(888, 165);
             this.cbxPagos.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPagos.Name = "cbxPagos";
-            this.cbxPagos.Size = new System.Drawing.Size(240, 24);
+            this.cbxPagos.Size = new System.Drawing.Size(270, 26);
             this.cbxPagos.TabIndex = 32;
             // 
             // ErrorClientes
@@ -257,9 +272,9 @@ namespace MARKET
             // 
             // PClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 609);
+            this.ClientSize = new System.Drawing.Size(1212, 685);
             this.Controls.Add(this.cbxPagos);
             this.Controls.Add(this.cbxdescuentos);
             this.Controls.Add(this.label9);
@@ -279,10 +294,14 @@ namespace MARKET
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1000, 47);
             this.Name = "PClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PClientes";
+            this.Text = "Clientes";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.PClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorClientes)).EndInit();

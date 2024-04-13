@@ -17,8 +17,6 @@ namespace MARKET
     {
         private NPedidoDetalles nPedidodetalles;
         private NProductos nProductos;
-        private PBuscarPedido buscarPedido;
-        private PBuscarProducto buscarProducto;
         public PPedidoDetalles()
         {
             InitializeComponent();
