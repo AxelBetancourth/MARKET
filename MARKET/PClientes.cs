@@ -39,6 +39,7 @@ namespace MARKET
         }
         void LimpiarDatos()
         {
+            txtClienteId.Text = "";
             txtcodigo.Text = "";
             txtnombres.Text = "";
             txtapellidos.Text = "";
@@ -59,6 +60,29 @@ namespace MARKET
             cbxPagos.DisplayMember = "Descripcion";
         }
 
+        private bool ValidarGrupoDescuento()
+        {
+            var GrupoDescuentoValidos = nGrupoDescuentos.CargaCombo().Select(c => c.Descripcion).ToList();
+            
+
+            if (!GrupoDescuentoValidos.Contains(cbxdescuentos.Text))
+            {
+                ErrorClientes.SetError(cbxdescuentos, "El Grupo de descuento seleccionado no es válido.");
+                return false;
+            }
+            return true;
+        }
+        private bool ValidarCondicionPagos()
+        {
+            var CondicionPagoValidos = nCondicionPagos.CargaCombo().Select(c => c.Descripcion).ToList();
+            if (!CondicionPagoValidos.Contains(cbxPagos.Text))
+            {
+                ErrorClientes.SetError(cbxPagos, "La condicion de pago seleccionada no es válida.");
+                return false;
+            }
+            return true;
+        }
+
         private bool ValidarDatos()
         {
             var FormularioValido = true;
@@ -67,6 +91,26 @@ namespace MARKET
                 FormularioValido = false;
                 ErrorClientes.SetError(txtcodigo, "Debe ingrear un Codigo");
                 return FormularioValido;
+            }
+            if (string.IsNullOrEmpty(cbxdescuentos.Text.Trim()))
+            {
+                FormularioValido = false;
+                ErrorClientes.SetError(cbxdescuentos, "Debe ingresar un grupo de descuento");
+                return FormularioValido;
+            }
+            if (string.IsNullOrEmpty(cbxPagos.Text.Trim()))
+            {
+                FormularioValido = false;
+                ErrorClientes.SetError(cbxPagos, "Debe ingresar una condición de pago");
+                return FormularioValido;
+            }
+            if (!ValidarGrupoDescuento())
+            {
+                FormularioValido = false;
+            }
+            if (!ValidarCondicionPagos())
+            {
+                FormularioValido = false;
             }
             if (string.IsNullOrEmpty(txtnombres.Text.ToString()) || string.IsNullOrWhiteSpace(txtnombres.Text.ToString()))
             {
@@ -80,22 +124,11 @@ namespace MARKET
                 ErrorClientes.SetError(txtapellidos, "Debe ingresar un apellido");
                 return FormularioValido;
             }
-            if (string.IsNullOrEmpty(cbxdescuentos.Text.ToString()) || string.IsNullOrWhiteSpace(cbxdescuentos.Text.ToString()))
-            {
-                FormularioValido = false;
-                ErrorClientes.SetError(cbxdescuentos, "Debe ingresar un grupo de descuento");
-                return FormularioValido;
-            }
-            if (string.IsNullOrEmpty(cbxPagos.Text.ToString()) || string.IsNullOrWhiteSpace(cbxPagos.Text.ToString()))
-            {
-                FormularioValido = false;
-                ErrorClientes.SetError(cbxPagos, "Debe ingresar una condición de pago");
-                return FormularioValido;
-            }
             return FormularioValido;
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            ErrorClientes.Clear();
             if (ValidarDatos())
             {
                 MClientes Clientes = new MClientes()

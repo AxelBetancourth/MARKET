@@ -98,6 +98,11 @@ namespace MARKET
             Factura.MdiParent = this;
             Factura.Show();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
     
 }
