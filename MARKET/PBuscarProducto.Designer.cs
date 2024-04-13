@@ -68,7 +68,6 @@
             this.dgbuscarProducto.Size = new System.Drawing.Size(789, 661);
             this.dgbuscarProducto.TabIndex = 5;
             this.dgbuscarProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbuscarProducto_CellClick_1);
-            this.dgbuscarProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbuscarProducto_CellContentClick);
             this.dgbuscarProducto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbuscarProducto_CellDoubleClick);
             // 
             // PBuscarProducto

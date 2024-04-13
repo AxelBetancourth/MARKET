@@ -44,8 +44,6 @@ namespace MARKET
             }
         }
 
-     
-
         private void dgbuscarFactura_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FacturaId = dgbuscarFactura.CurrentRow.Cells["FacturaId"].Value.ToString();

@@ -237,3 +237,5 @@ C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PPedi
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PPedidos.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PBuscarFacturas.resources
 C:\Users\admin\Source\Repos\AxelBetancourth\Market\MARKET\obj\Debug\MARKET.PFacturaDetalle.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PBuscarFacturas.resources
+C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.PFacturaDetalles.resources

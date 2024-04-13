@@ -60,7 +60,7 @@ namespace CapaNegocio
                 c.FacturaId,
 
             })
-                                      .ToList();
+            .ToList();
             foreach (var item in factura)
             {
                 Datos.Add(new CargarCombos()

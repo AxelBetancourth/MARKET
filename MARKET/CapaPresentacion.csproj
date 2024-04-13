@@ -98,11 +98,11 @@
     <Compile Include="PCondicionPagos.Designer.cs">
       <DependentUpon>PCondicionPagos.cs</DependentUpon>
     </Compile>
-    <Compile Include="PFacturaDetalle.cs">
+    <Compile Include="PFacturaDetalles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PFacturaDetalle.Designer.cs">
-      <DependentUpon>PFacturaDetalle.cs</DependentUpon>
+    <Compile Include="PFacturaDetalles.Designer.cs">
+      <DependentUpon>PFacturaDetalles.cs</DependentUpon>
     </Compile>
     <Compile Include="PFacturas.cs">
       <SubType>Form</SubType>
@@ -163,8 +163,8 @@
     <EmbeddedResource Include="PCondicionPagos.resx">
       <DependentUpon>PCondicionPagos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PFacturaDetalle.resx">
-      <DependentUpon>PFacturaDetalle.cs</DependentUpon>
+    <EmbeddedResource Include="PFacturaDetalles.resx">
+      <DependentUpon>PFacturaDetalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PFacturas.resx">
       <DependentUpon>PFacturas.cs</DependentUpon>
