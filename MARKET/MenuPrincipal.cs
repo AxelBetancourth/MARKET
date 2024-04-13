@@ -94,7 +94,7 @@ namespace MARKET
 
         private void detalleDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PFacturaDetalle Factura = new PFacturaDetalle();
+            PFacturaDetalles Factura = new PFacturaDetalles();
             Factura.MdiParent = this;
             Factura.Show();
         }

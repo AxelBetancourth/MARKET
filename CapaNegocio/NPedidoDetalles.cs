@@ -59,8 +59,7 @@ namespace CapaNegocio
             {
                 c.PedidoID,
 
-            })
-                                      .ToList();
+            }).ToList();
             foreach (var item in pedidos)
             {
                 Datos.Add(new CargarCombos()

@@ -124,8 +124,8 @@ namespace MARKET
         {
             PBuscarProducto pproducto = new PBuscarProducto();
             pproducto.ShowDialog();
-            txtprecio.Text = pproducto.preciocompra;
-            txtproductoid.Text = pproducto.productoId;
+            txtproductoid.Text = pproducto.ProductoId.ToString();
+            txtprecio.Text = pproducto.PrecioCompra.ToString();
         }
 
         private void buscarpdido_Click(object sender, EventArgs e)

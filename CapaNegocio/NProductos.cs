@@ -83,7 +83,9 @@ namespace CapaNegocio
         {
             var productos = dproductos.TodosLosProductos().Select(c => new {
                 c.ProductoId,
+                c.CategoriaId,
                 CategoriaDescripcion = c.MCategorias.Descripción,
+                c.UnidadMedidaId,
                 UnidadMedidaDescripcion = c.MUnidadMedidas.Descripción,
                 c.PrecioCompra,
                 c.Estado
@@ -94,7 +96,9 @@ namespace CapaNegocio
         {
             var productos = dproductos.TodosLosProductos().Select(c => new {
                 c.ProductoId,
+                c.CategoriaId,
                 CategoriaDescripcion = c.MCategorias.Descripción,
+                c.UnidadMedidaId,
                 UnidadMedidaDescripcion = c.MUnidadMedidas.Descripción,
                 c.PrecioCompra,
                 c.Estado

@@ -17,10 +17,13 @@ namespace MARKET
     {
 
         NProductos nProductos;
-        public string productoId { get; set; }
-        public string categoria { get; set; }
-        public string unidadmedida { get; set; }
-        public string preciocompra { get; set; }
+
+        public int ProductoId { get; set; }
+        public int Categoriaid { get; set; }
+        public int UnidadMedidaId { get; set; }
+        public DateTime FechaCreacion { get; set; }
+        public bool Estado { get; set; }
+        public decimal PrecioCompra { get; set; }
         public PBuscarProducto()
         {
             InitializeComponent();
@@ -52,16 +55,11 @@ namespace MARKET
 
         private void dgbuscarProducto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            productoId = dgbuscarProducto.CurrentRow.Cells["ProductoId"].Value.ToString();
-            categoria = dgbuscarProducto.CurrentRow.Cells["CategoriaDescripcion"].Value.ToString();
-            unidadmedida = dgbuscarProducto.CurrentRow.Cells["UnidadMedidaDescripcion"].Value.ToString();
-            preciocompra = dgbuscarProducto.CurrentRow.Cells["PrecioCompra"].Value.ToString();
+            ProductoId = Convert.ToInt32(dgbuscarProducto.CurrentRow.Cells["ProductoId"].Value);
+            Categoriaid = Convert.ToInt32(dgbuscarProducto.CurrentRow.Cells["CategoriaId"].Value);
+            UnidadMedidaId = Convert.ToInt32(dgbuscarProducto.CurrentRow.Cells["UnidadMedidaId"].Value);
+            PrecioCompra = Convert.ToInt32(dgbuscarProducto.CurrentRow.Cells["PrecioCompra"].Value);
             this.Visible = false;
-        }
-
-        private void dgbuscarProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
