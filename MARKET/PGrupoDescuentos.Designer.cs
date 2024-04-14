@@ -56,12 +56,14 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Red;
             this.btnEliminar.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = global::MARKET.Properties.Resources.eliminar;
             this.btnEliminar.Location = new System.Drawing.Point(695, 282);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(182, 50);
             this.btnEliminar.TabIndex = 47;
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -71,12 +73,14 @@
             this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(17)))));
             this.BtnGuardar.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar.Image = global::MARKET.Properties.Resources.Guardar;
             this.BtnGuardar.Location = new System.Drawing.Point(476, 282);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(182, 50);
             this.BtnGuardar.TabIndex = 46;
             this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 

@@ -329,6 +329,12 @@
   <ItemGroup>
     <None Include="Resources\detalle-pedido.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

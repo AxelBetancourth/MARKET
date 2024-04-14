@@ -114,7 +114,7 @@
             // 
             this.cbActivos.AutoSize = true;
             this.cbActivos.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbActivos.Location = new System.Drawing.Point(20, 350);
+            this.cbActivos.Location = new System.Drawing.Point(20, 330);
             this.cbActivos.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbActivos.Name = "cbActivos";
             this.cbActivos.Size = new System.Drawing.Size(190, 23);
@@ -129,12 +129,14 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Red;
             this.btnEliminar.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(694, 329);
+            this.btnEliminar.Image = global::MARKET.Properties.Resources.eliminar;
+            this.btnEliminar.Location = new System.Drawing.Point(683, 313);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(162, 44);
+            this.btnEliminar.Size = new System.Drawing.Size(182, 50);
             this.btnEliminar.TabIndex = 43;
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -144,12 +146,14 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(17)))));
             this.btnGuardar.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(488, 329);
+            this.btnGuardar.Image = global::MARKET.Properties.Resources.Guardar;
+            this.btnGuardar.Location = new System.Drawing.Point(488, 313);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(162, 44);
+            this.btnGuardar.Size = new System.Drawing.Size(182, 50);
             this.btnGuardar.TabIndex = 42;
             this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 

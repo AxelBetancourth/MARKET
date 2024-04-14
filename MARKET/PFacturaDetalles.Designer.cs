@@ -237,12 +237,14 @@
             this.btneliminar.BackColor = System.Drawing.Color.Red;
             this.btneliminar.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.White;
+            this.btneliminar.Image = global::MARKET.Properties.Resources.eliminar;
             this.btneliminar.Location = new System.Drawing.Point(662, 276);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(5);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(162, 44);
+            this.btneliminar.Size = new System.Drawing.Size(182, 50);
             this.btneliminar.TabIndex = 96;
             this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btneliminar.UseVisualStyleBackColor = false;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
@@ -252,12 +254,14 @@
             this.btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(17)))));
             this.btnguardar.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.ForeColor = System.Drawing.Color.White;
+            this.btnguardar.Image = global::MARKET.Properties.Resources.Guardar;
             this.btnguardar.Location = new System.Drawing.Point(462, 276);
             this.btnguardar.Margin = new System.Windows.Forms.Padding(5);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(162, 44);
+            this.btnguardar.Size = new System.Drawing.Size(182, 50);
             this.btnguardar.TabIndex = 95;
             this.btnguardar.Text = "Guardar";
+            this.btnguardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnguardar.UseVisualStyleBackColor = false;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
@@ -275,7 +279,7 @@
             this.DgDetalleFactura.Name = "DgDetalleFactura";
             this.DgDetalleFactura.RowHeadersWidth = 62;
             this.DgDetalleFactura.RowTemplate.Height = 28;
-            this.DgDetalleFactura.Size = new System.Drawing.Size(1165, 315);
+            this.DgDetalleFactura.Size = new System.Drawing.Size(1165, 338);
             this.DgDetalleFactura.TabIndex = 94;
             this.DgDetalleFactura.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDetalleFactura_CellDoubleClick);
             // 
@@ -284,6 +288,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label4.Location = new System.Drawing.Point(518, 23);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
