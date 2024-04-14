@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PPedidoDetalles));
             this.txtproductoid = new System.Windows.Forms.TextBox();
             this.txtpedidoid = new System.Windows.Forms.TextBox();
             this.DgDetallesPedido = new System.Windows.Forms.DataGridView();
@@ -57,7 +58,7 @@
             // txtproductoid
             // 
             this.txtproductoid.Location = new System.Drawing.Point(815, 17);
-            this.txtproductoid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtproductoid.Margin = new System.Windows.Forms.Padding(4);
             this.txtproductoid.Name = "txtproductoid";
             this.txtproductoid.ReadOnly = true;
             this.txtproductoid.Size = new System.Drawing.Size(49, 22);
@@ -67,7 +68,7 @@
             // txtpedidoid
             // 
             this.txtpedidoid.Location = new System.Drawing.Point(895, 17);
-            this.txtpedidoid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpedidoid.Margin = new System.Windows.Forms.Padding(4);
             this.txtpedidoid.Name = "txtpedidoid";
             this.txtpedidoid.ReadOnly = true;
             this.txtpedidoid.Size = new System.Drawing.Size(53, 22);
@@ -78,7 +79,7 @@
             // 
             this.DgDetallesPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgDetallesPedido.Location = new System.Drawing.Point(16, 250);
-            this.DgDetallesPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DgDetallesPedido.Margin = new System.Windows.Forms.Padding(4);
             this.DgDetallesPedido.Name = "DgDetallesPedido";
             this.DgDetallesPedido.RowHeadersWidth = 51;
             this.DgDetallesPedido.Size = new System.Drawing.Size(933, 289);
@@ -88,7 +89,7 @@
             // btneliminar
             // 
             this.btneliminar.Location = new System.Drawing.Point(521, 196);
-            this.btneliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(125, 28);
             this.btneliminar.TabIndex = 56;
@@ -99,7 +100,7 @@
             // btnguardar
             // 
             this.btnguardar.Location = new System.Drawing.Point(361, 196);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(125, 28);
             this.btnguardar.TabIndex = 55;
@@ -289,10 +290,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PPedidoDetalles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PPedidoDetalles";
+            this.Text = "Detalle Pedidos";
             this.Load += new System.EventHandler(this.PPedidoDetalles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgDetallesPedido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

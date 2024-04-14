@@ -234,9 +234,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\agregar-cliente.png" />
   </ItemGroup>
   <ItemGroup>
@@ -268,6 +265,69 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuenta.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-factura.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-factura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detalle-factura.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detalle-factura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pedidos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pedidos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-producto.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unidad.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-pedido.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-pedido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detalle-pedido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detalle-pedido.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
