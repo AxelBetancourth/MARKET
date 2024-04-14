@@ -80,11 +80,6 @@ namespace MARKET
                 errorProvider1.SetError(txtPorcentaje, "Debe ingresar un porcentaje");
                 return;
             }
-            if (!porcentaje.Contains(",") || porcentaje.Split(',')[1].Length < 1)
-            {
-                errorProvider1.SetError(txtPorcentaje, "Debe ingresar al menos un número después de la coma.");
-                return;
-            }
             if (agregar)
             {
                 nGrupoDescuentos.AgregarDescuentos(new MGrupoDescuentos()

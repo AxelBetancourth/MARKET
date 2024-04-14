@@ -62,9 +62,9 @@ namespace MARKET
             this.cbActivos.Location = new System.Drawing.Point(24, 315);
             this.cbActivos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbActivos.Name = "cbActivos";
-            this.cbActivos.Size = new System.Drawing.Size(190, 23);
+            this.cbActivos.Size = new System.Drawing.Size(191, 23);
             this.cbActivos.TabIndex = 23;
-            this.cbActivos.Text = "Mostrar solo activas";
+            this.cbActivos.Text = "Mostrar solo activos";
             this.cbActivos.UseVisualStyleBackColor = true;
             this.cbActivos.CheckedChanged += new System.EventHandler(this.cbActivos_CheckedChanged);
             // 

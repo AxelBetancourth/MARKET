@@ -135,7 +135,7 @@ namespace MARKET
             {
                 return;
             }
-            var PedidosDetallesAsociados = nPedidoDetalles.TodosDetallesPedidos().Where(c => c.PedidoID == int.Parse(productoId)).ToList();
+            var PedidosDetallesAsociados = nPedidoDetalles.TodosDetallesPedidos().Where(c => c.ProductoId== int.Parse(productoId)).ToList();
             if (PedidosDetallesAsociados.Count > 0)
             {
                 MessageBox.Show("El producto tiene asociados 'Pedidos Detalles', desvincule para poder eliminar ");
