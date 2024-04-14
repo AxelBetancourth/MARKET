@@ -17,91 +17,81 @@ namespace MARKET
             InitializeComponent();
         }
 
-        private void condiciónDePagosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PGrupoDescuentos descuentos= new PGrupoDescuentos();
-            descuentos.MdiParent = this;
-            descuentos.Show();
-        }
-
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void unidadDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
+        //Clientes
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PCategorias categoria = new PCategorias();
-            categoria.MdiParent = this;
-            categoria.Show();
+            PClientes Clientes = new PClientes();
+            Clientes.MdiParent = this;
+            Clientes.Show();
         }
-
-        private void condiciónDePagosToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void grupoDeDescuentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PGrupoDescuentos descuentos = new PGrupoDescuentos();
+            descuentos.MdiParent = this;
+            descuentos.Show();
+        }
+        private void condicionDePagoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PCondicionPagos condicionPagos = new PCondicionPagos();
             condicionPagos.MdiParent = this;
             condicionPagos.Show();
         }
 
-        private void unidadDeMedidaToolStripMenuItem1_Click(object sender, EventArgs e)
+        //Productos
+        private void agregarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PProductos Productos = new PProductos();
+            Productos.MdiParent = this;
+            Productos.Show();
+        }
+
+        private void categoriaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PCategorias categoria = new PCategorias();
+            categoria.MdiParent = this;
+            categoria.Show();
+        }
+
+        private void unidadDeMedidaToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             PUnidadMedidas unidadMedidas = new PUnidadMedidas();
             unidadMedidas.MdiParent = this;
             unidadMedidas.Show();
         }
 
-        private void grupoDeDescuentosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PProductos Productos = new PProductos();
-            Productos.MdiParent = this;
-            Productos.Show();
-        }
-
-        private void verFacturasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PFacturas Facturas = new PFacturas();
-            Facturas.MdiParent = this;
-            Facturas.Show();
-        }
-
-        private void grupoDeDescuentosToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            PClientes Clientes = new PClientes();
-            Clientes.MdiParent = this;
-            Clientes.Show();
-        }
-
-        private void verPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        //Pedidos
+        private void agregarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             PPedidos Pedidos = new PPedidos();
             Pedidos.MdiParent = this;
             Pedidos.Show();
         }
 
-        private void detalleDePedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void detallesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PPedidoDetalles Pedido = new PPedidoDetalles();
             Pedido.MdiParent = this;
             Pedido.Show();
         }
 
-        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        //Facturas
+        private void agregarToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            PProductos Productos = new PProductos();
-            Productos.MdiParent = this;
-            Productos.Show();
+            PFacturas Facturas = new PFacturas();
+            Facturas.MdiParent = this;
+            Facturas.Show();
         }
 
-        private void detalleDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void detallesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             PFacturaDetalles Factura = new PFacturaDetalles();
             Factura.MdiParent = this;
             Factura.Show();
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
     }
     

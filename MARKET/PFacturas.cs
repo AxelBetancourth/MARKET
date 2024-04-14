@@ -19,6 +19,7 @@ namespace MARKET
         private NFacturas nFacturas;
         private NClientes nClientes;
         private NPedidos nPedidos;
+        private NFacturaDetalle nFacturaDetalle;
 
         public PFacturas()
         {
@@ -26,6 +27,7 @@ namespace MARKET
             nFacturas = new NFacturas();
             nClientes = new NClientes();
             nPedidos = new NPedidos();
+            nFacturaDetalle = new NFacturaDetalle();
             CargarDatos();
             CargarCombos();
         }
@@ -143,9 +145,17 @@ namespace MARKET
             {
                 return;
             }
-            nFacturas.Eliminar(int.Parse(FacturaId));
-            LimpiarDatos();
-            CargarDatos();
+            var DetalleFacturasAsociado = nFacturaDetalle.TodosDetallesFacturas().Where(c => c.FacturaId == int.Parse(FacturaId)).ToList();
+            if (DetalleFacturasAsociado.Count > 0)
+            {
+                MessageBox.Show("La factura tiene asociados 'Detalle de Facturas', desvincule para poder eliminar ");
+            }
+            else
+            {
+                nFacturas.Eliminar(int.Parse(FacturaId));
+                CargarDatos();
+                LimpiarDatos();
+            }
         }
 
         private void bbuscarpedido_Click(object sender, EventArgs e)

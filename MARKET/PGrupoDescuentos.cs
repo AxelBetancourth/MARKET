@@ -80,6 +80,11 @@ namespace MARKET
                 errorProvider1.SetError(txtPorcentaje, "Debe ingresar un porcentaje");
                 return;
             }
+            if (!porcentaje.Contains(",") || porcentaje.Split(',')[1].Length < 1)
+            {
+                errorProvider1.SetError(txtPorcentaje, "Debe ingresar al menos un número después de la coma.");
+                return;
+            }
             if (agregar)
             {
                 nGrupoDescuentos.AgregarDescuentos(new MGrupoDescuentos()
@@ -111,6 +116,14 @@ namespace MARKET
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+
+            if (int.TryParse(txtPorcentaje.Text + e.KeyChar, out int porcentaje))
+            {
+                if (porcentaje > 100)
+                {
+                    e.Handled = true;
+                }
             }
         }
 
@@ -147,5 +160,9 @@ namespace MARKET
             }
         }
 
+        private void txtPorcentaje_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

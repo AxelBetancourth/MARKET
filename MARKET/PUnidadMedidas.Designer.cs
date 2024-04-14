@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PUnidadMedidas));
             this.btnEliminar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -185,9 +186,10 @@
             this.Controls.Add(this.cbActivos);
             this.Controls.Add(this.dgUnidades);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PUnidadMedidas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PUnidadMedidas";
+            this.Text = "Unidad Medida";
             this.Load += new System.EventHandler(this.PUnidadMedidas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgUnidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

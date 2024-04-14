@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PPedidos));
             this.txtpedidoID = new System.Windows.Forms.TextBox();
             this.dtpfechapedido = new System.Windows.Forms.DateTimePicker();
             this.cbxClienteid = new System.Windows.Forms.ComboBox();
@@ -272,10 +273,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgPedidos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PPedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PPedidos";
+            this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.PPedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorpedidos)).EndInit();

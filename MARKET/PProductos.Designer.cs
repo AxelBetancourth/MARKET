@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PProductos));
             this.label4 = new System.Windows.Forms.Label();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
@@ -64,7 +65,7 @@
             // btneliminar
             // 
             this.btneliminar.Location = new System.Drawing.Point(448, 268);
-            this.btneliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(100, 28);
             this.btneliminar.TabIndex = 29;
@@ -75,7 +76,7 @@
             // btnguardar
             // 
             this.btnguardar.Location = new System.Drawing.Point(291, 268);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(100, 28);
             this.btnguardar.TabIndex = 28;
@@ -87,7 +88,7 @@
             // 
             this.checkBfiltroactivos.AutoSize = true;
             this.checkBfiltroactivos.Location = new System.Drawing.Point(75, 276);
-            this.checkBfiltroactivos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBfiltroactivos.Margin = new System.Windows.Forms.Padding(4);
             this.checkBfiltroactivos.Name = "checkBfiltroactivos";
             this.checkBfiltroactivos.Size = new System.Drawing.Size(130, 20);
             this.checkBfiltroactivos.TabIndex = 27;
@@ -99,7 +100,7 @@
             // 
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProductos.Location = new System.Drawing.Point(13, 304);
-            this.dgProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgProductos.Name = "dgProductos";
             this.dgProductos.RowHeadersWidth = 51;
             this.dgProductos.Size = new System.Drawing.Size(893, 261);
@@ -109,7 +110,7 @@
             // txtpreciocompra
             // 
             this.txtpreciocompra.Location = new System.Drawing.Point(673, 91);
-            this.txtpreciocompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpreciocompra.Margin = new System.Windows.Forms.Padding(4);
             this.txtpreciocompra.Name = "txtpreciocompra";
             this.txtpreciocompra.Size = new System.Drawing.Size(132, 22);
             this.txtpreciocompra.TabIndex = 25;
@@ -119,7 +120,7 @@
             // 
             this.checkbEstado.AutoSize = true;
             this.checkbEstado.Location = new System.Drawing.Point(200, 223);
-            this.checkbEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkbEstado.Margin = new System.Windows.Forms.Padding(4);
             this.checkbEstado.Name = "checkbEstado";
             this.checkbEstado.Size = new System.Drawing.Size(66, 20);
             this.checkbEstado.TabIndex = 24;
@@ -130,7 +131,7 @@
             // 
             this.cbxunidadmedida.FormattingEnabled = true;
             this.cbxunidadmedida.Location = new System.Drawing.Point(200, 174);
-            this.cbxunidadmedida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxunidadmedida.Margin = new System.Windows.Forms.Padding(4);
             this.cbxunidadmedida.Name = "cbxunidadmedida";
             this.cbxunidadmedida.Size = new System.Drawing.Size(160, 24);
             this.cbxunidadmedida.TabIndex = 23;
@@ -139,7 +140,7 @@
             // 
             this.cbxcategoria.FormattingEnabled = true;
             this.cbxcategoria.Location = new System.Drawing.Point(200, 129);
-            this.cbxcategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxcategoria.Margin = new System.Windows.Forms.Padding(4);
             this.cbxcategoria.Name = "cbxcategoria";
             this.cbxcategoria.Size = new System.Drawing.Size(160, 24);
             this.cbxcategoria.TabIndex = 22;
@@ -148,7 +149,7 @@
             // 
             this.txtProductoid.Enabled = false;
             this.txtProductoid.Location = new System.Drawing.Point(200, 91);
-            this.txtProductoid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductoid.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductoid.Name = "txtProductoid";
             this.txtProductoid.ReadOnly = true;
             this.txtProductoid.Size = new System.Drawing.Size(160, 22);
@@ -239,10 +240,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PProductos";
+            this.Text = "Productos";
             this.Load += new System.EventHandler(this.PProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
