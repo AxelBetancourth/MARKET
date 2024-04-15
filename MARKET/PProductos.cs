@@ -38,7 +38,7 @@ namespace MARKET
             cbxcategoria.SelectedValue = "";
             cbxunidadmedida.SelectedValue = "";
             checkbEstado.Checked = false;
-            txtProductoid.Text = "";
+            txtpreciocompra.Text = "";
             errorProvider1.Clear();
         }
 
@@ -74,6 +74,14 @@ namespace MARKET
                 errorProvider1.SetError(txtpreciocompra, "Debe ingresar el precio de la compra");
                 return FormularioValido;
             }
+            if (!ValidarCategoria())
+            {
+                FormularioValido = false;
+            }
+            if (!ValidarUnidadeMedida())
+            {
+                FormularioValido = false;
+            }
             return FormularioValido;
         }
 
@@ -97,7 +105,26 @@ namespace MARKET
             checkbEstado.Checked = false;
             errorProvider1.Clear();
         }
-
+        private bool ValidarCategoria()
+        {
+            var CondicionPagoValidos = nCategoria.CargaCombo().Select(c => c.Descripcion).ToList();
+            if (!CondicionPagoValidos.Contains(cbxcategoria.Text))
+            {
+                errorProvider1.SetError(cbxcategoria, "La Categoria no es válida Seleccione una categoria");
+                return false;
+            }
+            return true;
+        }
+        private bool ValidarUnidadeMedida()
+        {
+            var CondicionPagoValidos = nUnidadMedida.CargaCombo().Select(c => c.Descripcion).ToList();
+            if (!CondicionPagoValidos.Contains(cbxunidadmedida.Text))
+            {
+                errorProvider1.SetError(cbxunidadmedida, "La Unidad de Medida no es válida Seleccione una Unidad de Medida");
+                return false;
+            }
+            return true;
+        }
         private void btnguardar_Click_1(object sender, EventArgs e)
         {
             if (ValidarDatos())
@@ -157,13 +184,28 @@ namespace MARKET
 
         private void txtpreciocompra_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-            (e.KeyChar != ','))
+            if (e.KeyChar == (char)Keys.Back)
+            {
+                return;
+            }
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
             {
                 e.Handled = true;
             }
+            System.Windows.Forms.TextBox textBox = sender as System.Windows.Forms.TextBox;
+            if (e.KeyChar == ',' && textBox.Text.Contains(","))
+            {
+                e.Handled = true;
+            }
+            else if (e.KeyChar != ',' && textBox.Text.Contains(","))
+            {
+                int posComa = textBox.Text.IndexOf(',');
+                if (textBox.SelectionStart > posComa && textBox.Text.Length > posComa + 2)
+                {
+                    e.Handled = true;
+                }
+            }
         }
-
         private void dgProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < dgProductos.Rows.Count)
@@ -177,6 +219,11 @@ namespace MARKET
                 checkbEstado.Checked = bool.Parse(dgProductos.CurrentRow.Cells["Estado"].Value.ToString());
                 txtpreciocompra.Text = dgProductos.CurrentRow.Cells["PrecioCompra"].Value.ToString();
             }
+        }
+
+        private void txtpreciocompra_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

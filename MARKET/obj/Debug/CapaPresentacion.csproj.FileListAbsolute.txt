@@ -239,3 +239,37 @@ C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\CapaP
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\CapaPres.61CA7C38.Up2Date
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.exe
 C:\Users\axel8\OneDrive\Documentos\Laboratorio Rad\Market\MARKET\obj\Debug\MARKET.pdb
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\MARKET.exe.config
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\MARKET.exe
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\MARKET.pdb
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\CapaDatos.dll
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\CapaNegocio.dll
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\EntityFramework.dll
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\CapaDatos.pdb
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\CapaDatos.dll.config
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\CapaNegocio.pdb
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\CapaNegocio.dll.config
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\EntityFramework.xml
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.MenuPrincipal.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PBuscarFacturas.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PBuscarPedido.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PBuscarProducto.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PCategorias.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PClientes.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PCondicionPagos.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PFacturaDetalles.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PFacturas.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PGrupoDescuentos.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PPedidoDetalles.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PPedidos.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PProductos.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.Properties.Resources.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.PUnidadMedidas.resources
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.exe
+C:\Users\claud\OneDrive\Documentos\ACTIVIDADES-PROGRA-RAD\Market\Market\MARKET\obj\Debug\MARKET.pdb
