@@ -62,7 +62,7 @@ namespace MARKET
             this.cbActivos.Location = new System.Drawing.Point(24, 315);
             this.cbActivos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbActivos.Name = "cbActivos";
-            this.cbActivos.Size = new System.Drawing.Size(191, 23);
+            this.cbActivos.Size = new System.Drawing.Size(170, 20);
             this.cbActivos.TabIndex = 23;
             this.cbActivos.Text = "Mostrar solo activos";
             this.cbActivos.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@ namespace MARKET
             this.txtnombres.Location = new System.Drawing.Point(180, 175);
             this.txtnombres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnombres.Name = "txtnombres";
-            this.txtnombres.Size = new System.Drawing.Size(300, 27);
+            this.txtnombres.Size = new System.Drawing.Size(300, 23);
             this.txtnombres.TabIndex = 19;
             // 
             // txtcodigo
@@ -135,7 +135,7 @@ namespace MARKET
             this.txtcodigo.Location = new System.Drawing.Point(180, 128);
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(300, 27);
+            this.txtcodigo.Size = new System.Drawing.Size(300, 23);
             this.txtcodigo.TabIndex = 18;
             // 
             // txtClienteId
@@ -144,7 +144,7 @@ namespace MARKET
             this.txtClienteId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClienteId.Name = "txtClienteId";
             this.txtClienteId.ReadOnly = true;
-            this.txtClienteId.Size = new System.Drawing.Size(111, 27);
+            this.txtClienteId.Size = new System.Drawing.Size(111, 23);
             this.txtClienteId.TabIndex = 17;
             // 
             // label4
@@ -155,7 +155,7 @@ namespace MARKET
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label4.Location = new System.Drawing.Point(508, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(259, 32);
+            this.label4.Size = new System.Drawing.Size(217, 27);
             this.label4.TabIndex = 16;
             this.label4.Text = "Gestión de Clientes";
             // 
@@ -166,7 +166,7 @@ namespace MARKET
             this.cbEstado.Location = new System.Drawing.Point(398, 86);
             this.cbEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(80, 23);
+            this.cbEstado.Size = new System.Drawing.Size(70, 20);
             this.cbEstado.TabIndex = 15;
             this.cbEstado.Text = "Activo";
             this.cbEstado.UseVisualStyleBackColor = true;
@@ -177,7 +177,7 @@ namespace MARKET
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(40, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 19);
+            this.label3.Size = new System.Drawing.Size(70, 16);
             this.label3.TabIndex = 14;
             this.label3.Text = "Nombres";
             // 
@@ -187,7 +187,7 @@ namespace MARKET
             this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(40, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 19);
+            this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 13;
             this.label2.Text = "Código";
             // 
@@ -197,7 +197,7 @@ namespace MARKET
             this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(40, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 19);
+            this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 12;
             this.label1.Text = "Cliente Id";
             // 
@@ -206,17 +206,17 @@ namespace MARKET
             this.txtapellidos.Location = new System.Drawing.Point(180, 221);
             this.txtapellidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtapellidos.Name = "txtapellidos";
-            this.txtapellidos.Size = new System.Drawing.Size(300, 27);
+            this.txtapellidos.Size = new System.Drawing.Size(300, 23);
             this.txtapellidos.TabIndex = 26;
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(655, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 19);
+            this.label5.Size = new System.Drawing.Size(154, 18);
             this.label5.TabIndex = 25;
             this.label5.Text = "Grupo de descuento";
             // 
@@ -226,7 +226,7 @@ namespace MARKET
             this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(39, 228);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 19);
+            this.label6.Size = new System.Drawing.Size(72, 16);
             this.label6.TabIndex = 24;
             this.label6.Text = "Apellidos";
             // 
@@ -236,7 +236,7 @@ namespace MARKET
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(619, 174);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 18);
+            this.label9.Size = new System.Drawing.Size(0, 15);
             this.label9.TabIndex = 29;
             // 
             // label10
@@ -246,7 +246,7 @@ namespace MARKET
             this.label10.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(655, 179);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(156, 19);
+            this.label10.Size = new System.Drawing.Size(139, 16);
             this.label10.TabIndex = 28;
             this.label10.Text = "Condición de pago";
             // 
@@ -257,7 +257,7 @@ namespace MARKET
             this.cbxdescuentos.Location = new System.Drawing.Point(853, 123);
             this.cbxdescuentos.Margin = new System.Windows.Forms.Padding(4);
             this.cbxdescuentos.Name = "cbxdescuentos";
-            this.cbxdescuentos.Size = new System.Drawing.Size(300, 27);
+            this.cbxdescuentos.Size = new System.Drawing.Size(300, 24);
             this.cbxdescuentos.TabIndex = 31;
             // 
             // cbxPagos
@@ -267,7 +267,7 @@ namespace MARKET
             this.cbxPagos.Location = new System.Drawing.Point(853, 170);
             this.cbxPagos.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPagos.Name = "cbxPagos";
-            this.cbxPagos.Size = new System.Drawing.Size(300, 27);
+            this.cbxPagos.Size = new System.Drawing.Size(300, 24);
             this.cbxPagos.TabIndex = 32;
             // 
             // ErrorClientes
@@ -276,7 +276,7 @@ namespace MARKET
             // 
             // PClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 685);
             this.Controls.Add(this.cbxPagos);
