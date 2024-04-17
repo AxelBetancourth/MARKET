@@ -50,6 +50,7 @@
             this.errorpedidos = new System.Windows.Forms.ErrorProvider(this.components);
             this.cbActivos = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgPedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorpedidos)).BeginInit();
             this.SuspendLayout();
@@ -59,14 +60,14 @@
             this.txtpedidoID.Location = new System.Drawing.Point(222, 79);
             this.txtpedidoID.Name = "txtpedidoID";
             this.txtpedidoID.ReadOnly = true;
-            this.txtpedidoID.Size = new System.Drawing.Size(180, 25);
+            this.txtpedidoID.Size = new System.Drawing.Size(180, 29);
             this.txtpedidoID.TabIndex = 124;
             // 
             // dtpfechapedido
             // 
             this.dtpfechapedido.Location = new System.Drawing.Point(222, 198);
             this.dtpfechapedido.Name = "dtpfechapedido";
-            this.dtpfechapedido.Size = new System.Drawing.Size(302, 25);
+            this.dtpfechapedido.Size = new System.Drawing.Size(302, 29);
             this.dtpfechapedido.TabIndex = 123;
             // 
             // cbxClienteid
@@ -74,7 +75,7 @@
             this.cbxClienteid.FormattingEnabled = true;
             this.cbxClienteid.Location = new System.Drawing.Point(222, 141);
             this.cbxClienteid.Name = "cbxClienteid";
-            this.cbxClienteid.Size = new System.Drawing.Size(302, 26);
+            this.cbxClienteid.Size = new System.Drawing.Size(302, 30);
             this.cbxClienteid.TabIndex = 122;
             // 
             // txtDescuento
@@ -82,7 +83,7 @@
             this.txtDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescuento.Location = new System.Drawing.Point(1046, 195);
             this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(121, 25);
+            this.txtDescuento.Size = new System.Drawing.Size(121, 29);
             this.txtDescuento.TabIndex = 121;
             this.txtDescuento.TextChanged += new System.EventHandler(this.txtDescuento_TextChanged);
             this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
@@ -94,7 +95,7 @@
             this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(906, 195);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 18);
+            this.label9.Size = new System.Drawing.Size(110, 22);
             this.label9.TabIndex = 120;
             this.label9.Text = "Descuento";
             // 
@@ -103,7 +104,7 @@
             this.txtSubTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubTotal.Location = new System.Drawing.Point(1046, 134);
             this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.Size = new System.Drawing.Size(154, 25);
+            this.txtSubTotal.Size = new System.Drawing.Size(154, 29);
             this.txtSubTotal.TabIndex = 119;
             this.txtSubTotal.TextChanged += new System.EventHandler(this.txtSubTotal_TextChanged);
             this.txtSubTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSubTotal_KeyPress);
@@ -115,7 +116,7 @@
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(906, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 18);
+            this.label4.Size = new System.Drawing.Size(93, 22);
             this.label4.TabIndex = 118;
             this.label4.Text = "SubTotal";
             // 
@@ -125,7 +126,7 @@
             this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(14, 198);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 18);
+            this.label8.Size = new System.Drawing.Size(170, 22);
             this.label8.TabIndex = 117;
             this.label8.Text = "Fecha del Pedido";
             // 
@@ -135,7 +136,7 @@
             this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(14, 141);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 18);
+            this.label6.Size = new System.Drawing.Size(79, 22);
             this.label6.TabIndex = 116;
             this.label6.Text = "Cliente ";
             // 
@@ -147,7 +148,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label5.Location = new System.Drawing.Point(550, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(221, 27);
+            this.label5.Size = new System.Drawing.Size(276, 33);
             this.label5.TabIndex = 115;
             this.label5.Text = "Gestion de Pedidos ";
             // 
@@ -189,7 +190,7 @@
             this.txtTotal.Location = new System.Drawing.Point(1046, 258);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(154, 25);
+            this.txtTotal.Size = new System.Drawing.Size(154, 29);
             this.txtTotal.TabIndex = 112;
             this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
             // 
@@ -198,9 +199,9 @@
             this.cbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbEstado.AutoSize = true;
             this.cbEstado.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEstado.Location = new System.Drawing.Point(1106, 75);
+            this.cbEstado.Location = new System.Drawing.Point(1087, 75);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(71, 22);
+            this.cbEstado.Size = new System.Drawing.Size(90, 26);
             this.cbEstado.TabIndex = 111;
             this.cbEstado.Text = "Activo";
             this.cbEstado.UseVisualStyleBackColor = true;
@@ -212,7 +213,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(906, 261);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 18);
+            this.label3.Size = new System.Drawing.Size(56, 22);
             this.label3.TabIndex = 110;
             this.label3.Text = "Total";
             // 
@@ -222,7 +223,7 @@
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(14, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 18);
+            this.label2.Size = new System.Drawing.Size(97, 22);
             this.label2.TabIndex = 109;
             this.label2.Text = "Pedido Id";
             // 
@@ -254,7 +255,7 @@
             this.cbActivos.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActivos.Location = new System.Drawing.Point(14, 296);
             this.cbActivos.Name = "cbActivos";
-            this.cbActivos.Size = new System.Drawing.Size(170, 22);
+            this.cbActivos.Size = new System.Drawing.Size(221, 26);
             this.cbActivos.TabIndex = 125;
             this.cbActivos.Text = "Mostrar solo activas";
             this.cbActivos.UseVisualStyleBackColor = true;
@@ -266,15 +267,27 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1220, 195);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 17);
+            this.label1.Size = new System.Drawing.Size(25, 20);
             this.label1.TabIndex = 126;
             this.label1.Text = "%";
             // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1173, 198);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(27, 22);
+            this.label7.TabIndex = 127;
+            this.label7.Text = "%";
+            // 
             // PPedidos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 685);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbActivos);
             this.Controls.Add(this.txtpedidoID);
@@ -330,5 +343,6 @@
         private System.Windows.Forms.ErrorProvider errorpedidos;
         private System.Windows.Forms.CheckBox cbActivos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
     }
 }
