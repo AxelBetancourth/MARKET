@@ -54,6 +54,7 @@
             this.bbuscarpedido = new System.Windows.Forms.Button();
             this.txtpedidoid = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -283,7 +284,7 @@
             this.txtdescuento.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtdescuento.Name = "txtdescuento";
             this.txtdescuento.ReadOnly = true;
-            this.txtdescuento.Size = new System.Drawing.Size(176, 27);
+            this.txtdescuento.Size = new System.Drawing.Size(142, 27);
             this.txtdescuento.TabIndex = 59;
             // 
             // label8
@@ -337,11 +338,23 @@
             this.label10.TabIndex = 62;
             this.label10.Text = "ID";
             // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1106, 201);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 22);
+            this.label11.TabIndex = 128;
+            this.label11.Text = "%";
+            // 
             // PFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 685);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtpedidoid);
             this.Controls.Add(this.bbuscarpedido);
@@ -405,5 +418,6 @@
         private System.Windows.Forms.Button bbuscarpedido;
         private System.Windows.Forms.TextBox txtpedidoid;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
