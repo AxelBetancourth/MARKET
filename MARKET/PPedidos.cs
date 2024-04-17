@@ -69,6 +69,16 @@ namespace MARKET
             cbEstado.Checked = false;
             errorpedidos.Clear();
         }
+        private bool ValidarCliente()
+        {
+            var clientesValidos = nClientes.CargaCombo().Select(c => c.Descripcion).ToList();
+            if (!clientesValidos.Contains(cbxClienteid.Text))
+            {
+                errorpedidos.SetError(cbxClienteid, "Seleccione un cliente.");
+                return false;
+            }
+            return true;
+        }
 
         private bool ValidarDatos()
         {
@@ -79,11 +89,14 @@ namespace MARKET
                 errorpedidos.SetError(cbxClienteid, "Debe seleccionar un Cliente");
                 return FormularioValido;
             }
-
+            if (!ValidarCliente())
+            {
+                FormularioValido = false;
+            }
             if (string.IsNullOrEmpty(txtTotal.Text.ToString()) || string.IsNullOrWhiteSpace(txtTotal.Text.ToString()))
             {
                 FormularioValido = false;
-                errorpedidos.SetError(txtTotal, "Debe ingresar el Total.");
+                errorpedidos.SetError(txtTotal, "Debe ingresar el Subtotal y Descuento.");
                 return FormularioValido;
             }
 
@@ -106,6 +119,7 @@ namespace MARKET
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            errorpedidos.Clear();
             var fecha = dtpfechapedido.Value.ToString();
             DateTime fechaeditarpedido = DateTime.Parse(fecha);
 
@@ -210,6 +224,7 @@ namespace MARKET
         private void txtSubTotal_TextChanged(object sender, EventArgs e)
         {
             txtDescuento.ReadOnly = string.IsNullOrEmpty(txtSubTotal.Text);
+            CalcularTotal();
         }
 
         private void CalcularTotal()
@@ -218,8 +233,10 @@ namespace MARKET
             {
                 decimal subTotal = decimal.Parse(txtSubTotal.Text);
                 decimal descuento = decimal.Parse(txtDescuento.Text);
-                decimal total = subTotal - descuento;
+                decimal valorDescuento = (descuento / 100) * subTotal;
+                decimal total = subTotal - valorDescuento;
                 txtTotal.Text = total.ToString();
+                txtTotal.Text = total.ToString("0.00");
             }
         }
         private void txtDescuento_TextChanged(object sender, EventArgs e)
