@@ -52,25 +52,25 @@ namespace MARKET
             if (string.IsNullOrEmpty(txtprecio.Text.ToString()) || string.IsNullOrWhiteSpace(txtprecio.Text.ToString()))
             {
                 FormularioValido = false;
-                errorProvider1.SetError(txtprecio, "Debe de buscar y seleccionar un pedido");
+                errorProvider1.SetError(txtprecio, "Debe de buscar y seleccionar un Producto");
                 return FormularioValido;
             }
             if (string.IsNullOrEmpty(txtotal.Text.ToString()) || string.IsNullOrWhiteSpace(txtotal.Text.ToString()))
             {
                 FormularioValido = false;
-                errorProvider1.SetError(txtotal, "Debe buscar y seleccionar un producto");
+                errorProvider1.SetError(txtotal, "Debe buscar y seleccionar un pedido");
                 return FormularioValido;
             }
             if (string.IsNullOrEmpty(txtsubt.Text.ToString()) || string.IsNullOrWhiteSpace(txtsubt.Text.ToString()))
             {
                 FormularioValido = false;
-                errorProvider1.SetError(txtsubt, "Debe buscar y seleccionar un producto");
+                errorProvider1.SetError(txtsubt, "Debe buscar y seleccionar un pedido");
                 return FormularioValido;
             }
             if (string.IsNullOrEmpty(txtDescuento.Text.ToString()) || string.IsNullOrWhiteSpace(txtDescuento.Text.ToString()))
             {
                 FormularioValido = false;
-                errorProvider1.SetError(txtDescuento, "Debe buscar y seleccionar un producto");
+                errorProvider1.SetError(txtDescuento, "Debe buscar y seleccionar un pedido");
                 return FormularioValido;
             }
             return FormularioValido;

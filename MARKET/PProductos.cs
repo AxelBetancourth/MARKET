@@ -56,6 +56,14 @@ namespace MARKET
         private bool ValidarDatos()
         {
             var FormularioValido = true;
+            if (!ValidarCategoria())
+            {
+                FormularioValido = false;
+            }
+            if (!ValidarUnidadeMedida())
+            {
+                FormularioValido = false;
+            }
             if (string.IsNullOrEmpty(cbxcategoria.Text.ToString()) || string.IsNullOrWhiteSpace(cbxcategoria.Text.ToString()))
             {
                 FormularioValido = false;
@@ -74,14 +82,7 @@ namespace MARKET
                 errorProvider1.SetError(txtpreciocompra, "Debe ingresar el precio de la compra");
                 return FormularioValido;
             }
-            if (!ValidarCategoria())
-            {
-                FormularioValido = false;
-            }
-            if (!ValidarUnidadeMedida())
-            {
-                FormularioValido = false;
-            }
+
             return FormularioValido;
         }
 
@@ -127,6 +128,7 @@ namespace MARKET
         }
         private void btnguardar_Click_1(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             if (ValidarDatos())
             {
                 decimal precioCompra;

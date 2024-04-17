@@ -107,6 +107,7 @@ namespace MARKET
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             var fecha = fechafactura.Value.ToString();
             DateTime fechaeditarfactura = DateTime.Parse(fecha);
 
